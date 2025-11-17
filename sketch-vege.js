@@ -114,68 +114,180 @@ let sketchVege = function(p){
     
     // ==================== PRÉPARATION DES DONNÉES ====================
     
+    // function prepareData() {
+    //     // Structurer les données par année, mois, semaine
+    //     for (let key in intervalDataVegeWeeksWeNeed) {
+    //         let [year, week] = key.split('-');
+    //         let indices = intervalDataVegeWeeksWeNeed[key];
+            
+    //         // Initialiser l'année si nécessaire
+    //         if (!yearsData[year]) {
+    //             yearsData[year] = {
+    //                 months: {},
+    //                 hasVegeWeek: true  // Initialisé à true, sera false si une semaine n'est pas végé
+    //             };
+    //         }
+            
+    //         // Pour chaque jour de la semaine, récupérer le mois
+    //         indices.forEach(idx => {
+    //             let row = Table[idx];
+    //             let date = new Date(row.Date);
+    //             let month = date.getMonth() + 1; // 1-12
+                
+    //             // Initialiser le mois si nécessaire
+    //             if (!yearsData[year].months[month]) {
+    //                 yearsData[year].months[month] = {
+    //                     weeks: {},
+    //                     hasVegeWeek: true  // Initialisé à true, sera false si une semaine n'est pas végé
+    //                 };
+    //             }
+                
+    //             // Initialiser la semaine si nécessaire
+    //             if (!yearsData[year].months[month].weeks[week]) {
+    //                 yearsData[year].months[month].weeks[week] = {
+    //                     days: [],
+    //                     hasVegeDay: false
+    //                 };
+    //             }
+                
+    //             // Ajouter le jour
+    //             let isVegeDay = row.is_vege_day === 'True' || row.is_vege_day === true;
+    //             //let hasVegeWeek = row.has_vege_week === 'True' || row.has_vege_week === true;
+                
+    //             yearsData[year].months[month].weeks[week].days.push({
+    //                 index: idx,
+    //                 date: date,
+    //                 isVege: isVegeDay,
+    //                 data: row
+    //             });
+                
+    //             // Mettre à jour les flags
+    //             if (isVegeDay) {
+    //                 yearsData[year].months[month].weeks[week].hasVegeDay = true;
+    //             }
+    //             // Un mois n'est validé que si TOUTES ses semaines sont végé (ET logique)
+    //             yearsData[year].months[month].hasVegeWeek = 
+    //                 yearsData[year].months[month].hasVegeWeek && yearsData[year].months[month].weeks[week].hasVegeDay;
+    //             // Une année n'est validée que si TOUTES ses semaines sont végé
+    //             yearsData[year].hasVegeWeek = 
+    //                 yearsData[year].hasVegeWeek && yearsData[year].months[month].hasVegeWeek;
+    //         });
+    //     }
+        
+    //     console.log("Données préparées:", yearsData);
+    // }
+
     function prepareData() {
+
+        // ================================
+        // 1) COLLECTE ET STRUCTURATION DES DONNÉES
+        // ================================
+
         // Structurer les données par année, mois, semaine
         for (let key in intervalDataVegeWeeksWeNeed) {
-            let [year, week] = key.split('-');
+
+            let [year, week] = key.split('-');       // ex: "2023-12" → "2023", "12"
             let indices = intervalDataVegeWeeksWeNeed[key];
-            
+
             // Initialiser l'année si nécessaire
             if (!yearsData[year]) {
                 yearsData[year] = {
                     months: {},
-                    hasVegeWeek: true  // Initialisé à true, sera false si une semaine n'est pas végé
+                    // !!!!! On ne calcule plus ici hasVegeWeek !
+                    // On l’évaluera APRES avoir rempli tous les mois.
+                    hasVegeWeek: true 
                 };
             }
-            
-            // Pour chaque jour de la semaine, récupérer le mois
+
+            // Pour chaque jour listé dans cette semaine
             indices.forEach(idx => {
+
                 let row = Table[idx];
                 let date = new Date(row.Date);
-                let month = date.getMonth() + 1; // 1-12
-                
+                let month = date.getMonth() + 1; // Mois en 1–12
+
                 // Initialiser le mois si nécessaire
                 if (!yearsData[year].months[month]) {
                     yearsData[year].months[month] = {
                         weeks: {},
-                        hasVegeWeek: true  // Initialisé à true, sera false si une semaine n'est pas végé
+                        // !!! Même principe : on ne calcule PAS encore ici
+                        hasVegeWeek: true 
                     };
                 }
-                
+
                 // Initialiser la semaine si nécessaire
                 if (!yearsData[year].months[month].weeks[week]) {
                     yearsData[year].months[month].weeks[week] = {
                         days: [],
-                        hasVegeDay: false
+                        hasVegeDay: false  // deviendra true si un seul jour végé existe
                     };
                 }
-                
-                // Ajouter le jour
+
+                // Ajouter le jour dans la semaine correspondante
                 let isVegeDay = row.is_vege_day === 'True' || row.is_vege_day === true;
-                //let hasVegeWeek = row.has_vege_week === 'True' || row.has_vege_week === true;
-                
+
                 yearsData[year].months[month].weeks[week].days.push({
                     index: idx,
                     date: date,
                     isVege: isVegeDay,
                     data: row
                 });
-                
-                // Mettre à jour les flags
+
+                // Mettre à jour le flag de la semaine
                 if (isVegeDay) {
                     yearsData[year].months[month].weeks[week].hasVegeDay = true;
                 }
-                // Un mois n'est validé que si TOUTES ses semaines sont végé (ET logique)
-                yearsData[year].months[month].hasVegeWeek = 
-                    yearsData[year].months[month].hasVegeWeek && yearsData[year].months[month].weeks[week].hasVegeDay;
-                // Une année n'est validée que si TOUTES ses semaines sont végé
-                yearsData[year].hasVegeWeek = 
-                    yearsData[year].hasVegeWeek && yearsData[year].months[month].hasVegeWeek;
+
             });
         }
-        
+
+
+
+        // ================================
+        // 2) CALCUL DES FLAGS : SEMAINES → MOIS
+        // ================================
+        // À ce stade, on a rempli toutes les structures,
+        // et maintenant on peut déterminer quels mois valident la règle.
+
+        for (let year in yearsData) {
+
+            for (let month in yearsData[year].months) {
+
+                let monthObj = yearsData[year].months[month];
+
+                // Un mois est validé VEGE si TOUTES ses semaines
+                // ont au moins un jour végé.
+                // (= équivalent du ET logique sur toutes les semaines)
+                monthObj.hasVegeWeek = Object.values(monthObj.weeks)
+                                            .every(week => week.hasVegeDay);
+
+            }
+        }
+
+
+
+        // ================================
+        // 3) CALCUL DES FLAGS : MOIS → ANNÉE
+        // ================================
+        // Même logique : une année n’est validée végé
+        // que si TOUS ses mois sont validés.
+
+        for (let year in yearsData) {
+
+            let yearObj = yearsData[year];
+
+            yearObj.hasVegeWeek = Object.values(yearObj.months)
+                                        .every(month => month.hasVegeWeek);
+        }
+
+
+
+        // ================================
+        // DEBUG FINAL
+        // ================================
         console.log("Données préparées:", yearsData);
     }
+
     
     // ==================== CRÉATION DES CLUSTERS ====================
     
