@@ -1,0 +1,172 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* on remet le scroll normal */
+  scroll-behavior: smooth; /* active le smooth scroll */
+  font-family: "Caveat", "Segoe UI", sans-serif;
+  margin: auto;
+
+}
+
+body{
+
+  max-width: 1251px;
+  min-width: 1251px;
+
+}
+
+section{
+
+  max-height: 573px;
+  min-height: 573px;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+
+}
+
+#canvas1, #canvas2{
+
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+button {
+
+  border: 2px dashed #f44336;
+  background: transparent;
+  color: white;
+  font-family: 'Caveat';
+}
+
+/* --- L'overlay principal --- */
+#overlay, #trans-zone1, #trans-zone2 {
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 50px 0;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+ section#trans-zone1, section#trans-zone2{
+
+  h1{
+
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 20px;
+  }
+  flex-flow: row wrap;
+
+  background: url("8291.jpg");
+  background-size: 50%;
+  background-repeat: repeat;
+}
+
+/* Boutons repositionnés classiquement */
+#btnStats, #btnContexte, #btnVegeLud {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin-left: 10px;
+  z-index: 1000;
+  /* background-color: #333; */
+  color: black;
+  border: 2px dashed #f44336;  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  width: 150px;
+}
+
+#btnStats {
+  display: block; /* toujours visible */
+  top : 70px
+}
+
+#btnVegeLud{
+  
+  display: block; /* toujours visible */
+  top : 120px
+}
+
+
+#btnStats:hover, #btnContexte:hover, #btnVegeLud:hover{
+  background-color: pink;
+}
+
+
+/* --- Contenu de texte principal --- */
+.info {
+  max-width: 600px;
+  margin-left: 60px;
+}
+
+.info h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.2em;
+}
+
+.info p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.question {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+/* --- Le post-it à gauche --- */
+.postit {
+  background-color: #fff89a;
+  box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.3);
+  width: 220px;
+  height: 200px;
+  padding: 20px;
+  transform: rotate(-2deg);
+  position: relative;
+}
+
+.postit h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.postit p {
+  font-size: 1em;
+  color: #444;
+}
+
+img{
+
+  &.little-boy{
+
+    position: fixed;
+    bottom: 0;
+    right: -7px;
+    z-index: 10000;
+    width: 200px;
+  }
+
+  &.carrot{
+
+    position: absolute;
+    bottom: -5;
+    right: -12px;
+    width: 100px;
+  }
+}
