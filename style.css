@@ -1,38 +1,37 @@
 html, body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   overflow-y: auto; /* on remet le scroll normal */
   scroll-behavior: smooth; /* active le smooth scroll */
-  font-family: "Caveat", "Segoe UI", sans-serif;
-  margin: auto;
+  font-family: "Caveat", "Segoe UI", sans-serif;;
 
+  --fixed-Width: 1251px;
+  --fixed-Height: 573px;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 body{
 
-  max-width: 1251px;
-  min-width: 1251px;
+  width: var(--fixed-Width);
 
 }
 
 section{
 
-  max-height: 573px;
-  min-height: 573px;
-}
-
-canvas {
-  display: block;
-  max-width: 100%;
-
+  width: var(--fixed-Width);
+  height: var(--fixed-Height);
+  overflow-y: hidden;
 }
 
 #canvas1, #canvas2{
 
   position: relative;
-  max-width: 100%;
-  max-height: 573px;
-  min-height: 573px;
+  width: var(--fixed-Width);
+  height: var(--fixed-Height);
+
 }
 
 button {
@@ -45,28 +44,29 @@ button {
 
 /* --- L'overlay principal --- */
 #overlay, #trans-zone1, #trans-zone2 {
-  max-width: 100%;
+  width: var(--fixed-Width);
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 50px 0;
   z-index: 1;
   box-sizing: border-box;
+  position: relative;
 }
 
  section#trans-zone1, section#trans-zone2{
+
 
   h1{
 
     width: 100%;
     text-align: center;
     font-size: 100px;
-    margin-bottom: 20px;
-  }
-  flex-flow: row wrap;
+    position: absolute;
+    top: 2%;
+    }
 
   background: url("8291.jpg");
   background-size: 50%;
@@ -137,6 +137,7 @@ button {
   height: 200px;
   padding: 20px;
   transform: rotate(-2deg);
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -150,6 +151,48 @@ button {
   font-size: 1em;
   color: #444;
 }
+
+.for-vege-1{
+
+  position: absolute;
+  left: 30px;
+  top: 40%;
+}
+
+.for-durable-1{
+
+  position: absolute;
+  left: 30px;
+  top: 40%;
+}
+
+.for-vege-2{
+
+  position: absolute;
+  right: 30px;
+  top: 40%;
+}
+
+.for-durable-2{
+
+  position: absolute;
+  right: 30px;
+  top: 40%;
+}
+
+.for-durable-3{
+
+  position: absolute;
+  left: 30%;
+  bottom: 50px;
+}
+
+.for-vege-3{
+
+  position: absolute;
+  left: 30%;
+  bottom: 20px;
+}  
 
 img{
 
@@ -165,7 +208,7 @@ img{
   &.carrot{
 
     position: absolute;
-    bottom: -5;
+    bottom: -25px;
     right: -12px;
     width: 100px;
   }

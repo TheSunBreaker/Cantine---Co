@@ -521,7 +521,8 @@ function intervalDatesActualization(){
 
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight).parent("canvas1");
+  
+  canvas = createCanvas(1251, 573).parent("canvas1");
   observer.observe(canvas.elt.parentNode)
 
     

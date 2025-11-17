@@ -43,7 +43,7 @@ let sketchVege = function(p){
                            
     p.setup = function(){
 
-        vegeCanvas = p.createCanvas(windowWidth, windowHeight).parent("canvas2")
+        vegeCanvas = p.createCanvas(1251, 573).parent("canvas2")
 
         
         // On observe le wrapper du canvas (le <div id="canvas2">)
