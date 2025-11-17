@@ -23,8 +23,8 @@ section{
 
 canvas {
   display: block;
-  max-width: 100%;
-
+  max-height: 573px;
+  min-height: 573px;
 }
 
 #canvas1, #canvas2{
