@@ -204,7 +204,16 @@ let sketchVege = function(p){
 
                 let row = Table[idx];
                 let date = new Date(row.Date);
-                let month = date.getMonth() + 1; // Mois en 1–12
+                
+                let isoYear = parseInt(year);
+                let isoWeek = parseInt(week);
+
+                // Date du jeudi de la semaine ISO
+                let thursday = getDateOfISOWeek(isoYear, isoWeek, 4);
+
+                // Le mois auquel appartient officiellement cette semaine
+                let month = thursday.getMonth() + 1;
+
 
                 // Initialiser le mois si nécessaire
                 if (!yearsData[year].months[month]) {
@@ -1196,13 +1205,22 @@ let sketchVege = function(p){
 
 // Fonction pour éclaircir une couleur (utilise pour drawPlat() par exemple)
 function lightenColor(p, hexColor, amount) {
-let c = p.color(hexColor);
-let r = p.red(c) + amount;
-let g = p.green(c) + amount;
-let b = p.blue(c) + amount;
-return p.color(
-    p.constrain(r, 0, 255),
-    p.constrain(g, 0, 255),
-    p.constrain(b, 0, 255)
-);
+    let c = p.color(hexColor);
+    let r = p.red(c) + amount;
+    let g = p.green(c) + amount;
+    let b = p.blue(c) + amount;
+    return p.color(
+        p.constrain(r, 0, 255),
+        p.constrain(g, 0, 255),
+        p.constrain(b, 0, 255)
+    );
+}
+
+function getDateOfISOWeek(isoYear, isoWeek, isoWeekday) {
+    // isoWeekday : 1=lundi → 7=dimanche
+    let simple = new Date(isoYear, 0, 1 + (isoWeek - 1) * 7);
+    let dow = simple.getDay();
+    if (dow === 0) dow = 7;                         // dimanche → 7
+    let diff = isoWeekday - dow;
+    return new Date(simple.getFullYear(), simple.getMonth(), simple.getDate() + diff);
 }
