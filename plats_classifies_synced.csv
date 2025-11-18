@@ -1,0 +1,977 @@
+Plat_unique,vegetarien,commentaire,_debug_note
+rôti de porc au jus,False,sûr,matched_nonveg:porc
+poulet rôti,False,sûr,matched_nonveg:poulet
+steak haché,False,sûr,matched_nonveg:steak
+tortis bolognaise,False,sûr,matched_nonveg:bolognaise
+poisson pané,False,sûr,matched_fish:poisson
+couscous d'agneau et ses légumes,False,sûr,matched_nonveg:agneau
+filet de lieu beurre persillé,False,sûr,matched_nonveg:filet
+bœuf bourguignon,False,sûr,matched_nonveg:bœuf
+galette saucisse,False,sûr,matched_nonveg:saucisse
+sot l'y laisse de dinde,False,sûr,matched_nonveg:dinde
+filet de saumon sauce hollandaise,False,sûr,matched_nonveg:filet
+rôti de veau au jus,False,sûr,matched_nonveg:veau
+poulet label rôti,False,sûr,matched_nonveg:poulet
+sauté de porc au paprika,False,sûr,matched_nonveg:porc
+timbale milanaise,False,incertain,short_unknown
+filet de lieu sauce crevettes,False,sûr,matched_nonveg:filet
+blanquette de veau,False,sûr,matched_nonveg:veau
+lasagnes de bœuf,False,sûr,matched_nonveg:bœuf
+omelette,True,sûr,matched_veg:omelette
+paëlla aux légumes,True,sûr,matched_veg:légumes
+agneau marengo,False,sûr,matched_nonveg:agneau
+filet de lieu sauce crme,False,sûr,matched_nonveg:filet
+sauté de porc au curry,False,sûr,matched_nonveg:porc
+escalope de dinde au jus,False,sûr,matched_nonveg:escalope
+hachis parmentier,False,incertain,short_unknown
+filet de lieu sauce armoricaine,False,sûr,matched_nonveg:filet
+sauté de poulet antillais,False,sûr,matched_nonveg:poulet
+poisson pané beurre citron,False,sûr,matched_fish:poisson
+rôti de porc,False,sûr,matched_nonveg:porc
+saucisse grillée,False,sûr,matched_nonveg:saucisse
+rôti de dinde au jus,False,sûr,matched_nonveg:rôti
+couscous de légumes,True,sûr,matched_veg:légumes
+filet de saumon sauce beurre blanc,False,sûr,matched_nonveg:filet
+filet de lieu sauce dieppoise,False,sûr,matched_nonveg:filet
+gratin de boulgour,True,incertain_but_checked,preserved
+rôti de bœuf,False,sûr,matched_nonveg:bœuf
+rôti de porc sauce tomate,False,sûr,matched_nonveg:porc
+filet de lieu sauce provenale,False,sûr,matched_nonveg:filet
+sauté de bœuf aux olives,False,sûr,matched_nonveg:bœuf
+sauté de dinde à l'oignon,False,sûr,matched_nonveg:dinde
+couscous au poulet et ses légumes,False,sûr,matched_nonveg:poulet
+sauté de porc dijonnais,False,sûr,matched_nonveg:porc
+escalope de dinde,False,sûr,matched_nonveg:escalope
+courgettes parmentires,False,incertain,short_unknown
+filet de saumon sauce suchet,False,sûr,matched_nonveg:filet
+rôti de dinde aux herbes,False,sûr,matched_nonveg:rôti
+gratin de pommes de terre au fromage fondu,True,sûr,matched_veg:fromage
+filet de lieu sauce grenobloise,False,sûr,matched_nonveg:filet
+sauté de veau marengo,False,sûr,matched_nonveg:veau
+jambon braisé froid,False,sûr,matched_nonveg:jambon
+filet de lieu sauce poivrons,False,sûr,matched_nonveg:filet
+escalope de porc charcutire,False,sûr,matched_nonveg:porc
+sauté de dinde louisianne,False,sûr,matched_nonveg:dinde
+saucisse rougail,False,sûr,matched_nonveg:saucisse
+repas de substitution,False,incertain,fallback
+rôti de dinde,False,sûr,matched_nonveg:rôti
+filet de lieu sauce tomate,False,sûr,matched_nonveg:filet
+sauté de poulet colombo,False,sûr,matched_nonveg:poulet
+saucisse,False,sûr,matched_nonveg:saucisse
+filet de lieu sauce moules,False,sûr,matched_nonveg:filet
+veau marengo,False,sûr,matched_nonveg:veau
+gratin de pommes de terre fromagé,True,incertain_but_checked,preserved
+filet de lieu sauce beurre blanc,False,sûr,matched_nonveg:filet
+sauté de porc dijonnaise,False,sûr,matched_nonveg:porc
+poisson pané sauce tomate,False,sûr,matched_fish:poisson
+aiguillettes de poulet provenale,False,sûr,matched_nonveg:poulet
+gratin de boulghour,True,incertain_but_checked,preserved
+dos de cabillaud beurre citron,False,sûr,matched_fish:cabillaud
+lasagne de bœuf,False,sûr,matched_nonveg:bœuf
+sauté de dinde aux olives,False,sûr,matched_nonveg:dinde
+gratin de pommes de terre au fromage frais,True,sûr,matched_veg:fromage
+bœuf à la marocaine,False,sûr,matched_nonveg:bœuf
+filet de lieu sauce crème,False,sûr,matched_nonveg:filet
+colombo de poulet,False,sûr,matched_nonveg:poulet
+sauté de porc agenais,False,sûr,matched_nonveg:porc
+escalope de dinde aux herbes,False,sûr,matched_nonveg:escalope
+filet de saumon à l'oseille,False,sûr,matched_nonveg:filet
+poulet basquaise,False,sûr,matched_nonveg:poulet
+rôti de dinde label au jus,False,sûr,matched_nonveg:rôti
+bœuf à la mrocaine,False,sûr,matched_nonveg:bœuf
+filet de lieu à la grenobloise,False,sûr,matched_nonveg:filet
+aiguillettes de poulet sauce tomate,False,sûr,matched_nonveg:poulet
+filet de lieu sauce hollandaise,False,sûr,matched_nonveg:filet
+cassoulet,True,incertain_but_checked,preserved
+escalope de poulet,False,sûr,matched_nonveg:poulet
+rôti de bœuf au jus,False,sûr,matched_nonveg:bœuf
+filet de lieu sauce crevette,False,sûr,matched_nonveg:filet
+sauté de porc caramel,False,sûr,matched_nonveg:porc
+poulet à l'ananas,False,sûr,matched_nonveg:poulet
+bœuf flamand,False,sûr,matched_nonveg:bœuf
+filet de saumon sauce crème,False,sûr,matched_nonveg:filet
+poulet rôti label,False,sûr,matched_nonveg:poulet
+jambon braisé,False,sûr,matched_nonveg:jambon
+tartiflette,False,incertain,ambiguous_indicator:tartiflette
+escalope de poulet au paprika,False,sûr,matched_nonveg:poulet
+sauté de porc charcutier,False,sûr,matched_nonveg:porc
+dos de cabillaud sauce moules,False,sûr,matched_fish:cabillaud
+rôti de porc aux herbes,False,sûr,matched_nonveg:porc
+tajine d'agneau aux abricots,False,sûr,matched_nonveg:agneau
+filtet de lieu sauce crevette,False,sûr,matched_fish:crevette
+sauté de poulet aux pruneaux,False,sûr,matched_nonveg:poulet
+gratin de pommes de terre au fromage,True,sûr,matched_veg:fromage
+escalope de porc sauce charcutière,False,sûr,matched_nonveg:porc
+sauté de poulet basquaise,False,sûr,matched_nonveg:poulet
+timbale de poisson au maquereau,False,sûr,matched_fish:poisson
+sauté de porc à l'indienne,False,sûr,matched_nonveg:porc
+boulghour au légumes,True,sûr,matched_veg:légumes
+rôti de dinde farci et sa sauce,False,sûr,matched_nonveg:rôti
+filet de saumon beurre persillé,False,sûr,matched_nonveg:filet
+rôti de veau aux herbes,False,sûr,matched_nonveg:veau
+filet de lieu sauce oseille,False,sûr,matched_nonveg:filet
+blanquette de veau à l'ancienne,False,sûr,matched_nonveg:veau
+sauté de poulet agenais,False,sûr,matched_nonveg:poulet
+pizza aux 4 légumes,True,sûr,matched_veg:légumes
+paëlla de légumes,True,sûr,matched_veg:légumes
+bœuf chasseur,False,sûr,matched_nonveg:bœuf
+filet de saumon sauce oseille,False,sûr,matched_nonveg:filet
+escalope de dinde label à la crème,False,sûr,matched_nonveg:escalope
+émincé de dinde label aux champignons,False,sûr,matched_nonveg:dinde
+sauté de dinde label sauce louisianne,False,sûr,matched_nonveg:dinde
+tajine d'agneau aux pruneaux,False,sûr,matched_nonveg:agneau
+escalope de dinde label sauce paprika,False,sûr,matched_nonveg:escalope
+filet de saumon sauce béarnaise,False,sûr,matched_nonveg:filet
+lasagne de légumes,True,sûr,matched_veg:légumes
+dos de cabillaud beurre blanc,False,sûr,matched_fish:cabillaud
+blanquette de dinde,False,sûr,matched_nonveg:dinde
+sauté de porc à la moutarde,False,sûr,matched_nonveg:porc
+rôti de dinde label aux herbes,False,sûr,matched_nonveg:rôti
+escalope de porc,False,sûr,matched_nonveg:porc
+sot l'y laisse de dinde label,False,sûr,matched_nonveg:dinde
+galette / saucisse,False,sûr,matched_nonveg:saucisse
+filet de lieu beurre citron,False,sûr,matched_nonveg:filet
+escalope de poulet aux champignons,False,sûr,matched_nonveg:poulet
+curry d'agneau,False,sûr,matched_nonveg:agneau
+pizza aux légumes,True,sûr,matched_veg:légumes
+dos de cabillaud beurre persillé,False,sûr,matched_fish:cabillaud
+bœuf marocain,False,sûr,matched_nonveg:bœuf
+filet de saumon beurre blanc,False,sûr,matched_nonveg:filet
+rôti de dinde label sauce tomate,False,sûr,matched_nonveg:rôti
+escalope de porc charcutière,False,sûr,matched_nonveg:porc
+aiguillettes de poulet aux herbes,False,sûr,matched_nonveg:poulet
+escaloppe de dinde label dijonnaise,False,sûr,matched_nonveg:dinde
+sot-l'y-laisse de dinde label sauce champignons,False,sûr,matched_nonveg:dinde
+jambon braisé au jus,False,sûr,matched_nonveg:jambon
+tajine de bœuf aux pruneaux,False,sûr,matched_nonveg:bœuf
+sauté de porc sauce charcutière,False,sûr,matched_nonveg:porc
+poulet rôti label au jus,False,sûr,matched_nonveg:poulet
+,False,incertain,empty
+escalope de porc aux herbes,False,sûr,matched_nonveg:porc
+sauté d'agneau marengo,False,sûr,matched_nonveg:agneau
+sauté label antillais,False,incertain,fallback
+dos de cabillaud,False,sûr,matched_fish:cabillaud
+rôti de porc 1/2 sel/ cornichons,False,sûr,matched_nonveg:porc
+galette/ saucisse,False,sûr,matched_nonveg:saucisse
+filet de saumon,False,sûr,matched_nonveg:filet
+sauté de poulet sauce dijonnaise,False,sûr,matched_nonveg:poulet
+escalope de dinde label au jus,False,sûr,matched_nonveg:escalope
+aiguillettes de poulet provençale,False,sûr,matched_nonveg:poulet
+pizza au fromage,True,sûr,matched_veg:fromage
+rôti de dinde aux champignons,False,sûr,matched_nonveg:rôti
+bœuf sauce à la marocaine,False,sûr,matched_nonveg:bœuf
+sauté de porc,False,sûr,matched_nonveg:porc
+de poulet agenais,False,sûr,matched_nonveg:poulet
+tortis bolognaises,False,incertain,short_unknown
+saucisse de porc,False,sûr,matched_nonveg:porc
+de volaille,False,sûr,matched_nonveg:volaille
+de dinde au jus,False,sûr,matched_nonveg:dinde
+aiguillettes de poulet sauce tomates,False,sûr,matched_nonveg:poulet
+cassoulet (saussice de porc,False,sûr,matched_nonveg:porc
+de volaille),False,sûr,matched_nonveg:volaille
+escalope de poulet au jus,False,sûr,matched_nonveg:poulet
+de dinde au caramel,False,sûr,matched_nonveg:dinde
+rôti de dinde sauce madère,False,sûr,matched_nonveg:rôti
+coquillettes bolognaises,False,incertain,short_unknown
+filet de lieu sauce tomates,False,sûr,matched_nonveg:filet
+tartiflette de dinde,False,sûr,matched_nonveg:dinde
+de dinde,False,sûr,matched_nonveg:dinde
+rôti de dinde label aux châtaignes,False,sûr,matched_nonveg:rôti
+de dinde aux herbes,False,sûr,matched_nonveg:dinde
+dos de cabillaud sauce crevette,False,sûr,matched_fish:cabillaud
+sauté de veau aux champignons,False,sûr,matched_nonveg:veau
+saucisse de volaille,False,sûr,matched_nonveg:saucisse
+tartiflette (dés de porc,False,sûr,matched_nonveg:porc
+dés de dinde),False,sûr,matched_nonveg:dinde
+rôti de dinde au jus label,False,sûr,matched_nonveg:rôti
+poulet rôti au jus,False,sûr,matched_nonveg:poulet
+saucisse grillée de porc,False,sûr,matched_nonveg:porc
+timbale de légumes,True,sûr,matched_veg:légumes
+sauté de dinde à l'indienne,False,sûr,matched_nonveg:dinde
+boulghour de légumes,True,sûr,matched_veg:légumes
+rôti de dinde farci sauce champignons des bois,False,sûr,matched_nonveg:rôti
+jambon braisé aux champignons,False,sûr,matched_nonveg:jambon
+dos de cabillaud sauce crème,False,sûr,matched_fish:cabillaud
+sot-l'y-laisse de dinde sauce tomate,False,sûr,matched_nonveg:dinde
+galette saucisse de porc,False,sûr,matched_nonveg:porc
+timbale milanaise au jambon,False,sûr,matched_nonveg:jambon
+lasagnes de légumes,True,sûr,matched_veg:légumes
+de volaille sauce charcutière,False,sûr,matched_nonveg:volaille
+sauté de dinde,False,sûr,matched_nonveg:dinde
+curry,False,incertain_but_depend_on_whats_with_so_False_then_depend_on_other,preserved
+jambon braisé sauce madère,False,sûr,matched_nonveg:jambon
+rôti de dinde label,False,sûr,matched_nonveg:rôti
+sauté de dinde label rouge dijonnais,False,sûr,matched_nonveg:dinde
+tajine de veau aux pruneaux,False,sûr,matched_nonveg:veau
+"chili aux légumes (riz, ratatouille)",True,sûr,matched_veg:ratatouille
+dos de cabillaud sauce hollandaise,False,sûr,matched_fish:cabillaud
+timbale milanaise au jambon de porc,False,sûr,matched_nonveg:porc
+pot-au-feu et ses légumes,True,sûr,matched_veg:légumes
+saucisses de porc,False,sûr,matched_nonveg:porc
+tartiflette aux lardons,False,incertain,ambiguous_indicator:tartiflette
+dés de dinde,False,sûr,matched_nonveg:dinde
+tortis à la carbonara (lardons,False,incertain,fallback
+volaille dijonnaise,False,sûr,matched_nonveg:volaille
+filet de saumon à l’oseille,False,sûr,matched_nonveg:filet
+navarin d'agneau,False,sûr,matched_nonveg:agneau
+filet de lieu/ beurre persillé,False,sûr,matched_nonveg:filet
+rôti de dinde sauce aux champignons,False,sûr,matched_nonveg:rôti
+escaloppe de dinde/ sauce charcutière,False,sûr,matched_nonveg:dinde
+sauté de bœuf flamand,False,sûr,matched_nonveg:bœuf
+filet de lieu/ sauce tomate,False,sûr,matched_nonveg:filet
+escaloppe de poulet au paprika,False,sûr,matched_nonveg:poulet
+filet de saumon/ sauce ciboulette,False,sûr,matched_nonveg:filet
+"émincé de volaille, sauce louisianne",False,sûr,matched_nonveg:volaille
+filet de lieu/ sauce moules,False,sûr,matched_nonveg:filet
+chili aux légumes,True,sûr,matched_veg:légumes
+œufs durs/ sauce aurore,False,incertain,fallback
+dos de cabillaud/ sauce crème,False,sûr,matched_fish:cabillaud
+tartiflette dés de porc,False,sûr,matched_nonveg:porc
+sauté de poulet/ sauce aux champignons,False,sûr,matched_nonveg:poulet
+filet de lieu/ sauce crevette,False,sûr,matched_nonveg:filet
+parmentier de légumes,True,sûr,matched_veg:légumes
+poulet label au jus,False,sûr,matched_nonveg:poulet
+"escalope de dinde label, sauce tomate",False,sûr,matched_nonveg:escalope
+"filet de lieu, beurre citron",False,sûr,matched_nonveg:filet
+"filet de lieu, sauce beurre blanc",False,sûr,matched_nonveg:filet
+rôti de bœuf froid,False,sûr,matched_nonveg:bœuf
+riz safrané aux légumes,True,sûr,matched_veg:légumes
+rôti de dinde charcutière,False,sûr,matched_nonveg:rôti
+"œufs durs, sauce aurore",False,incertain,fallback
+"filet de lieu, sauce provençale",False,sûr,matched_nonveg:filet
+"sauté de bœuf, sauce marocaine",False,sûr,matched_nonveg:bœuf
+courgettes parmentieres,False,incertain,short_unknown
+escalope de dinde label aux herbes,False,sûr,matched_nonveg:escalope
+galette / tomate/ fromage,True,sûr,matched_veg:fromage
+paëlla de dinde,False,sûr,matched_nonveg:dinde
+coquillettes bolognaise,False,sûr,matched_nonveg:bolognaise
+semoule aux légumes de couscous,True,sûr,matched_veg:légumes
+filet de lieu aux petits légumes,False,sûr,matched_nonveg:filet
+escalope de dinde label sauce crème,False,sûr,matched_nonveg:escalope
+filet de lieu,False,sûr,matched_nonveg:filet
+sauté de poulet label marengo,False,sûr,matched_nonveg:poulet
+sauté de dinde dijonnais,False,sûr,matched_nonveg:dinde
+sauté de dinde label agenais,False,sûr,matched_nonveg:dinde
+sauté de volaille à la tomate,False,sûr,matched_nonveg:volaille
+"escalope de dinde label, sauce charcutière",False,sûr,matched_nonveg:escalope
+parmentier crécy,False,incertain,preserved
+"filet de lieu, sauce beurre citron",False,sûr,matched_nonveg:filet
+rôti de dinde aux herbes label,False,sûr,matched_nonveg:rôti
+tartiflette de porc,False,sûr,matched_nonveg:porc
+de dinde label,False,sûr,matched_nonveg:dinde
+"filet de lieu, sauce suchet",False,sûr,matched_nonveg:filet
+sauté de poulet label antillais,False,sûr,matched_nonveg:poulet
+rôti de dinde label agenais,False,sûr,matched_nonveg:rôti
+galette tomate/fromage,True,sûr,matched_veg:fromage
+"jambon braisé, sauce chasseur",False,sûr,matched_nonveg:jambon
+röti de dinde label,False,sûr,matched_nonveg:dinde
+"filet de lieu, sauce crème",False,sûr,matched_nonveg:filet
+"rôti de dinde, sauce charcutière",False,sûr,matched_nonveg:rôti
+sauté de dinde au jus,False,sûr,matched_nonveg:dinde
+"sauté de dinde label, sauce paprika",False,sûr,matched_nonveg:dinde
+"filet de lieu, sauce dugléré",False,sûr,matched_nonveg:filet
+sauté de dinde forestier,False,sûr,matched_nonveg:dinde
+"filet de lieu, sauce bonne femme",False,sûr,matched_nonveg:filet
+"œufs, sauce aurore",False,incertain,fallback
+émincé de poulet au curry,False,sûr,matched_nonveg:poulet
+gratin de pommes de terres ail et fines herbes,True,incertain_but_checked,preserved
+santé de dinde forestier,False,sûr,matched_nonveg:dinde
+"escalope de dinde label, sauce chasseur",False,sûr,matched_nonveg:escalope
+"filet de saumon, sauce oseille",False,sûr,matched_nonveg:filet
+sauté de chapon et sa sauce,False,incertain,fallback
+"galette, tomates, fromage",True,sûr,matched_veg:fromage
+"filet de lieu, sauce dieppoise",False,sûr,matched_nonveg:filet
+chili de légumes,True,sûr,matched_veg:légumes
+"rôti de veau, sauce châtaigne",False,sûr,matched_nonveg:veau
+"filet de lieu, sauce hollandaise",False,sûr,matched_nonveg:filet
+rôti de dinde label sauce charcutière,False,sûr,matched_nonveg:rôti
+escalope de dinde label sauce champignons,False,sûr,matched_nonveg:escalope
+de dinde label au caramel,False,sûr,matched_nonveg:dinde
+rôti de dinde label sauce dijonnaise,False,sûr,matched_nonveg:rôti
+parmentier de légumes d'hiver,True,sûr,matched_veg:légumes
+filet de poulet sauce louisiane,False,sûr,matched_nonveg:poulet
+sauté de porc sauce aux marrons,False,sûr,matched_nonveg:porc
+sauté de dinde label,False,sûr,matched_nonveg:dinde
+galette/ tomate/ fromage,True,sûr,matched_veg:fromage
+œuf sauce aurore,True,sûr,matched_veg:œuf
+escalope de dinde label sauce barbecue,False,sûr,matched_nonveg:escalope
+croziflette,False,incertain,short_unknown
+jambon braisé sauce champignons,False,sûr,matched_nonveg:jambon
+de dinde au paprika,False,sûr,matched_nonveg:dinde
+rôti de dinde label aux raisins,False,sûr,matched_nonveg:rôti
+sauté de poulet yassa,False,sûr,matched_nonveg:poulet
+rôti de dinde sauce diable,False,sûr,matched_nonveg:rôti
+aiguillettes poulet sauce louisiane,False,sûr,matched_nonveg:poulet
+poulet label,False,sûr,matched_nonveg:poulet
+tartiflettes (dés de porc,False,sûr,matched_nonveg:porc
+de dinde),False,sûr,matched_nonveg:dinde
+sauté de dinde label sauce chasseur,False,sûr,matched_nonveg:dinde
+de dinde label au jus,False,sûr,matched_nonveg:dinde
+filet de poulet sauce crème,False,sûr,matched_nonveg:poulet
+œuf dur/ sauce aurore,True,sûr,matched_veg:œuf
+sauté d'agneau irish stew,False,sûr,matched_nonveg:agneau
+rôti de dinde sauce champignons,False,sûr,matched_nonveg:rôti
+bolognaise,False,sûr,matched_nonveg:bolognaise
+filet de lieu dugléré,False,sûr,matched_nonveg:filet
+dinde au jus,False,sûr,matched_nonveg:dinde
+poulet rôti label rouge,False,sûr,matched_nonveg:poulet
+pot-au-feu,False,incertain,fallback
+dos de lieu sauce armoricaine,False,incertain,fallback
+brandade de poisson,False,sûr,matched_fish:poisson
+rougaille de saucisse,False,sûr,matched_nonveg:saucisse
+sauté de poulet sauce tomate,False,sûr,matched_nonveg:poulet
+rôti de dinde sauce chasseur,False,sûr,matched_nonveg:rôti
+parmentier de crécy,False,incertain,preserved
+saumon sauce au beurre blanc,False,sûr,matched_fish:saumon
+rôti de dinde sauce paprika,False,sûr,matched_nonveg:rôti
+filet de lieu sauce suchet,False,sûr,matched_nonveg:filet
+egg'burger/ jus de pomme,True,incertain_but_checked,preserved
+filet de lieu sauce provençale,False,sûr,matched_nonveg:filet
+poisson pané/ beurre citron,False,sûr,matched_fish:poisson
+sauté de poulet au curry,False,sûr,matched_nonveg:poulet
+repas de reserve,False,incertain,fallback
+rôti de porc 1/2 sel,False,sûr,matched_nonveg:porc
+émincé de poulet basquaise,False,sûr,matched_nonveg:poulet
+riz safranné aux légumes,True,sûr,matched_veg:légumes
+sauté de bœuf provençale,False,sûr,matched_nonveg:bœuf
+émincé de poulet au jus,False,sûr,matched_nonveg:poulet
+paëlla,False,incertain,short_unknown
+rôti de dinde agenais,False,sûr,matched_nonveg:rôti
+"gnocchi à la romaine, sauce tomate",True,incertain_but_checked,preserved
+parmentier de courgettes,False,incertain,fallback
+escalope milanaise,False,sûr,matched_nonveg:escalope
+gratin de pommes de terre et fromage frais,True,sûr,matched_veg:fromage
+"blanc de poulet, sauce louisiane",False,sûr,matched_nonveg:poulet
+de dinde froid,False,sûr,matched_nonveg:dinde
+"filet de lieu, sauce tomate",False,sûr,matched_nonveg:filet
+sauté de bœuf aux champignons,False,sûr,matched_nonveg:bœuf
+tajine d'agneau,False,sûr,matched_nonveg:agneau
+parmentier de légumes d'été,True,sûr,matched_veg:légumes
+"rôti de bœuf, sauce rose",False,sûr,matched_nonveg:bœuf
+"blanc de poulet, sauce barbecue",False,sûr,matched_nonveg:poulet
+bœuf à la bolognaise,False,sûr,matched_nonveg:bœuf
+filet de lieu sauce à l'estragon,False,sûr,matched_nonveg:filet
+escalope de volaille label à la provençale,False,sûr,matched_nonveg:escalope
+sauté de bœuf marocain,False,sûr,matched_nonveg:bœuf
+filet de lieu sauce à la crème,False,sûr,matched_nonveg:filet
+riz safrané,False,incertain,short_unknown
+filet de lieu sauce méditerranéenne,False,sûr,matched_nonveg:filet
+haricots blancs à la provençale,True,incertain_but_checked,preserved
+blanc de poulet sauce suprême,False,sûr,matched_nonveg:poulet
+sauté de dinde/ saucisse de volaille,False,sûr,matched_nonveg:saucisse
+filet de lieu au beurre blanc,False,sûr,matched_nonveg:filet
+gnocchis sauce tomate,True,incertain_but_checked,preserved
+aiguillettes de poulet sauce suprême,False,sûr,matched_nonveg:poulet
+rôti de dinde sauce forestière,False,sûr,matched_nonveg:rôti
+lasagne,False,incertain,ambiguous_indicator:lasagne
+rôti de dinde sauce curry,False,sûr,matched_nonveg:rôti
+filet de lieu sauce curry,False,sûr,matched_nonveg:filet
+kig ha farz,False,incertain,fallback
+filet de lieu à la crème,False,sûr,matched_nonveg:filet
+gratin de pomme de terre au fromage frais,True,sûr,matched_veg:fromage
+rôti de dinde label forestière,False,sûr,matched_nonveg:rôti
+omelette à la provençale,True,sûr,matched_veg:omelette
+blanc de poulet à la crème,False,sûr,matched_nonveg:poulet
+tajine de veau,False,sûr,matched_nonveg:veau
+éffiloché de canard confit et ses pommes,False,sûr,matched_nonveg:canard
+sauté de poulet sauce suprême,False,sûr,matched_nonveg:poulet
+lasagnes,False,incertain,ambiguous_indicator:lasagnes
+goulash de bœuf,False,sûr,matched_nonveg:bœuf
+filet de lieu sauce dugléré,False,sûr,matched_nonveg:filet
+escalope de dinde label au paprika,False,sûr,matched_nonveg:escalope
+rôti de dinde à l'indienne,False,sûr,matched_nonveg:rôti
+émincé de volaille à la crème,False,sûr,matched_nonveg:volaille
+rôti de veau,False,sûr,matched_nonveg:veau
+filet de lieu/ beurre ciboulette,False,sûr,matched_nonveg:filet
+sauté de dinde sauce au curry,False,sûr,matched_nonveg:dinde
+filet de lieu au beurre persillé,False,sûr,matched_nonveg:filet
+blanc de poulet sauce normande,False,sûr,matched_nonveg:poulet
+blanquette de volaille label,False,sûr,matched_nonveg:volaille
+filet de lieu sauce beurre citronée,False,sûr,matched_nonveg:filet
+bolognaise végétale,True,sûr_nope_tabuse,matched_nonveg:bolognaise
+rôit de veau,False,sûr,matched_nonveg:veau
+sauté de veau au curry,False,sûr,matched_nonveg:veau
+gnocchi à la romaine,True,incertain_but_checked,preserved
+filet de lieu à l'estragon,False,sûr,matched_nonveg:filet
+couscous,False,incertain,ambiguous_indicator:couscous
+sauté de bœuf marcocain,False,sûr,matched_nonveg:bœuf
+blanc de poulet sauce paprika,False,sûr,matched_nonveg:poulet
+filet de lieu/ beurre citron,False,sûr,matched_nonveg:filet
+tomates cerise - salade de pommes de terre au thon,False,sûr,matched_fish:thon
+salade de lentilles - dés de féta - tomates cerise,True,sûr,matched_veg:lentilles
+taboulé - œuf mimosa,True,sûr,matched_veg:œuf
+riz niçois - thon,False,sûr,matched_fish:thon
+salade de pâtes aux trois couleurs - œuf mimosa,True,sûr,matched_veg:œuf
+jambon de dinde,False,sûr,matched_nonveg:jambon
+rôti de dinde froid,False,sûr,matched_nonveg:rôti
+aiguillettes de poulet,False,sûr,matched_nonveg:poulet
+blanc de poulet,False,sûr,matched_nonveg:poulet
+filet de poulet,False,sûr,matched_nonveg:poulet
+œuf dur,True,sûr,matched_veg:œuf
+cordon bleu,False,incertain,short_unknown
+poulet,False,sûr,matched_nonveg:poulet
+roulé de saumon / mayonnaise,False,sûr,matched_fish:saumon
+"veggi mix (pois chiches, lentilles)",True,sûr,matched_veg:lentilles
+chili con carné,False,sûr,matched_nonveg:carné
+sandwich fallafel (pain pita),True,incertain_but_checked,preserved
+"galette, saucisse de porc",False,sûr,matched_nonveg:porc
+filet de saumon froid,False,sûr,matched_nonveg:filet
+gnocchi,True,sûr,matched_veg:gnocchi
+"escalope de dinde, sauce basilic",False,sûr,matched_nonveg:escalope
+pas de centre,False,incertain,fallback
+escalope de porc sauce forestière,False,sûr,matched_nonveg:porc
+rôti de dinde sauce barbecue,False,sûr,matched_nonveg:rôti
+dos de lieu à la provençale,False,incertain,fallback
+blanquette de volaille,False,sûr,matched_nonveg:volaille
+saumon à l'oseille,False,sûr,matched_fish:saumon
+poulet tandoori,False,sûr,matched_nonveg:poulet
+"bolongnaise végétale (quinoa, carotte, oignon)",True,incertain_but_checked,fallback
+pot au feu,False,incertain,fallback
+filet de lieu beurre / citron,False,sûr,matched_nonveg:filet
+émincé de volaille aux champignons,False,sûr,matched_nonveg:volaille
+filet de lieu sauce normande,False,sûr,matched_nonveg:filet
+gratin de pâtes brocoli,True,incertain_but_checked,preserved
+boulette de lentilles*,True,sûr,matched_veg:lentilles
+omelette*,True,sûr,matched_veg:omelette
+aiguillette de blé*,False,incertain,fallback
+galette de soja tomate*,True,sûr,matched_veg:galette
+blanc de poulet sauce suprème,False,sûr,matched_nonveg:poulet
+bolognaiseou galette de lentilles corail boulgour*,True,sûr,matched_veg:lentilles
+filet de lieu beurre estragon,False,sûr,matched_nonveg:filet
+sauté de veau milanaise,False,sûr,matched_nonveg:veau
+galette de soja à la tomate *,True,sûr,matched_veg:galette
+tortis carbonara de porc,False,sûr,matched_nonveg:porc
+carbonara végétale *,False,incertain,fallback
+rôti de dinde sauce piquante,False,sûr,matched_nonveg:rôti
+aiguillettes de blé et carottes *,False,incertain,fallback
+galette de soja au citron *,True,sûr,matched_veg:galette
+émincé de volaille sauce colombo,False,sûr,matched_nonveg:volaille
+omelette *,True,sûr,matched_veg:omelette
+galette de tomate et fromage,True,sûr,matched_veg:fromage
+lasagne de légumes*,True,sûr,matched_veg:légumes
+jambon braisé à la châtaigne,False,sûr,matched_nonveg:jambon
+galette de soja au citron*,True,sûr,matched_veg:galette
+boulettes de lentilles*,True,sûr,matched_veg:lentilles
+filet de lieu beurre ciboulette,False,sûr,matched_nonveg:filet
+bolognaise végétal,True,sûr_nope_tabuse,matched_nonveg:bolognaise
+parmentier de potiron,False,incertain,fallback
+galette de soja citron*,True,sûr,matched_veg:galette
+sauté de porc dijonais,False,sûr,matched_nonveg:porc
+escalope de dinde sauce crème,False,sûr,matched_nonveg:escalope
+boulette de lentilles corail*,True,sûr,matched_veg:lentilles
+émincé de dinde,False,sûr,matched_nonveg:dinde
+indian veggie *,True,sûr,matched_veg:veggie
+jambon braisé sauce forestière,False,sûr,matched_nonveg:jambon
+galette de lentilles corail boulgour*,True,sûr,matched_veg:lentilles
+galette tomate fromage,True,sûr,matched_veg:fromage
+aiguillettes de blé et carotte*,False,incertain,fallback
+escalope de porc sauce moutarde,False,sûr,matched_nonveg:porc
+galette de lentilles corail*,True,sûr,matched_veg:lentilles
+ballotin de poulet aux marrons,False,sûr,matched_nonveg:poulet
+nuggets de blé*,False,incertain,fallback
+galette de fromage et tomate,True,sûr,matched_veg:fromage
+rôti de porc au marrons,False,sûr,matched_nonveg:porc
+pâtes carbonara de porc,False,sûr,matched_nonveg:porc
+filet de lieu à l'oseille,False,sûr,matched_nonveg:filet
+jambon braisé sauce au poivre,False,sûr,matched_nonveg:jambon
+aiguillette de blé carottes*,False,incertain,fallback
+escalope de dinde label,False,sûr,matched_nonveg:escalope
+mélange légumineuses mexicain*,False,incertain,fallback
+gratin de pâtes au brocoli,True,incertain_but_checked,preserved
+escalope de porc forestière,False,sûr,matched_nonveg:porc
+aiguillette de blé carotte*,False,incertain,fallback
+porc au caramel,False,sûr,matched_nonveg:porc
+aiguillette de blé carotte *,False,incertain,fallback
+émincé de volaille sauce crème,False,sûr,matched_nonveg:volaille
+blanc de poulet à la milanaise,False,sûr,matched_nonveg:poulet
+aiguillette de blé carotte,True,incertain_but_checked,preserved
+parmentier de crècy,False,incertain,preserved
+saumon,False,sûr,matched_fish:saumon
+galette de lentilles*,True,sûr,matched_veg:lentilles
+galette de soja à la tomate*,True,sûr,matched_veg:galette
+aiguillette de blé *,False,incertain,fallback
+escalope de dinde label au curry,False,sûr,matched_nonveg:escalope
+sauté de veau sauce champignons,False,sûr,matched_nonveg:veau
+galette de lentilles *,True,sûr,matched_veg:lentilles
+croziflette de porc,False,sûr,matched_nonveg:porc
+croziflette sans viande *,False,sûr,matched_nonveg:viande
+mélange légumineuse mexicain *,False,incertain,fallback
+lasagnes de légumes *,True,sûr,matched_veg:légumes
+mix veggie mexicain *,True,sûr,matched_veg:veggie
+couscous à la dinde,False,sûr,matched_nonveg:dinde
+couscous de légumes *,True,sûr,matched_veg:légumes
+aiguillette de blé aux carottes*,False,incertain,fallback
+filet de lieu sauce citron,False,sûr,matched_nonveg:filet
+jambon braisé sauce chasseur,False,sûr,matched_nonveg:jambon
+veggie mix *,True,sûr,matched_veg:veggie
+dos de lieu,False,incertain,fallback
+veggie mix mexicain*,True,sûr,matched_veg:veggie
+émincé de poulet sauce colombo,False,sûr,matched_nonveg:poulet
+filet de saumon sauce estragon,False,sûr,matched_nonveg:filet
+aiguillettes de blé aux carottes*,False,incertain,fallback
+filet de lieu à la sauce tomate,False,sûr,matched_nonveg:filet
+blanc de volaille à la crème,False,sûr,matched_nonveg:volaille
+choucroute garnie,False,incertain,short_unknown
+choucroute végétale,True,sûr,short_unknown
+gnocchi à la romaine et sauce tomate,True,incertain_but_checked,preserved
+rôti de veau sauce forestière,False,sûr,matched_nonveg:veau
+galette à la tomate et au fromage,True,sûr,matched_veg:fromage
+timbale végétale*,False,incertain,short_unknown
+"dos de lieu, sauce crème",False,incertain,fallback
+gratin de pâtes aux brocolis,True,incertain_but_checked,ambiguous_indicator:pâtes
+galettes de soja à la tomate*,False,incertain,fallback
+rougail de saucisse de porc,False,sûr,matched_nonveg:porc
+rougail végétale*,False,incertain,short_unknown
+sauté de poulet marengo,False,sûr,matched_nonveg:poulet
+galettes de lentilles corail*,True,sûr,matched_veg:lentilles
+mix veggie mexicain*,True,sûr,matched_veg:veggie
+"filet de lieu, sauce beurre et ciboulette",False,sûr,matched_nonveg:filet
+"poisson pané, citron",False,sûr,matched_fish:poisson
+végétale*,False,incertain,short_unknown
+mix veggie indian*,True,sûr,matched_veg:veggie
+sauté de dinde au paprika,False,sûr,matched_nonveg:dinde
+galette de boulgour*,True,sûr,matched_veg:galette
+escalope de dinde label sauce basquaise,False,sûr,matched_nonveg:escalope
+nugget's,False,incertain,short_unknown
+nugget's végétale*,False,incertain,fallback
+blanc de poulet label sauce barbecue,False,sûr,matched_nonveg:poulet
+aiguillettes de blé carotte*,False,incertain,fallback
+repas de réserve,False,incertain,fallback
+salade de pâtes*,True,sûr,matched_veg:salade
+galette gruyère et tomate cerise*,True,sûr,matched_veg:galette
+"salade de lentilles, salade de pomme de terre, concombre et dés de feta",True,sûr,matched_veg:lentilles
+parmentier de courgette,True,sûr,matched_veg:courgette
+gratin de pâtes au thon,False,sûr,matched_fish:thon
+sauté de bœuf au paprika,False,sûr,matched_nonveg:bœuf
+aiguillettes de blé carottes*,False,incertain,fallback
+carbonara de porc,False,sûr,matched_nonveg:porc
+carbonara végétale*,False,incertain,short_unknown
+escalope de porc dijonnaise,False,sûr,matched_nonveg:porc
+mélange mexicain*,False,incertain,short_unknown
+mélange indien végétal*,True,sûr,matched_veg:végétal
+filet de lieu sauce beurre citron,False,sûr,matched_nonveg:filet
+fish and chips,False,incertain,fallback
+mélange indien mix*,False,incertain,fallback
+filet de lieu au curry,False,sûr,matched_nonveg:filet
+tortillas*,False,incertain,short_unknown
+nugget's végé et purée*,True,sûr,matched_veg:végé
+aiguillettes de blé*,False,incertain,fallback
+coquillettes de poireaux à la béchamel,False,incertain,fallback
+mélange mix mexicain*,False,incertain,fallback
+mix veggie indien*,True,sûr,matched_veg:veggie
+timbale milanaise de porc,False,sûr,matched_nonveg:porc
+rôti de boeuf,False,sûr,matched_nonveg:boeuf
+aiguilette de blé aux carottes*,False,incertain,fallback
+végétarienne*,False,incertain,short_unknown
+galette de tomate fromage,True,sûr,matched_veg:fromage
+mélange couscous*,False,incertain,ambiguous_indicator:couscous
+galettes de lentilles*,True,sûr,matched_veg:lentilles
+"gnocchis à la romaine, sauce provençale",True,incertain_but_checked,preserved
+lasagnes de légumes*,True,sûr,matched_veg:légumes
+escalope de porc dijonaise,False,sûr,matched_nonveg:porc
+lasagne végétale *,False,incertain,ambiguous_indicator:lasagne
+mélange mix à la provençale*,False,incertain,fallback
+paëlla végétarienne,True,sûr,short_unknown
+escalope de porc sauce dijonnaise,False,sûr,matched_nonveg:porc
+ballotin de volaille à la châtaigne,False,sûr,matched_nonveg:volaille
+nuggets de blé,True,incertain_but_checked,preserved
+filet de lieu à la ciboulette,False,sûr,matched_nonveg:filet
+volaille,False,sûr,matched_nonveg:volaille
+tartiflette végétarienne*,False,incertain,ambiguous_indicator:tartiflette
+mélange mix indien*,False,incertain,fallback
+boulette de lentilles sauce provençale,True,sûr,matched_veg:lentilles
+chipolatas,False,incertain,short_unknown
+escalope de porc à la crème,False,sûr,matched_nonveg:porc
+galette de soja*,True,sûr,matched_veg:galette
+coquillettes poireaux béchamel,False,incertain,fallback
+nems aux légumes,True,sûr,matched_veg:légumes
+escalope de porc aux champignons,False,sûr,matched_nonveg:porc
+filet de saumon au beurre blanc,False,sûr,matched_nonveg:filet
+sauté de poulet tandorri,False,sûr,matched_nonveg:poulet
+mélange provençale*,False,incertain,short_unknown
+falafels,True,incertain_but_checked,short_unknown
+croziflette végétarienne*,False,incertain,short_unknown
+émincé de poulet sauce forestière,False,sûr,matched_nonveg:poulet
+filet de saumon beurre citron,False,sûr,matched_nonveg:filet
+lasagne végétale*,False,incertain,ambiguous_indicator:lasagne
+sauté de porc sauce chataîgne,False,sûr,matched_nonveg:porc
+croustillant fromager*,False,incertain,short_unknown
+parmentier épinards,False,incertain,short_unknown
+pané de blé tomate mozzarella*,True,sûr,matched_veg:mozzarella
+sauté de poulet,False,sûr,matched_nonveg:poulet
+galette de millet*,True,sûr,matched_veg:galette
+mélange indien*,False,incertain,short_unknown
+galette de tomate*,True,sûr,matched_veg:galette
+galette yumi texas*,True,sûr,matched_veg:galette
+coquillettes au thon,False,sûr,matched_fish:thon
+fallafels sauce provençale,True,incertain_but_checked,preserved
+sauté de bœuf goulash,False,sûr,matched_nonveg:bœuf
+timballe végé*,True,sûr,matched_veg:végé
+œuf florentine,True,sûr,matched_veg:œuf
+filet de lieu à l'armoricaine,False,sûr,matched_nonveg:filet
+galette fromage et tomate,True,sûr,matched_veg:fromage
+"hamburger (galette végé, guacamole, fromage, salade)",True,sûr,matched_veg:végé
+sauté de poulet tandoori,False,sûr,matched_nonveg:poulet
+escalope de porc à la normande,False,sûr,matched_nonveg:porc
+moussaka de légumes,True,sûr,matched_veg:légumes
+pané au fromage*,True,sûr,matched_veg:fromage
+poisson pané au citron,False,sûr,matched_fish:poisson
+pont de l'ascension,False,incertain,fallback
+sauté de poulet barbecue,False,sûr,matched_nonveg:poulet
+escalope de porc colombo,False,sûr,matched_nonveg:porc
+sauté de bœuf sauce basquaise,False,sûr,matched_nonveg:bœuf
+rôti de porc à la moutarde,False,sûr,matched_nonveg:porc
+dos de lieu beurre citron,False,incertain,fallback
+galette texas*,True,sûr,matched_veg:galette
+dahl de lentilles,True,sûr,matched_veg:lentilles
+filet de lieu noir beurre estragon,False,sûr,matched_nonveg:filet
+galette de citron*,True,sûr,matched_veg:galette
+fallafels,True,incertain_but_checked,preserved
+émincé de poulet à la crème,False,sûr,matched_nonveg:poulet
+menu de fête,False,incertain,fallback
+poulet sauce barbecue,False,sûr,matched_nonveg:poulet
+galette de tomate,True,incertain_but_checked,preserved
+jambon braisé aux herbes,False,sûr,matched_nonveg:jambon
+sauté de bœuf tandoori,False,sûr,matched_nonveg:bœuf
+galette texas yumi*,True,sûr,matched_veg:galette
+lieu noir à la tomate,False,incertain,fallback
+paëlla végétale*,False,incertain,short_unknown
+sauté de dinde à la crème,False,sûr,matched_nonveg:dinde
+poisson pané à la tomate,False,sûr,matched_fish:poisson
+lieu noir beurre ciboulette,False,incertain,fallback
+jambon braisé sauce barbecue,False,sûr,matched_nonveg:jambon
+pois chiches*,True,sûr,matched_veg:pois chiches
+galette au citron*,True,sûr,matched_veg:galette
+"salade de pâtes, tomate cerise, bâtonnet de concombre sauce fromage blanc, viande froide",False,sûr,matched_nonveg:viande
+boulgour de légumes,True,sûr,matched_veg:légumes
+sauté de bœuf à la provençale,False,sûr,matched_nonveg:bœuf
+filet de lieu noir beurre ciboulette,False,sûr,matched_nonveg:filet
+émincé de dinde à la crème,False,sûr,matched_nonveg:dinde
+timbale végé*,True,sûr,matched_veg:végé
+timbale au thon,False,sûr,matched_fish:thon
+émincé de poule au pot sauce crème,False,incertain,fallback
+nugget's végé*,True,sûr,matched_veg:végé
+rôti de dinde à la moutarde,False,sûr,matched_nonveg:rôti
+palet fromager*,False,incertain,short_unknown
+lieu noir sauce curry,False,incertain,ambiguous_indicator:curry
+ravioles à la tomate gratinées,True,incertain_but_checked,fallback
+lieu noir sauce poivron,False,incertain,fallback
+dahl de lentilles corail,True,sûr,matched_veg:lentilles
+galette tomate mozza*,True,sûr,matched_veg:mozza
+boulette de patate douce,True,incertain_but_checked,preserved
+lieu noir,False,incertain,short_unknown
+rôti de dinde à la crème,False,sûr,matched_nonveg:rôti
+saumon à l'estragon,False,sûr,matched_fish:saumon
+escalope milanaise sauce tomate,False,sûr,matched_nonveg:escalope
+tartiflette végé*,True,sûr,matched_veg:végé
+eiglefin beurre persillé,False,incertain,fallback
+boulette de pois chiches*,True,sûr,matched_veg:pois chiches
+jambon braisé à la moutarde,False,sûr,matched_nonveg:jambon
+palet tomate mozza*,True,sûr,matched_veg:mozza
+dos de lieu sauce hollandaise,False,incertain,fallback
+lasagne végé*,True,sûr,matched_veg:végé
+boulettes de lentille*,True,sûr,matched_veg:lentille
+lieu noir beurre citron,False,incertain,fallback
+carbonade flamande,False,incertain,short_unknown
+nugget's croc fromage*,True,sûr,matched_veg:fromage
+galette soja citron*,True,sûr,matched_veg:galette
+filet de lieu noir sauce à l'oseille,False,sûr,matched_nonveg:filet
+aiguillette de carottes*,False,incertain,fallback
+pâtes au potiron et mozzarella,True,sûr,matched_veg:mozzarella
+escalope de dinde à la crème,False,sûr,matched_nonveg:escalope
+sauté de bœuf marengo,False,sûr,matched_nonveg:bœuf
+lieu noir sauce dieppoise,False,incertain,fallback
+"parmentier purée de potiron, protéine de pois",False,incertain,fallback
+bolognaise végé,True,sûr,matched_nonveg:bolognaise
+poisson beurre blanc,False,sûr,matched_fish:poisson
+repas de noël,False,incertain,fallback
+lieu noir sauce paprika,False,incertain,fallback
+gnocchi à la romaine sauce tomate,True,incertain_but_checked,preserved
+pané fromager*,False,incertain,short_unknown
+émincé de dinde tandorii,False,sûr,matched_nonveg:dinde
+églefin sauce beurre blanc,False,incertain,fallback
+galettes de millet,True,incertain_but_checked,preserved
+végé*,True,sûr,matched_veg:végé
+lieu noir sauce armoricaine,False,incertain,fallback
+"escalope de dinde, sauce forestière",False,sûr,matched_nonveg:escalope
+parmentier au potiron,False,incertain,fallback
+filet de lieu noir à la crème,False,sûr,matched_nonveg:filet
+tortillas *,False,incertain,short_unknown
+nems végé,True,sûr,matched_veg:végé
+cassoulet végé*,True,sûr,matched_veg:végé
+sauté de veau sauce aux marrons,False,sûr,matched_nonveg:veau
+curry de légumes,True,sûr,matched_veg:légumes
+pané fromagé*,False,incertain,short_unknown
+émincé de poulet,False,sûr,matched_nonveg:poulet
+églefin,False,incertain,short_unknown
+gratin de pâte mozza potiron,True,sûr,matched_veg:mozza
+saumon au beurre blanc,False,sûr,matched_fish:saumon
+lieu sauce armoricaine,False,incertain,fallback
+sauté de bœuf,False,sûr,matched_nonveg:bœuf
+galette de quinoa à la provençale*,True,sûr,matched_veg:galette
+lieu noir sauce hollandaise,False,incertain,fallback
+pâtes potiron mozza,True,sûr,matched_veg:mozza
+sauté de veau sauce tajine,False,sûr,matched_nonveg:veau
+lieu noir beurre persillé,False,incertain,fallback
+sauté de porc sauce tomate,False,sûr,matched_nonveg:porc
+paëlla végé,True,sûr,matched_veg:végé
+dos de lieu à la crème,False,incertain,fallback
+sauté de bœuf bourguignon,False,sûr,matched_nonveg:bœuf
+rougail saucisse de porc,False,sûr,matched_nonveg:porc
+escalope de porc sauce charcutier,False,sûr,matched_nonveg:porc
+nugge't végé*,True,sûr,matched_veg:végé
+lieu noir sauce grenobloise,False,incertain,fallback
+croq' fromage*,True,sûr,matched_veg:fromage
+lieu sauce oseille,False,incertain,fallback
+sauté de poulet sauce chasseur,False,sûr,matched_nonveg:poulet
+galette de haricots rouges*,True,sûr,matched_veg:galette
+cassoulet de porc,False,sûr,matched_nonveg:porc
+dos de lieu au curry,False,incertain,ambiguous_indicator:curry
+mélange méxicain*,False,incertain,short_unknown
+escalope de dinde colombo,False,sûr,matched_nonveg:escalope
+croq'fromage*,True,sûr,matched_veg:fromage
+pané de blé tomate mozza*,True,sûr,matched_veg:mozza
+timbale de thon,False,sûr,matched_fish:thon
+rôti de veau sauce provençale,False,sûr,matched_nonveg:veau
+croustillant fromager,False,incertain,short_unknown
+galette millet*,True,sûr,matched_veg:galette
+eglefin sauce armoricaine,False,incertain,fallback
+dos de lieu beurre persillé,False,incertain,fallback
+"sauté de dinde, sauce barbecue",False,sûr,matched_nonveg:dinde
+sauté de boeuf,False,sûr,matched_nonveg:boeuf
+chili volaille,False,sûr,matched_nonveg:volaille
+veggie mexicain*,True,sûr,matched_veg:veggie
+pont,False,incertain,short_unknown
+blanquette de poulet,False,sûr,matched_nonveg:poulet
+galette de tomate mozza*,True,sûr,matched_veg:mozza
+saumon beurre ciboulette,False,sûr,matched_fish:saumon
+œufs durs au curry,False,incertain,ambiguous_indicator:curry
+galette de lentilles vertes*,True,sûr,matched_veg:lentilles
+boulette de lentilles vertes*,True,sûr,matched_veg:lentilles
+nuget's végé*,True,sûr,matched_veg:végé
+sauté de veau sauce lyonnaise,False,sûr,matched_nonveg:veau
+lieu noir  beurre sauce oseille,False,incertain,fallback
+"carottes batonnet, houmous, salade de lentilles, concombre féta, riz niçois",True,sûr,matched_veg:lentilles
+galette fromage tomate,True,sûr,matched_veg:fromage
+sauté de boeuf marocain,False,sûr,matched_nonveg:boeuf
+galette de haricots blanc*,True,sûr,matched_veg:galette
+"œufs durs sauce cocktail, taboulé",False,incertain,fallback
+falafels sauce boulgour,True,incertain_but_checked,fallback
+saumon sauce dieppoise,False,sûr,matched_fish:saumon
+paëlla végé*,True,sûr,matched_veg:végé
+lieu noir mayonnaise,False,incertain,fallback
+riz au thon,False,sûr,matched_fish:thon
+tortillas,True,incertain_but_checked,preserved
+lieu,False,incertain,short_unknown
+"club sandwich' (pain de mie complet, œuf dur, houmous de pois chiches, tomates, emmental, salade verte)",True,sûr,matched_veg:pois chiches
+"saumon, sauce à l'oseille",False,sûr,matched_fish:saumon
+lieu noir à la crème,False,incertain,fallback
+"œuf dur, sauce cocktail",True,sûr,matched_veg:œuf
+croq' fromage sauce tomate,True,sûr,matched_veg:fromage
+haricots blancs provençale,True,incertain_but_checked,fallback
+mix indien*,False,incertain,short_unknown
+"omelette, sauce tomate",True,sûr,matched_veg:omelette
+sauté de bœuf agenais,False,sûr,matched_nonveg:bœuf
+"lieu noir, sauce diéppoise",False,incertain,fallback
+pané tomate mozza*,True,sûr,matched_veg:mozza
+sauté de poulet forestier,False,sûr,matched_nonveg:poulet
+égréné de légumes provençale,True,sûr,matched_veg:légumes
+escalope de porc au curry,False,sûr,matched_nonveg:porc
+saumon beurre citron,False,sûr,matched_fish:saumon
+pané de tomate*,False,incertain,fallback
+galette fromage champignons béchamel,True,sûr,matched_veg:fromage
+eglefin,False,incertain,short_unknown
+saumon sauce oseille,False,sûr,matched_fish:saumon
+tarte fromage,True,sûr,matched_veg:fromage
+sauté de poulet à la crème,False,sûr,matched_nonveg:poulet
+lieu noir au parprika,False,incertain,fallback
+boulette de haricots rouges*,False,incertain,fallback
+tortillas sauce boulgour,True,incertain_but_checked,preserved
+sauté de poulet sauce tajine,False,sûr,matched_nonveg:poulet
+tortis mozza patate douce,True,sûr,matched_veg:mozza
+pané fromage*,True,sûr,matched_veg:fromage
+saumon beurre persillé,False,sûr,matched_fish:saumon
+tarte au fromage,True,sûr,matched_veg:fromage
+lieu sauce estragon,False,incertain,fallback
+omelette aux champignons,True,sûr,matched_veg:omelette
+lieu beurre persillé,False,incertain,fallback
+émincé de volaille sauce forestière,False,sûr,matched_nonveg:volaille
+pané tomates mozza*,True,sûr,matched_veg:mozza
+tortillas pomme de terre,True,incertain_but_checked,preserved
+sauté de bœuf sauce goulash,False,sûr,matched_nonveg:bœuf
+égréné de pois provençale,True,incertain_but_checked,fallback
+arancini,False,incertain,short_unknown
+boulette de soja tomate*,False,incertain,fallback
+samoussa,False,incertain,short_unknown
+croc' fromage*,True,sûr,matched_veg:fromage
+lieu noir sauce oseille,False,incertain,fallback
+sauté de poulet sauce crème coco,False,sûr,matched_nonveg:poulet
+lieu noir beurre estragon,False,incertain,fallback
+eglefin beurre blanc,False,incertain,fallback
+galette fromage champignons,True,sûr,matched_veg:fromage
+blanquette de veau à la crème,False,sûr,matched_nonveg:veau
+boulette soja tomate*,True,sûr,matched_veg:boulette soja
+saumon sauce hollandaise,False,sûr,matched_fish:saumon
+couscous végé*,True,sûr,matched_veg:végé
+parmentier purée verte,False,incertain,fallback
+saucisse végé*,False,sûr,matched_nonveg:saucisse
+lieu noir au curry,False,incertain,ambiguous_indicator:curry
+boulette de tomate*,False,incertain,fallback
+"burger végé (galette végé, guacamole, fromage, salade verte)",True,sûr,matched_veg:végé
+boulette de pois chiche au cumin*,True,sûr,matched_veg:pois chiche
+eglefin beurre à l'oseille,False,incertain,fallback
+lasagne végé,True,sûr,matched_veg:végé
+pané tomate mozza,True,sûr,matched_veg:mozza
+boulette de tomate soja*,False,incertain,fallback
+lieu noir beurre blanc,False,incertain,fallback
+"fajitas (égréné végétal de pois, poivron crème, fromage)",True,sûr,matched_veg:végétal
+mélange de légumineuses*,False,incertain,fallback
+saucisse végé,True,sûr,matched_nonveg:saucisse
+galette de haricots blancs*,True,sûr,matched_veg:galette
+œuf dur sauce cocktail et taboulé,True,sûr,matched_veg:œuf
+"salade de lentilles féta, tartinade de tomate, riz niçois",True,sûr,matched_veg:lentilles
+sauté de porc paprika,False,sûr,matched_nonveg:porc
+galette de haricots rouges *,True,sûr,matched_veg:galette
+omelette sauce tomate,True,sûr,matched_veg:omelette
+lieu beurre ciboulette,False,incertain,fallback
+salade de pâtes tomates et billes de mozza,True,sûr,matched_veg:mozza
+pavé tomate mozza*,True,sûr,matched_veg:mozza
+lieu beurre aux fines herbes,False,incertain,fallback
+repas de fin d'année,False,incertain,fallback
+"salade fromagère, riz au thon, tomate cerise",False,sûr,matched_fish:thon
+égréné protéine de pois sauce provençale,True,incertain_but_checked,fallback
+boulette de soja tomate,True,incertain_but_checked,preserved
+saumon froid,False,sûr,matched_fish:saumon
+lieu noir froid mayonnaise,False,incertain,fallback
+boulette de soja champignons*,True,sûr,matched_veg:champignons
+"salade bar' (salade de lentilles,féta, houmous, concombre, riz au thon)",False,sûr,matched_fish:thon
+croq'fromage,True,sûr,matched_veg:fromage
+galette de haricots rouge*,True,sûr,matched_veg:galette
+lieu noir sauce estragon,False,incertain,fallback
+poisson sauce provençale,False,sûr,matched_fish:poisson
+œuf dur et taboulé,True,sûr,matched_veg:œuf
+sauté de boeuf bourguignon,False,sûr,matched_nonveg:boeuf
+boulettes de pois chiches*,True,sûr,matched_veg:pois chiches
+lieu beurre citron,False,incertain,fallback
+mélange légumineuses*,False,incertain,short_unknown
+œufs durs sauce curry,False,incertain,ambiguous_indicator:curry
+lieu noir sauce crème,False,incertain,fallback
+œuf poché,True,sûr,matched_veg:œuf
+gratin de pâtes brocolis,True,incertain_but_checked,ambiguous_indicator:pâtes
+eglefin sauce suchet,False,incertain,fallback
+croq' fromage,True,sûr,matched_veg:fromage
+œufs mollets,False,incertain,short_unknown
+dos de lieu noir sauce hollandaise,False,incertain,fallback
+"galette végé, (œufs brouillés, tomates séchées, fromage)",True,sûr,matched_veg:végé
+lieu noir sauce tomate,False,incertain,fallback
+saumon beurre estragon,False,sûr,matched_fish:saumon
+parmentier,False,incertain,short_unknown
+lieu noir suchet,False,incertain,fallback
+bourguignon,False,incertain,short_unknown
+lieu noir à l'armoricaine,False,incertain,fallback
+menu de noël,False,incertain,fallback
+eglefin beurre citron,False,incertain,fallback
+saumon beurre blanc,False,sûr,matched_fish:saumon
+lasagnes végé*,True,sûr,matched_veg:végé
+arancini au fromage,True,sûr,matched_veg:fromage
+lieu sauce paprika,False,incertain,fallback
+dalh de lentilles corail,True,sûr,matched_veg:lentilles
+boulette de lentilles verte*,True,sûr,matched_veg:lentilles
+samoussa végé,True,sûr,matched_veg:végé
+pané de tomate mozza*,True,sûr,matched_veg:mozza
+mélange végé*,True,sûr,matched_veg:végé
+lieu noir beurre oseille,False,incertain,fallback
+"tacos (émincé végétal, légumes, sauce crème champignons)",True,sûr,matched_veg:végétal
+œufs mollet,False,incertain,short_unknown
+galette de haricot rouge*,True,sûr,matched_veg:galette
+galette de lentilles corail *,True,sûr,matched_veg:lentilles
+"fajitas (poivron, crème, émincé végétal)",True,sûr,matched_veg:végétal
+"bolognaise végétal, lentilles",True,sûr,matched_nonveg:bolognaise
+"saumon, sauce estragon",False,sûr,matched_fish:saumon
+gratin de brocolis,True,incertain_but_checked,preserved
+mélange légumineuse*,False,incertain,short_unknown
+égréné provençale,True,incertain_but_checked,short_unknown
+œufs durs,False,incertain,short_unknown
+pané mozza tomate*,True,sûr,matched_veg:mozza
+arrancini fromage,True,sûr,matched_veg:fromage
+escaloppe de dinde,False,sûr,matched_nonveg:dinde
+galette quinoa provençale*,True,sûr,matched_veg:galette
+carbonara de volaille,False,sûr,matched_nonveg:volaille
+carbonara végé*,True,sûr,matched_veg:végé
+boulgour aux petits légumes,True,sûr,matched_veg:légumes
+croustillant fromager *,False,incertain,fallback
+boulette de haricot blanc*,False,incertain,fallback
+"dos de lieu, sauce hollandaise",False,incertain,fallback
+poisson beurre ciboulette,False,sûr,matched_fish:poisson
+sauté de porc provençale,False,sûr,matched_nonveg:porc
+"aiguillette égréné haric&co, poivron, sauce crème",False,incertain,fallback
+œuf dur au curry,True,sûr,matched_veg:œuf
+omelette sauce boulgour,True,sûr,matched_veg:omelette
+parmentier de pomme de terre,False,incertain,fallback
+paëlle végé,True,sûr,matched_veg:végé
+escalope de volaille,False,sûr,matched_nonveg:escalope
+pané tomate mozza *,True,sûr,matched_veg:mozza
+égréné protéine de pois,True,incertain_but_checked,preserved
+"gnocchis à la romaine, sauce tomate",True,incertain_but_checked,preserved
+boulette de soja champignon*,True,sûr,matched_veg:champignon
+"salade de pâtes, tomates, billes de mozza",True,sûr,matched_veg:mozza
+mélange de légumineuse*,False,incertain,fallback
+"piémontaise, tomate cerise",False,incertain,fallback
+"œuf dur froid, sauce cocktail et taboulé",True,sûr,matched_veg:œuf
+timbale de porc,False,sûr,matched_nonveg:porc
+"club sandwich (houmous, fromage œuf dur, salade verte)",True,sûr,matched_veg:fromage
+"boulgour de légumes, sauce boulgour",True,sûr,matched_veg:légumes
+croq fromage*,True,sûr,matched_veg:fromage
+"lieu noir, sauce méditerranéenne",False,incertain,fallback
+falafels sauce yaourt,True,incertain_but_checked,fallback
+"sauté de bœuf, sauce provençale",False,sûr,matched_nonveg:bœuf
+"salade de pâtes, tomates",True,sûr,matched_veg:salade
+arrancini,False,incertain,short_unknown
+eglefin beurre fines herbes,False,incertain,fallback
+"club sandwich (pain de mie, houmous, tomate, œuf dur, emmental, salade verte)",True,sûr,matched_veg:œuf
+"lieu noir, sauce hollandaise",False,incertain,fallback
+œuf dur sauce cocktail,True,sûr,matched_veg:œuf
+sauté de bœuf paprika,False,sûr,matched_nonveg:bœuf
+nugget's de blé*,False,incertain,fallback
+"salad bar' (salade de lentille, féta, houmous, concombre, riz au thon)",False,sûr,matched_fish:thon
+timballe au thon,False,sûr,matched_fish:thon
+bolognaise tortis,False,sûr,matched_nonveg:bolognaise
+boulettes de lentilles corail,True,sûr,matched_veg:lentilles
+lieu à la crème,False,incertain,fallback
+galettes de haricots rouges,True,incertain_but_checked,preserved
+saucisse porc,False,sûr,matched_nonveg:porc
+pané de tomate mozzarella*,True,sûr,matched_veg:mozzarella
+tortillas sauce tomate,True,incertain_but_checked,fallback
+"pâte méxicaine (maïs, haricots rouges)",True,incertain_but_checked,preserved
+saucisse végétarienne,True,sûr,matched_nonveg:saucisse
+blanquette de veau label,False,sûr,matched_nonveg:veau
+galette,True,sûr,matched_veg:galette
+cassoulet porc,False,sûr,matched_nonveg:porc
+végétarien,True,sûr,matched_veg:végétarien
+croq fromage,True,sûr,matched_veg:fromage
+rôti de veau label au jus,False,sûr,matched_nonveg:veau
+pâte carbonara,False,incertain,short_unknown
+dinde,False,sûr,matched_nonveg:dinde
+légumes,True,sûr,matched_veg:légumes
+galette de quinoa provençale*,True,sûr,matched_veg:galette
+lieu sauce hollandaise,False,incertain,fallback
+escalope de porc au jus,False,sûr,matched_nonveg:porc
+pané de tomate mozza,True,sûr,matched_veg:mozza
+mélange de légumes secs,True,sûr,matched_veg:légumes
+tortis,False,incertain,short_unknown
+lieu à la tomate,False,incertain,fallback
+boulettes de pois chiches,True,sûr,matched_veg:pois chiches
+œuf dur sauce curry,True,sûr,matched_veg:œuf
+sauté de bœuf sauce chataigne,False,sûr,matched_nonveg:bœuf
+galette de quinoa provençale,True,incertain_but_checked,preserved
+poulet au jus,False,sûr,matched_nonveg:poulet
+mélange légumes secs,True,sûr,matched_veg:légumes
+sauté de bœuf sauce chataîgne,False,sûr,matched_nonveg:bœuf
+boulette de pois chiches,True,sûr,matched_veg:pois chiches
+"bolognaise (carottes, lentilles)",False,sûr,matched_nonveg:bolognaise
+tortis carbonara porc,False,sûr,matched_nonveg:porc
+végé,True,sûr,matched_veg:végé
+tartiflette poc,False,incertain,ambiguous_indicator:tartiflette
+galette de lentilles vertes,True,sûr,matched_veg:lentilles
+dos de lieu beurre blanc,False,incertain,fallback
+saumon sauce paprika,False,sûr,matched_fish:saumon

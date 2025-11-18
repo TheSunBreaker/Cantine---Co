@@ -1,0 +1,2328 @@
+Plat,Est_Vegetarien,Est_Vegetarien_Ameliore,Est_Vegetarien_Final
+Rôti de porc au jus,False,False,False
+Poulet rôti,False,False,False
+Steak haché,False,False,False
+Tortis bolognaise,False,False,False
+Poisson pané,False,False,False
+Couscous d'agneau et ses légumes,False,False,False
+Filet de lieu beurre persillé,False,False,False
+Bœuf bourguignon,False,False,False
+Galette saucisse,False,False,False
+Sot l'y laisse de dinde,False,False,False
+Filet de saumon sauce hollandaise,False,False,False
+Rôti de veau au jus,False,False,False
+Poulet label rôti,False,False,False
+Sauté de porc au paprika,False,False,False
+Timbale milanaise,False,False,False
+Filet de lieu sauce crevettes,False,False,False
+Blanquette de veau,False,False,False
+Rôti de porc au jus,False,False,False
+Steak haché,False,False,False
+Lasagnes de bœuf,False,False,False
+Omelette,False,True,True
+Paëlla aux légumes,False,True,True
+Agneau marengo,False,False,False
+Filet de lieu sauce crme,False,False,False
+Sauté de porc au curry,False,False,False
+Poulet rôti,False,False,False
+Escalope de dinde au jus,False,False,False
+Hachis parmentier,False,False,False
+Filet de lieu sauce armoricaine,False,False,False
+Sauté de poulet antillais,False,False,False
+Poisson pané beurre citron,False,False,False
+Rôti de porc,False,False,False
+Saucisse grillée,False,False,False
+Rôti de dinde au jus,False,False,False
+Couscous de légumes,False,True,True
+Hachis parmentier,False,False,False
+Filet de saumon sauce beurre blanc,False,False,False
+Poulet rôti,False,False,False
+Filet de lieu sauce dieppoise,False,False,False
+Gratin de boulgour,False,True,True
+Rôti de bœuf,False,False,False
+Rôti de porc sauce tomate,False,False,False
+Filet de lieu sauce provenale,False,False,False
+Timbale milanaise,False,False,False
+Sauté de bœuf aux olives,False,False,False
+Sauté de dinde à l'oignon,False,False,False
+Couscous au poulet et ses légumes,False,False,False
+Sauté de porc dijonnais,False,False,False
+Escalope de dinde,False,False,False
+Courgettes parmentires,False,True,True
+Filet de saumon sauce suchet,False,False,False
+Saucisse grillée,False,False,False
+Rôti de dinde aux herbes,False,False,False
+Gratin de pommes de terre au fromage fondu,False,True,True
+Courgettes parmentires,False,True,True
+Filet de lieu sauce grenobloise,False,False,False
+Poulet rôti,False,False,False
+Sauté de veau marengo,False,False,False
+Jambon braisé froid,False,False,False
+Paëlla aux légumes,False,True,True
+Filet de lieu sauce poivrons,False,False,False
+Omelette,False,True,True
+Sauté de poulet antillais,False,False,False
+Escalope de porc charcutire,False,False,False
+Tortis bolognaise,False,False,False
+Filet de lieu sauce crevettes,False,False,False
+Poisson pané beurre citron,False,False,False
+Poulet rôti,False,False,False
+Sauté de dinde louisianne,False,False,False
+Saucisse rougail,False,False,False
+Rôti de bœuf,False,False,False
+REPAS DE SUBSTITUTION,False,False,False
+Rôti de porc,False,False,False
+Steak haché,False,False,False
+Rôti de dinde,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Sauté de poulet colombo,False,False,False
+Filet de saumon sauce hollandaise,False,False,False
+Rôti de bœuf,False,False,False
+Filet de lieu sauce crevettes,False,False,False
+Saucisse,False,False,False
+Hachis parmentier,False,False,False
+Rôti de veau au jus,False,False,False
+Poulet label rôti,False,False,False
+Sauté de bœuf aux olives,False,False,False
+Filet de lieu sauce moules,False,False,False
+Couscous de légumes,False,True,True
+Rôti de porc,False,False,False
+Veau marengo,False,False,False
+Escalope de porc charcutire,False,False,False
+Poulet label rôti,False,False,False
+Poisson pané beurre citron,False,False,False
+Rôti de bœuf,False,False,False
+Gratin de pommes de terre fromagé,False,True,True
+Filet de lieu sauce beurre blanc,False,False,False
+Sauté de porc dijonnaise,False,False,False
+Escalope de dinde au jus,False,False,False
+Hachis parmentier,False,False,False
+Saucisse,False,False,False
+Rôti de dinde,False,False,False
+Filet de lieu sauce crme,False,False,False
+Poulet rôti,False,False,False
+Sauté de bœuf aux olives,False,False,False
+Rôti de porc,False,False,False
+Poisson pané sauce tomate,False,False,False
+Aiguillettes de poulet provenale,False,False,False
+Steak haché,False,False,False
+Gratin de boulghour,False,True,True
+Dos de cabillaud beurre citron,False,False,False
+Lasagne de bœuf,False,False,False
+Sauté de dinde aux olives,False,False,False
+Rôti de dinde au jus,False,False,False
+Poulet rôti,False,False,False
+Gratin de pommes de terre au fromage frais,False,True,True
+Bœuf à la marocaine,False,False,False
+Filet de lieu sauce crème,False,False,False
+Colombo de poulet,False,False,False
+Sauté de porc agenais,False,False,False
+Escalope de dinde aux herbes,False,False,False
+Bœuf à la marocaine,False,False,False
+Filet de saumon à l'oseille,False,False,False
+Poulet basquaise,False,False,False
+Saucisse,False,False,False
+Rôti de dinde label au jus,False,False,False
+Bœuf à la mrocaine,False,False,False
+Filet de lieu à la grenobloise,False,False,False
+Couscous de légumes,False,True,True
+Rôti de porc au jus,False,False,False
+Aiguillettes de poulet sauce tomate,False,False,False
+Hachis parmentier,False,False,False
+Filet de lieu sauce hollandaise,False,False,False
+Rôti de dinde label au jus,False,False,False
+Cassoulet,False,False,False
+Escalope de poulet,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Sauté de porc caramel,False,False,False
+Poulet à l'ananas,False,False,False
+Paëlla aux légumes,False,True,True
+Bœuf flamand,False,False,False
+Filet de saumon sauce crème,False,False,False
+Poulet rôti label,False,False,False
+Gratin de boulgour,False,True,True
+Jambon braisé,False,False,False
+Steak haché,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Tartiflette,False,False,True
+Poisson pané beurre citron,False,False,False
+Escalope de poulet au paprika,False,False,False
+Sauté de porc charcutier,False,False,False
+Rôti de veau au jus,False,False,False
+Blanquette de veau,False,False,False
+Lasagnes de bœuf,False,False,False
+Dos de cabillaud sauce moules,False,False,False
+Poulet rôti,False,False,False
+Rôti de porc aux herbes,False,False,False
+Filet de saumon sauce beurre blanc,False,False,False
+Tajine d'agneau aux abricots,False,False,False
+Couscous de légumes,False,True,True
+Saucisse grillée,False,False,False
+Escalope de poulet,False,False,False
+Tortis bolognaise,False,False,False
+Filtet de lieu sauce crevette,False,False,False
+Rôti de porc au jus,False,False,False
+Sauté de poulet aux pruneaux,False,False,False
+Gratin de pommes de terre au fromage,False,True,True
+Bœuf bourguignon,False,False,False
+Filet de lieu sauce moules,False,False,False
+Rôti de dinde,False,False,False
+Poulet rôti,False,False,False
+Escalope de porc sauce charcutière,False,False,False
+Tortis bolognaise,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Saucisse,False,False,False
+Sauté de poulet basquaise,False,False,False
+Timbale de poisson au maquereau,False,False,False
+Hachis parmentier,False,False,False
+Omelette,False,True,True
+Sauté de porc à l'indienne,False,False,False
+Boulghour au légumes,False,True,True
+Steak haché,False,False,False
+Rôti de dinde farci et sa sauce,False,False,False
+Filet de saumon beurre persillé,False,False,False
+Tartiflette,False,False,True
+Filet de lieu sauce beurre blanc,False,False,False
+Rôti de veau aux herbes,False,False,False
+Sot l'y laisse de dinde,False,False,False
+Galette saucisse,False,False,False
+Filet de lieu sauce oseille,False,False,False
+Rôti de porc,False,False,False
+Timbale milanaise,False,False,False
+Blanquette de veau à l'ancienne,False,False,False
+Sauté de poulet agenais,False,False,False
+Rôti de dinde,False,False,False
+Pizza aux 4 légumes,False,True,True
+Escalope de porc sauce charcutière,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Sauté de porc agenais,False,False,False
+Poulet rôti label,False,False,False
+Paëlla de légumes,False,True,True
+Bœuf chasseur,False,False,False
+Filet de saumon sauce oseille,False,False,False
+Cassoulet,False,False,False
+Sauté de poulet antillais,False,False,False
+Escalope de dinde label à la crème,False,False,False
+Tortis bolognaise,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Émincé de dinde label aux champignons,False,False,False
+Rôti de porc au jus,False,False,False
+Steak haché,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce dieppoise,False,False,False
+Poulet rôti,False,False,False
+Saucisse,False,False,False
+Couscous de légumes,False,True,True
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce moules,False,False,False
+Rôti de porc au jus,False,False,False
+Sauté de dinde label sauce louisianne,False,False,False
+Escalope de poulet,False,False,False
+Tajine d'agneau aux pruneaux,False,False,False
+Filet de lieu sauce dieppoise,False,False,False
+Poisson pané beurre citron,False,False,False
+Timbale milanaise,False,False,False
+Blanquette de veau,False,False,False
+Galette saucisse,False,False,False
+Steak haché,False,False,False
+Poulet rôti label,False,False,False
+Rôti de veau au jus,False,False,False
+Escalope de dinde label sauce paprika,False,False,False
+Tartiflette,False,False,True
+Filet de saumon sauce béarnaise,False,False,False
+Lasagne de légumes,False,True,True
+Rôti de porc au jus,False,False,False
+Dos de cabillaud beurre blanc,False,False,False
+Hachis parmentier,False,False,False
+Omelette,False,True,True
+Sauté de porc charcutier,False,False,False
+Gratin de boulghour,False,True,True
+Aiguillettes de poulet sauce tomate,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Rôti de dinde label au jus,False,False,False
+Saucisse grillée,False,False,False
+Omelette,False,True,True
+Hachis parmentier,False,False,False
+Filet de lieu sauce beurre blanc,False,False,False
+Blanquette de dinde,False,False,False
+Rôti de porc au jus,False,False,False
+Paëlla de légumes,False,True,True
+Bœuf bourguignon,False,False,False
+Filet de saumon sauce oseille,False,False,False
+Sauté de porc à la moutarde,False,False,False
+Poulet rôti,False,False,False
+Timbale milanaise,False,False,False
+Bœuf bourguignon,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Rôti de dinde label aux herbes,False,False,False
+Couscous de légumes,False,True,True
+Escalope de porc,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce dieppoise,False,False,False
+Rôti de veau au jus,False,False,False
+Sot l'y laisse de dinde label,False,False,False
+Steak haché,False,False,False
+Galette / saucisse,False,False,False
+Filet de lieu beurre citron,False,False,False
+Escalope de poulet aux champignons,False,False,False
+Rôti de porc au jus,False,False,False
+Blanquette de veau à l'ancienne,False,False,False
+Curry d'agneau,False,False,False
+Lasagnes de bœuf,False,False,False
+Rôti de porc au jus,False,False,False
+Omelette,False,True,True
+Tajine d'agneau aux abricots,False,False,False
+Filet de lieu sauce moules,False,False,False
+Pizza aux légumes,False,True,True
+Dos de cabillaud beurre persillé,False,False,False
+Bœuf marocain,False,False,False
+Sauté de porc agenais,False,False,False
+Rôti de dinde label au jus,False,False,False
+Poisson pané,False,False,False
+Rôti de bœuf au jus,False,False,False
+Galette saucisse,False,False,False
+Rôti de porc au jus,False,False,False
+Sauté de poulet antillais,False,False,False
+Gratin de boulgour,False,True,True
+Hachis parmentier,False,False,False
+Filet de saumon beurre blanc,False,False,False
+Rôti de dinde label sauce tomate,False,False,False
+Filet de lieu sauce dieppoise,False,False,False
+Escalope de porc charcutière,False,False,False
+Aiguillettes de poulet aux herbes,False,False,False
+Rôti de porc au jus,False,False,False
+Escaloppe de dinde label dijonnaise,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Sot-l'y-laisse de dinde label sauce champignons,False,False,False
+Jambon braisé au jus,False,False,False
+Tajine de bœuf aux pruneaux,False,False,False
+Filet de lieu sauce moules,False,False,False
+Sauté de porc sauce charcutière,False,False,False
+Poulet rôti label au jus,False,False,False
+,False,False,False
+Tajine de bœuf aux pruneaux,False,False,False
+Filet de saumon sauce oseille,False,False,False
+Rôti de dinde label au jus,False,False,False
+,False,False,False
+Escalope de porc aux herbes,False,False,False
+Sauté d'agneau marengo,False,False,False
+Filet de lieu sauce poivrons,False,False,False
+Sauté label antillais,False,False,False
+Rôti de porc au jus,False,False,False
+Timbale milanaise,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu beurre citron,False,False,False
+Sauté de porc au curry,False,False,False
+Poulet basquaise,False,False,False
+Dos de cabillaud,False,False,False
+REPAS DE SUBSTITUTION,False,False,False
+Rôti de porc 1/2 sel/ cornichons,False,False,False
+Sauté de poulet colombo,False,False,False
+Filet de saumon sauce hollandaise,False,False,False
+Rôti de bœuf au jus,False,False,False
+Galette/ saucisse,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Escalope de porc,False,False,False
+Hachis parmentier,False,False,False
+Rôti de veau au jus,False,False,False
+Poulet label rôti,False,False,False
+Sauté de bœuf aux olives,False,False,False
+Filet de lieu sauce moules,False,False,False
+Couscous de légumes,False,True,True
+Rôti de porc au jus,False,False,False
+Veau marengo,False,False,False
+Escalope de porc charcutière,False,False,False
+Poulet label rôti,False,False,False
+Poisson pané beurre citron,False,False,False
+Rôti de bœuf au jus,False,False,False
+Gratin de pommes de terre fromagé,False,True,True
+Filet de saumon,False,False,False
+Filet de lieu sauce beurre blanc,False,False,False
+Sauté de poulet sauce dijonnaise,False,False,False
+Escalope de dinde label au jus,False,False,False
+Hachis parmentier,False,False,False
+Saucisse,False,False,False
+Filet de lieu sauce crème,False,False,False
+Poulet rôti,False,False,False
+Sauté de bœuf aux olives,False,False,False
+Rôti de porc au jus,False,False,False
+Poisson pané sauce tomate,False,False,False
+Aiguillettes de poulet provençale,False,False,False
+Steak haché,False,False,False
+Gratin de boulgour,False,True,True
+Dos de cabillaud beurre citron,False,False,False
+Rôti de dinde label au jus,False,False,False
+Omelette,False,True,True
+Pizza au fromage,False,False,True
+Omelette,False,True,True
+Jambon braisé ou rôti de dinde aux champignons,False,False,False
+Bœuf sauce à la marocaine,False,False,False
+Filet de lieu sauce crème,False,False,False
+Colombo de poulet,False,False,False
+Sauté de porc ou de poulet agenais,False,False,False
+Escalope de dinde aux herbes,False,False,False
+Tortis bolognaises,False,False,False
+Filet de saumon à l'oseille,False,False,False
+Omelette,False,True,True
+Saucisse de porc ou de volaille,False,False,True
+Rôti de dinde label au jus,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce grenobloise,False,False,False
+Couscous de légumes,False,True,True
+Rôti de porc ou de dinde au jus,False,False,False
+Aiguillettes de poulet sauce tomates,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce hollandaise,False,False,False
+Rôti de dinde label au jus,False,False,False
+Cassoulet (saussice de porc ou de volaille),False,False,True
+Escalope de poulet au jus,False,False,False
+Bœuf flamand,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Sauté de porc ou de dinde au caramel,False,False,False
+Poulet à l'ananas,False,False,False
+Paëlla de légumes,False,True,True
+Rôti de bœuf au jus,False,False,False
+Filet de saumon sauce crème,False,False,False
+Poulet rôti label au jus,False,False,False
+Gratin de boulgour,False,True,True
+Jambon braisé ou rôti de dinde sauce madère,False,False,False
+Coquillettes bolognaises,False,False,False
+Filet de lieu sauce tomates,False,False,False
+Tartiflette ou tartiflette de dinde,False,False,False
+Poisson pané beurre citron,False,False,False
+Escalope de poulet au paprika,False,False,False
+Sauté de porc charcutier ou de dinde,False,False,False
+Rôti de veau au jus,False,False,False
+Rôti de dinde label aux châtaignes,False,False,False
+Blanquette de veau,False,False,False
+Rôti de porc ou de dinde aux herbes,False,False,False
+Dos de cabillaud sauce crevette,False,False,False
+Pizza au fromage,False,False,True
+Omelette,False,True,True
+Sauté de veau aux champignons,False,False,False
+Rôti de veau au jus,False,False,False
+Filet de saumon sauce beurre blanc,False,False,False
+Couscous de légumes,False,True,True
+Saucisse grillée ou saucisse de volaille,False,False,False
+Escalope de poulet,False,False,False
+Bœuf bourguignon,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Rôti de porc au jus ou rôti de dinde au jus,False,False,False
+Sauté de poulet aux pruneaux,False,False,False
+Tartiflette (dés de porc ou dés de dinde),False,False,False
+Bœuf bourguignon,False,False,False
+Filet de lieu sauce moules,False,False,False
+Rôti de dinde au jus label,False,False,False
+Poulet rôti au jus,False,False,False
+Escalope de porc sauce charcutière ou rôti de dinde,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Saucisse grillée de porc ou de volaille,False,False,True
+Sauté de poulet basquaise,False,False,False
+Timbale de légumes,False,True,True
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce crème,False,False,False
+Sauté de porc ou sauté de dinde à l'indienne,False,False,False
+Boulghour de légumes,False,True,True
+Steak haché,False,False,False
+Rôti de dinde farci sauce champignons des bois,False,False,False
+Filet de saumon beurre persillé,False,False,False
+Rôti de porc au jus ou rôti de dinde au jus,False,False,False
+Poulet rôti label,False,False,False
+Jambon braisé aux champignons ou rôti de dinde,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce beurre blanc,False,False,False
+Dos de cabillaud sauce crème,False,False,False
+Rôti de veau aux herbes,False,False,False
+Sot-l'y-laisse de dinde sauce tomate,False,False,False
+Galette saucisse de porc ou de dinde,False,False,False
+Rôti de porc au jus ou rôti de dinde au jus,False,False,False
+Timbale milanaise au jambon ou de volaille,False,False,True
+Blanquette de veau à l'ancienne,False,False,False
+Filet de lieu sauce oseille,False,False,False
+Lasagnes de légumes,False,True,True
+Omelette,False,True,True
+Escalope de porc ou de volaille sauce charcutière,False,False,True
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce crème,False,False,False
+Poulet rôti label,False,False,False
+Sauté de porc au curry ou sauté de dinde ou curry,False,False,True
+Escalope de dinde label à la crème,False,False,False
+Bœuf bourguignon,False,False,False
+Filet de saumon sauce oseille,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de poulet antillais,False,False,False
+Jambon braisé sauce madère ou rôti de dinde label,False,False,False
+Bœuf bourguignon,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Émincé de dinde label aux champignons,False,False,False
+Couscous de légumes,False,True,True
+Steak haché,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce dieppoise,False,False,False
+Rôti de porc au jus ou rôti de dinde au jus,False,False,False
+Paëlla de légumes,False,True,True
+Sauté de dinde label rouge dijonnais,False,False,False
+Tajine de veau aux pruneaux,False,False,False
+Filet de lieu sauce moules,False,False,False
+"Chili aux légumes (riz, ratatouille)",False,True,True
+Poulet rôti,False,False,False
+Poisson pané sauce tomate,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de saumon sauce béarnaise,False,False,False
+Omelette,False,True,True
+Dos de cabillaud sauce hollandaise,False,False,False
+Timbale milanaise au jambon de porc ou de dinde,False,False,False
+Pot-au-feu et ses légumes,False,True,True
+Saucisses de porc ou de volaille,False,False,True
+Poisson pané,False,False,False
+Tartiflette aux lardons ou dés de dinde,False,False,False
+Rôti de veau au jus,False,False,False
+Galette saucisse de porc ou de dinde,False,False,False
+Steak haché,False,False,False
+Poulet rôti,False,False,False
+Blanquette de veau,False,False,False
+Escalope de dinde Label sauce paprika,False,False,False
+Tortis à la carbonara (lardons ou dés de dinde),False,False,False
+Filet de lieu sauce crème,False,False,False
+Lasagne de bœuf,False,False,False
+Omelette,False,True,True
+Escalope de porc ou volaille dijonnaise,False,False,True
+Hachis parmentier,False,False,False
+Filet de saumon à l’oseille,False,False,False
+Gratin de boulgour,False,True,True
+Rôti de porc au jus OU rôti de dinde au jus,False,False,False
+Navarin d'agneau,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu/ beurre persillé,False,False,False
+Paëlla aux légumes,False,True,True
+Poulet rôti au jus,False,False,False
+Jambon braisé OU rôti de dinde sauce aux champignons,False,False,False
+Tortis bolognaise,False,False,False
+Filet de lieu sauce crevette,False,False,False
+Couscous de légumes,False,True,True
+Escaloppe de dinde/ sauce charcutière,False,False,False
+Sauté de bœuf flamand,False,False,False
+Filet de lieu/ sauce tomate,False,False,False
+Omelette,False,True,True
+Saucisse OU saucisse de volaille,False,False,False
+Escaloppe de poulet au paprika,False,False,False
+Rôti de veau au jus,False,False,False
+Filet de saumon/ sauce ciboulette,False,False,False
+Gratin de boulgour,False,True,True
+Rôti de porc au jus OU Rôti de dinde au jus,False,False,False
+"Émincé de volaille, sauce louisianne",False,False,True
+Bœuf bourguignon,False,False,False
+Filet de lieu/ sauce moules,False,False,False
+Chili aux légumes,False,True,True
+Poulet rôti au jus,False,False,False
+Rôti de porc aux herbes OU rôti de dinde aux herbes,False,False,False
+Poisson pané,False,False,False
+Rôti de veau au jus,False,False,False
+Œufs durs/ sauce aurore,False,False,False
+Dos de cabillaud/ sauce crème,False,False,False
+Tartiflette dés de porc OU dés de dinde,False,False,False
+Blanquette de veau,False,False,False
+,False,False,False
+,False,False,False
+Omelette,False,True,True
+Lasagnes de bœuf,False,False,False
+Sauté de poulet/ sauce aux champignons,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu/ sauce crevette,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+Parmentier de légumes,False,True,True
+Poulet label au jus,False,False,False
+"Escalope de dinde label, sauce tomate",False,False,True
+Steak haché,False,False,False
+"Filet de lieu, beurre citron",False,False,False
+Gratin de boulgour,False,True,True
+Sauté de poulet antillais,False,False,False
+Rôti de porc aux herbes OU rôti de dinde aux herbes,False,False,False
+Sauté de bœuf flamand,False,False,False
+Filet de lieu sauce crème,False,False,False
+Tortis bolognaise,False,False,False
+"Filet de lieu, sauce beurre blanc",False,False,False
+Veau marengo,False,False,False
+Omelette,False,True,True
+Galette/ Saucisse OU saucisse de volaille,False,False,False
+Rôti de bœuf froid,False,False,False
+Riz safrané aux légumes,False,True,True
+Sauté de porc charcutier OU Rôti de dinde charcutière,False,False,False
+Rôti de veau au jus,False,False,False
+"Œufs durs, sauce aurore",False,False,False
+Poulet rôti label au jus,False,False,False
+Rôti de bœuf froid,False,False,False
+Timbale milanaise,False,False,False
+"Filet de lieu, sauce provençale",False,False,False
+Riz safrané aux légumes,False,True,True
+"Sauté de bœuf, sauce marocaine",False,False,False
+Rôti de porc au jus OU rôti de dinde au jus,False,False,False
+Poisson pané,False,False,False
+Tajine d'agneau aux pruneaux,False,False,False
+Courgettes parmentieres,False,True,True
+Escalope de dinde label aux herbes,False,False,False
+Galette / tomate/ fromage,False,False,True
+"Filet de lieu, sauce beurre blanc",False,False,False
+Paëlla de dinde,False,False,False
+Poulet rôti label au jus,False,False,False
+Parmentier de légumes,False,True,True
+,False,False,False
+,False,False,False
+Lasagne de bœuf,False,False,False
+Omelette,False,True,True
+Jambon braisé aux champignons,False,False,False
+Coquillettes bolognaise,False,False,False
+Filet de saumon,False,False,False
+Poulet rôti label au jus,False,False,False
+Semoule aux légumes de couscous,False,True,True
+Escalope de porc OU rôti de dinde label aux herbes,False,False,False
+Sauté de bœuf flamand,False,False,False
+Filet de lieu aux petits légumes,False,False,False
+Gratin de boulghour,False,True,True
+Saucisse de porc OU saucisse de volaille,False,False,False
+Escalope de dinde label sauce crème,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu,False,False,False
+Sauté de poulet label marengo,False,False,False
+Gratin de pommes de terre au fromage frais,False,True,True
+Jambon braisé OU rôti de dinde label,False,False,False
+"Sauté de bœuf, sauce marocaine",False,False,False
+Filet de lieu,False,False,False
+Omelette,False,True,True
+Sauté de porc  OU sauté de dinde dijonnais,False,False,False
+Sauté de dinde label agenais,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de saumon,False,False,False
+Sauté de porc OU sauté de volaille à la tomate,False,False,True
+Chili aux légumes,False,True,True
+"Escalope de dinde label, sauce charcutière",False,False,False
+Parmentier crécy,False,False,False
+"Filet de lieu, sauce beurre citron",False,False,False
+Riz safrané aux légumes,False,True,True
+Rôti de porc OU rôti de dinde aux herbes label,False,False,False
+Tartiflette de porc OU de dinde label,False,False,False
+Navarin d'agneau,False,False,False
+"Filet de lieu, sauce suchet",False,False,False
+Sauté de poulet label antillais,False,False,False
+Parmentier de légumes,False,True,True
+Rôti de veau au jus,False,False,False
+Galette Saucisse OU saucisse de volaille,False,False,False
+Filet de lieu,False,False,False
+Poisson pané,False,False,False
+Blanquette de veau à l'ancienne,False,False,False
+Rôti de dinde label agenais,False,False,False
+Galette tomate/fromage,False,False,True
+Lasagnes de bœuf,False,False,False
+Omelette,False,True,True
+"Jambon braisé, sauce chasseur OU röti de dinde label",False,False,False
+Rôti de bœuf au jus,False,False,False
+"Filet de lieu, sauce crème",False,False,False
+Chili aux légumes,False,True,True
+Poulet rôti label au jus,False,False,False
+"Escalope de porc OU rôti de dinde, sauce charcutière",False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de saumon,False,False,False
+Semoule aux légumes de couscous,False,True,True
+Rôti de porc OU sauté de dinde au jus,False,False,False
+"Sauté de dinde label, sauce paprika",False,False,True
+Tortis bolognaise,False,False,False
+"Filet de lieu, sauce dugléré",False,False,False
+Sauté de porc OU sauté de dinde forestier,False,False,False
+Gratin de boulghour,False,True,True
+Escalope de dinde label à la crème,False,False,False
+Hachis parmentier,False,False,False
+"Filet de lieu, sauce bonne femme",False,False,False
+"Œufs, sauce aurore",False,False,False
+Émincé de poulet au curry,False,False,False
+Navarin d'agneau,False,False,False
+Rôti de bœuf au jus,False,False,False
+"Filet de lieu, sauce suchet",False,False,False
+Gratin de pommes de terres ail et fines herbes,False,True,True
+Sauté de porc OU santé de dinde forestier,False,False,False
+"Escalope de dinde label, sauce chasseur",False,False,False
+Hachis parmentier,False,False,False
+"Filet de saumon, sauce oseille",False,False,False
+Poulet rôti au jus,False,False,False
+Sauté de chapon et sa sauce,False,False,False
+Steak haché,False,False,False
+Parmentier de légumes,False,True,True
+Filet de lieu,False,False,False
+Sauté de veau marengo,False,False,False
+"Galette, tomates, fromage",False,False,True
+"Filet de lieu, sauce dieppoise",False,False,False
+Chili de légumes,False,True,True
+"Rôti de veau, sauce châtaigne",False,False,False
+"Filet de lieu, sauce hollandaise",False,False,False
+Lasagne de bœuf,False,False,False
+Omelette,False,True,True
+Escalope de porc OU rôti de dinde label sauce charcutière,False,False,False
+Rôti de veau au jus,False,False,False
+Filet de saumon,False,False,False
+Sauté de porc dijonnais OU rôti de dinde label,False,False,False
+Gratin de boulgour,False,True,True
+Escalope de dinde label sauce champignons,False,False,False
+Tortis bolognaise,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Couscous de légumes,False,True,True
+Sauté de porc OU de dinde label au caramel,False,False,False
+Rôti de dinde label aux herbes,False,False,False
+Tortis bolognaise,False,False,False
+Filet de lieu,False,False,False
+Sauté de porc OU rôti de dinde label sauce dijonnaise,False,False,False
+Parmentier de légumes d'hiver,False,True,True
+Sauté de poulet antillais,False,False,False
+Pot-au-feu et ses légumes,False,True,True
+Filet de lieu,False,False,False
+Saucisse OU saucisse de volaille,False,False,False
+Chili de légumes,False,True,True
+Filet de poulet sauce louisiane,False,False,False
+Hachis parmentier,False,False,False
+Filet de saumon,False,False,False
+Sauté de porc sauce aux marrons OU sauté de dinde label,False,False,False
+Poulet rôti label,False,False,False
+Rôti de veau au jus,False,False,False
+Galette/ tomate/ fromage,False,False,True
+Poisson pané beurre citron,False,False,False
+Œuf sauce aurore,False,False,False
+Sauté de veau marengo,False,False,False
+Escalope de dinde label sauce barbecue,False,False,False
+Croziflette,False,False,False
+Filet de lieu,False,False,False
+Lasagnes de bœuf,False,False,False
+Omelette,False,True,True
+Jambon braisé sauce champignons OU rôti de dinde label,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Semoule aux légumes de couscous,False,True,True
+Sauté de porc OU de dinde au paprika,False,False,False
+Rôti de dinde label aux raisins,False,False,False
+Bœuf marocain,False,False,False
+Filet de lieu,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de poulet yassa,False,False,False
+Escalope de porc OU rôti de dinde sauce diable,False,False,False
+Hachis parmentier,False,False,False
+Filet de saumon,False,False,False
+Gratin de pommes de terre au fromage frais,False,True,True
+Sauté de porc OU de dinde au paprika,False,False,False
+Aiguillettes poulet sauce louisiane,False,False,False
+Rôti de veau au jus,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Sauté de porc OU de dinde au paprika,False,False,False
+Riz safrané aux légumes,False,True,True
+Escalope de dinde label au jus,False,False,False
+Pot-au-feu et ses légumes,False,True,True
+Filet de lieu,False,False,False
+Poulet label,False,False,False
+Omelette,False,True,True
+Tartiflettes (dés de porc OU de dinde),False,False,False
+Pot-au-feu et ses légumes,False,True,True
+Filet de lieu aux petits légumes,False,False,False
+Blanquette de veau,False,False,False
+Poisson pané beurre citron,False,False,False
+Sauté de dinde label sauce chasseur,False,False,False
+Rôti de porc OU de dinde label au jus,False,False,False
+Galette/ tomate/ fromage,False,False,True
+Rôti de veau au jus,False,False,False
+Filet de poulet sauce crème,False,False,False
+Œuf dur/ sauce aurore,False,False,False
+Sauté d'agneau irish stew,False,False,False
+Filet de saumon,False,False,False
+Lasagnes de légumes,False,True,True
+Jambon braisé OU rôti de dinde sauce champignons,False,False,False
+Bolognaise,False,False,False
+Filet de lieu dugléré,False,False,False
+,False,False,False
+Rôti de porc OU dinde au jus,False,False,False
+Rôti de bœuf au jus,False,False,False
+Poisson pané,False,False,False
+Poulet rôti label rouge,False,False,False
+Omelette,False,True,True
+Pot-au-feu,False,False,False
+Dos de lieu sauce armoricaine,False,False,False
+Chili de légumes,False,True,True
+Saucisse OU saucisse de volaille,False,False,False
+Brandade de poisson,False,False,False
+Rôti de veau au jus,False,False,False
+Filet de saumon,False,False,False
+Gratin de pommes de terre au fromage frais,False,True,True
+Rougaille de saucisse OU de volaille,False,False,True
+Filet de poulet sauce crème,False,False,False
+Bœuf flamand,False,False,False
+Filet de lieu,False,False,False
+Poulet rôti label rouge,False,False,False
+Riz safrané aux légumes,False,True,True
+Rôti de dinde au jus,False,False,False
+Sauté de poulet sauce tomate,False,False,False
+Couscous de légumes,False,True,True
+Jambon braisé OU rôti de dinde sauce chasseur,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu sauce oseille,False,False,False
+Omelette,False,True,True
+Escalope de porc OU rôti de dinde au jus,False,False,False
+Parmentier de crécy,False,False,False
+Saumon sauce au beurre blanc,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de porc OU rôti de dinde sauce paprika,False,False,False
+Escalope de dinde aux herbes,False,False,False
+Rôti de veau au jus,False,False,False
+Filet de lieu sauce suchet,False,False,False
+Rôti de dinde label au jus,False,False,False
+Chili de légumes,False,True,True
+Jambon braisé OU Rôti de dinde sauce champignons,False,False,False
+Egg'Burger/ jus de pomme,False,False,False
+Filet de lieu sauce provençale,False,False,False
+Couscous de légumes,False,True,True
+Poisson pané/ beurre citron,False,False,False
+Sauté de poulet au curry,False,False,False
+REPAS DE RESERVE,False,False,False
+Rôti de porc 1/2 sel OU rôti de dinde au jus,False,False,False
+Émincé de poulet basquaise,False,False,False
+Riz safranné aux légumes,False,True,True
+Sauté de bœuf provençale,False,False,False
+Rôti de porc OU émincé de poulet au jus,False,False,False
+Filet de lieu beurre citron,False,False,False
+Paëlla,False,False,True
+Sauté de porc OU rôti de dinde agenais,False,False,False
+"Gnocchi à la romaine, sauce tomate",False,False,True
+Rôti de bœuf froid,False,False,False
+Filet de lieu,False,False,False
+Parmentier de courgettes,False,True,True
+Gratin de pommes de terre au fromage frais,False,True,True
+Omelette,False,True,True
+Poulet rôti label au jus,False,False,False
+Rôti de porc OU rôti de dinde,False,False,False
+Brandade de poisson,False,False,False
+"Filet de saumon, sauce oseille",False,False,False
+"Filet de saumon, sauce oseille",False,False,False
+Filet de saumon,False,False,False
+Gratin de boulghour,False,True,True
+Rôti de veau au jus,False,False,False
+Escalope milanaise,False,False,False
+Galette saucisse OU saucisse de volaille,False,False,False
+"Filet de lieu, sauce crème",False,False,False
+Blanquette de veau,False,False,False
+Gratin de pommes de terre et fromage frais,False,True,True
+"Blanc de poulet, sauce louisiane",False,False,False
+Rôti de porc OU de dinde froid,False,False,False
+"Filet de lieu, sauce tomate",False,False,True
+Omelette,False,True,True
+Paëlla,False,False,True
+Sauté de bœuf aux champignons,False,False,False
+Tajine d'agneau,False,False,False
+Bolognaise,False,False,False
+Poulet rôti au jus,False,False,False
+Parmentier de légumes d'été,False,True,True
+Filet de saumon,False,False,False
+"Rôti de bœuf, sauce rose",False,False,False
+"Blanc de poulet, sauce barbecue",False,False,False
+Couscous de légumes,False,True,True
+,False,False,False
+,False,False,False
+Lasagnes de bœuf,False,False,False
+Omelette,False,True,True
+Saucisse de porc OU de volaille,False,False,True
+Bœuf à la bolognaise,False,False,False
+Filet de lieu sauce à l'estragon,False,False,False
+Rôti de porc OU rôti de dinde au jus,False,False,False
+Gratin de boulghour,False,True,True
+Escalope de volaille label à la provençale,False,False,False
+Sauté de bœuf marocain,False,False,False
+Filet de lieu sauce à la crème,False,False,False
+Riz safrané,False,False,False
+Poulet rôti label au jus,False,False,False
+Jambon braisé OU rôti de dinde aux champignons,False,False,False
+Bolognaise,False,False,False
+Filet de lieu sauce méditerranéenne,False,False,False
+Brandade de poisson,False,False,False
+Haricots blancs à la provençale,False,False,True
+Saucisse OU saucisse de volaille,False,False,False
+Blanc de poulet sauce suprême,False,False,False
+Pot-au-feu,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Cassoulet OU sauté de dinde/ saucisse de volaille,False,False,False
+Omelette,False,True,True
+Escalope de dinde label sauce crème,False,False,False
+Parmentier crécy,False,False,False
+Filet de lieu beurre citron,False,False,False
+Couscous de légumes,False,True,True
+Poulet rôti label au jus,False,False,False
+Sauté de porc OU sauté de dinde dijonnais,False,False,False
+Rôti de bœuf au jus,False,False,False
+Filet de lieu au beurre blanc,False,False,False
+Gnocchis sauce tomate,False,False,True
+Blanquette de veau,False,False,False
+Aiguillettes de poulet sauce suprême,False,False,False
+Jambon braisé OU rôti de dinde sauce forestière,False,False,False
+Filet de saumon sauce oseille,False,False,False
+Rôti de dinde au jus,False,False,False
+Poisson pané beurre citron,False,False,False
+Parmentier de légumes d'hiver,False,True,True
+Galette/ saucisse OU saucisse de volaille,False,False,False
+Lasagne,False,False,False
+Omelette,False,True,True
+Escalope de porc OU rôti de dinde sauce curry,False,False,False
+Bolognaise,False,False,False
+Filet de lieu,False,False,False
+Gratin de boulgour,False,True,True
+Escalope de porc OU rôti de dinde,False,False,False
+Bolognaise,False,False,False
+Filet de lieu sauce curry,False,False,False
+Riz safrané,False,False,False
+Sauté de porc OU sauté de dinde dijonnais,False,False,False
+Kig ha farz,False,False,False
+Poulet rôti,False,False,False
+Filet de lieu à la crème,False,False,False
+Rôti de dinde label,False,False,False
+Gratin de pomme de terre au fromage frais,False,True,True
+Jambon braisé OU rôti de dinde label forestière,False,False,False
+Bœuf bourguignon,False,False,False
+Filet de saumon,False,False,False
+Omelette à la provençale,False,True,True
+Rôti de porc OU sauté de dinde,False,False,False
+Blanc de poulet à la crème,False,False,False
+Tajine de veau,False,False,False
+Filet de lieu sauce hollandaise,False,False,False
+Haricots blancs à la provençale,False,False,True
+Blanquette de dinde,False,False,False
+Brandade de poisson,False,False,False
+Rôti de bœuf,False,False,False
+Filet de lieu,False,False,False
+Saucisse OU saucisse de volaille,False,False,False
+Gratin de boulghour,False,True,True
+Poisson pané,False,False,False
+Éffiloché de canard confit et ses pommes,False,False,False
+Filet de lieu sauce suchet,False,False,False
+Timbale milanaise,False,False,False
+Filet de saumon,False,False,False
+Galette/ tomate/ fromage,False,False,True
+Sauté de poulet sauce suprême,False,False,False
+Saucisse OU saucisse de volaille,False,False,False
+Filet de lieu sauce armoricaine,False,False,False
+Parmentier de légumes d'hiver,False,True,True
+Rôti de dinde label,False,False,False
+Lasagnes,False,False,True
+Lasagnes,False,False,True
+Omelette,False,True,True
+Omelette,False,True,True
+Jambon braisé OU rôti de dinde sauce chasseur,False,False,False
+Jambon braisé OU rôti de dinde sauce chasseur,False,False,False
+Goulash de bœuf,False,False,False
+Filet de lieu sauce dugléré,False,False,False
+Filet de lieu sauce dugléré,False,False,False
+Couscous de légumes,False,True,True
+Saucisse OU saucisse de volaille,False,False,False
+Escalope de dinde label au paprika,False,False,False
+Hachis parmentier,False,False,False
+Filet de saumon,False,False,False
+Riz safrané,False,False,False
+Sauté de porc OU Rôti de dinde à l'indienne,False,False,False
+Émincé de volaille à la crème,False,False,True
+Rôti de veau,False,False,False
+Filet de lieu/ beurre ciboulette,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de dinde sauce au curry,False,False,False
+Brandade de poisson,False,False,False
+Rôti de bœuf,False,False,False
+Filet de lieu au beurre persillé,False,False,False
+Poulet label,False,False,False
+Haricots blancs à la provençale,False,False,True
+Escalope de porc OU rôti de dinde,False,False,False
+Sauté de bœuf flamand,False,False,False
+Filet de lieu sauce crème,False,False,False
+Couscous de légumes,False,True,True
+Rôti de porc OU de dinde,False,False,False
+Blanc de poulet sauce normande,False,False,False
+Rôti de bœuf,False,False,False
+Filet de saumon,False,False,False
+Blanquette de volaille label,False,False,True
+Filet de lieu sauce beurre citronée,False,False,False
+Bolognaise végétale,False,False,False
+Rôit de veau,False,False,False
+Croziflette,False,False,False
+Sauté de veau au curry,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Timbale milanaise OU dés de dinde,False,False,False
+Rôti de dinde label,False,False,False
+Gnocchi à la romaine,False,False,False
+Lasagnes,False,False,True
+Omelette,False,True,True
+Jambon braisé OU rôti de dinde sauce champignons,False,False,False
+Rôti de bœuf,False,False,False
+Filet de lieu à l'estragon,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de porc agenais OU rôti de dinde,False,False,False
+Rôti de bœuf,False,False,False
+Filet de saumon,False,False,False
+Omelette,False,True,True
+Couscous,False,True,True
+Rôti de porc 1/2 sel OU sauté de dinde,False,False,False
+Sauté de bœuf marcocain,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Rôti de porc OU rôti de dinde,False,False,False
+Riz safrané,False,False,False
+Blanc de poulet sauce paprika,False,False,False
+Tajine d'agneau,False,False,False
+Filet de lieu/ beurre citron,False,False,False
+Tomates cerise - Salade de pommes de terre au thon,False,False,False
+Salade de lentilles - Dés de féta - Tomates cerise,True,True,True
+Taboulé - Œuf mimosa,False,True,True
+Riz niçois - Thon,False,False,False
+Salade de pâtes aux trois couleurs - Œuf mimosa,False,False,True
+,False,False,False
+,False,False,False
+Jambon de dinde,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+Rôti de dinde froid,False,False,False
+Rôti de porc ou sauté de dinde,False,False,False
+Rôti de porc ou sauté de dinde,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+Aiguillettes de poulet,False,False,False
+Rôti de dinde label,False,False,False
+,False,False,False
+,False,False,False
+Rôti de dinde label,False,False,False
+,False,False,False
+Blanc de poulet,False,False,False
+,False,False,False
+,False,False,False
+,False,False,False
+Aiguillettes de poulet,False,False,False
+Rôti de dinde label,False,False,False
+Poisson pané,False,False,False
+Omelette,False,True,True
+Filet de poulet,False,False,False
+Rôti de bœuf,False,False,False
+Rôti de porc OU rôti de dinde,False,False,False
+Jambon braisé froid OU filet de poulet,False,False,False
+Poisson pané,False,False,False
+Œuf dur,False,False,False
+Cordon bleu,False,False,True
+Poulet,False,False,False
+Roulé de saumon / mayonnaise,False,False,False
+Rôti de veau,False,False,False
+"Veggi mix (pois chiches, lentilles)",True,True,True
+Filet de poulet,False,False,False
+Poisson pané,False,False,False
+Saucisse de porc OU de volaille,False,False,True
+Chili con carné,False,False,False
+,False,False,False
+Timbale milanaise,False,False,False
+Filet de lieu,False,False,False
+Poulet rôti,False,False,False
+Parmentier de légumes d'été,False,True,True
+Rôti de bœuf,False,False,False
+Sandwich Fallafel (pain pita),False,False,False
+"Filet de lieu, sauce crème",False,False,False
+Parmentier de courgettes,False,True,True
+"Blanc de poulet, sauce barbecue",False,False,False
+"Galette, saucisse de porc OU de volaille",False,False,True
+Sauté de bœuf provençale,False,False,False
+,False,False,False
+Rôti de dinde,False,False,False
+Filet de saumon froid,False,False,False
+Jambon braisé froid OU rôti de dinde,False,False,False
+Rôti de porc 1/2 sel,False,False,False
+Gnocchi,False,False,False
+"Escalope de dinde, sauce basilic",False,False,True
+Poulet rôti,False,False,False
+PAS DE CENTRE,False,False,False
+PAS DE CENTRE,False,False,False
+Lasagne de bœuf,False,False,False
+Escalope de porc sauce forestière ou Rôti de dinde,False,False,False
+Omelette,False,True,True
+Omelette,False,True,True
+Filet de lieu sauce tomate,False,False,False
+Gratin de boulgour,False,True,True
+Poulet,False,False,False
+Jambon braisé OU Rôti de dinde sauce barbecue,False,False,False
+Jambon braisé OU Rôti de dinde sauce barbecue,False,False,False
+Rôti de bœuf,False,False,False
+Dos de lieu à la provençale,False,False,False
+Rôti de porc OU Sauté de dinde,False,False,False
+Couscous de légumes,False,True,True
+Blanquette de volaille,False,False,True
+Blanquette de volaille,False,False,True
+Rôti de bœuf,False,False,False
+Saumon à l'oseille,False,False,False
+Poulet Tandoori,False,False,False
+"Bolongnaise végétale (quinoa, carotte, oignon)",True,True,True
+Rôti de dinde,False,False,False
+Parmentier crécy,False,False,False
+Pot au feu,False,False,False
+Filet de lieu beurre / citron,False,False,False
+Riz safrané,False,False,False
+Émincé de volaille aux champignons,False,True,True
+Escalope de porc OU Rôti de dinde,False,False,False
+Rôti de bœuf,False,False,False
+Filet de lieu sauce normande,False,False,False
+Gratin de pâtes brocoli,False,True,True
+Rôti de porc aux herbes OU Sauté de dinde OU Boulette de lentilles*,True,True,True
+Escalope de dinde OU Omelette*,False,True,True
+Sauté de bœuf marocain OU Aiguillette de blé*,False,False,False
+Filet de saumon à l'oseille,False,False,False
+Gratin de boulgour,False,True,True
+Saucisse de porc OU de Volaille OU Galette de soja tomate*,True,True,True
+Blanc de poulet sauce suprème OU Omelette*,False,True,True
+BolognaiseOU Galette de lentilles corail boulgour*,True,True,True
+Filet de lieu beurre estragon,False,False,False
+Gnocchi à la romaine,False,False,False
+Brandade de poisson,False,False,False
+Sauté de veau milanaise OU galette de soja à la tomate *,True,True,True
+Tortis carbonara de porc OU de volaille OU carbonara végétale *,False,False,True
+Filet de saumon,False,False,False
+Sauté de porc OU rôti de dinde sauce piquante OU aiguillettes de blé et carottes *,False,False,False
+Rôti de veau OU galette de soja au citron *,True,True,True
+Émincé de volaille sauce colombo OU Omelette *,False,True,True
+Galette de tomate et fromage,False,False,True
+Filet de lieu sauce hollandaise,False,False,False
+Lasagne OU lasagne de légumes*,False,True,True
+Omelette,False,True,True
+Jambon braisé à la châtaigne OU rôti de dinde OU galette de soja au citron*,True,True,True
+Sauté d'agneau marengo OU boulettes de lentilles*,True,True,True
+Filet de lieu beurre ciboulette,False,False,False
+Bolognaise végétal,False,False,False
+Poulet Label OU Aiguillette de blé*,False,False,False
+Parmentier de potiron OU Galette de soja citron*,True,True,True
+Filet de lieu beurre ciboulette,False,False,False
+Sauté de porc dijonais OU de Volaille OU Galette de soja citron*,True,True,True
+Couscous de légumes,False,True,True
+Escalope de dinde sauce crème OU omelette*,False,True,True
+Bœuf bourguignon OU Boulette de lentilles corail*,True,True,True
+Filet de saumon,False,False,False
+Gratin de boulgour,False,True,True
+Émincé de dinde OU Indian veggie *,False,False,False
+Jambon braisé sauce forestière OU Rôti de dinde OU Galette de lentilles corail boulgour*,True,True,True
+Rôti de bœuf OU Omelette*,False,True,True
+Filet de lieu sauce suchet,False,False,False
+Haricots blancs à la provençale,False,False,True
+Galette saucisse OU Galette tomate fromage,False,False,True
+Blanquette de volaille OU Aiguillettes de blé et carotte*,False,False,True
+Sauté de bœuf flamand OU Boulette de lentilles*,True,True,True
+Filet de lieu sauce tomate,False,False,False
+Riz safrané,False,False,False
+Poulet Label OU Aiguillette de blé*,False,False,False
+Escalope de porc sauce moutarde OU Rôti de dinde OU Omelette*,False,True,True
+Bœuf flamand OU Galette de lentilles corail*,True,True,True
+Filet de lieu beurre citron,False,False,False
+Sauté de porc dijonnais OU Rôti de dinde OU galette de soja tomate*,True,True,True
+Couscous de légumes,False,True,True
+Poisson pané,False,False,False
+Ballotin de poulet aux marrons OU Nuggets de blé*,False,False,False
+Filet de saumon,False,False,False
+Brandade de poisson,False,False,False
+Escalope de dinde OU Galette de lentilles corail*,True,True,True
+Galette de fromage et tomate,False,False,True
+Rôti de porc au marrons OU Rôti de dinde OU Omelette*,False,True,True
+Gnocchi à la romaine,False,False,False
+Blanquette de volaille OU Galette de soja citron*,True,True,True
+Pâtes carbonara de porc OU de Volaille OU Omelette*,False,True,True
+Filet de lieu à l'oseille,False,False,False
+Lasagne OU Lasagne de légumes*,False,True,True
+Omelette,False,True,True
+Jambon braisé sauce au poivre OU Rôti de dinde OU Boulette de lentilles*,True,True,True
+Bœuf flamand OU Galette de soja tomate*,True,True,True
+Filet de saumon,False,False,False
+Sauté de porc agenais OU Rôti de dinde OU Aiguillette de blé carottes*,False,False,False
+Couscous de légumes,False,True,True
+Escalope de dinde Label OU Mélange légumineuses Mexicain*,False,False,False
+Tajine de veau OU Omelette*,False,True,True
+Filet de lieu à l'estragon,False,False,False
+Poulet rôti Label OU Galette de soja tomate*,True,True,True
+Gratin de pâtes au brocoli,False,True,True
+Escalope de porc forestière OU Rôti de dinde OU Omelette *,False,True,True
+Parmentier de crécy OU Aiguillette de blé carotte*,False,False,False
+Filet de lieu sauce curry,False,False,False
+Gratin de boulgour,False,True,True
+Porc au caramel OU Sauté de dinde OU Aiguillette de blé carotte *,False,False,False
+Émincé de volaille sauce crème OU Galette de soja au citron *,True,True,True
+Pot au feu OU Boulette de lentilles*,True,True,True
+Filet de lieu beurre persillé,False,False,False
+Riz safrané,False,False,False
+Saucisse de porc OU saucisse de volaille OU Galette de soja au citron *,True,True,True
+Blanc de poulet à la milanaise OU Aiguillette de blé carotte,False,False,False
+Parmentier de Crècy OU Omelette*,False,True,True
+Saumon,False,False,False
+Poulet Label OU Aiguillette de blé carottes*,False,False,False
+Omelette,False,True,True
+Brandade de poisson,False,False,False
+Bolognaise OU Galette de lentilles*,True,True,True
+Filet de lieu beurre citron,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de soja à la tomate*,True,True,True
+Gratin de boulgour,False,True,True
+Blanquette de volaille OU Aiguillette de blé *,False,False,True
+Bolognaise OU Boulette de lentilles*,True,True,True
+Filet de lieu beurre persillé,False,False,False
+Escalope de dinde Label au curry OU Aiguillette de blé *,False,False,False
+Rôti de veau OU Galette de soja au citron*,True,True,True
+Poisson pané,False,False,False
+Parmentier de légumes d'hiver,False,True,True
+Filet de lieu,False,False,False
+Gnocchi à la romaine,False,False,False
+Sauté de veau sauce champignons OU Galette de lentilles *,True,True,True
+Croziflette de porc OU de volaille OU Croziflette sans viande *,False,False,True
+Rôti de dinde OU Mélange légumineuse mexicain *,False,False,False
+Saumon à l'oseille,False,False,False
+Lasagnes OU Lasagnes de légumes *,False,True,True
+Omelette,False,True,True
+Jambon braisé OU Rôti de dinde OU Galette de soja au citron*,True,True,True
+Rôti de bœuf OU Boulette de lentilles*,True,True,True
+Filet de lieu,False,False,False
+Gratin de boulgour,False,True,True
+Saucisse de porc OU Saucisse de volaille OU Galette de soja à la tomate*,True,True,True
+Escalope de dinde Label sauce crème OU Mix veggie mexicain *,False,False,False
+Sauté de bœuf marocain OU Omelette*,False,True,True
+Filet de saumon,False,False,False
+Haricots blancs à la provençale,False,False,True
+Couscous à la dinde OU Couscous de légumes *,False,True,True
+Rôti de porc OU Sauté de dinde OU Omelette*,False,True,True
+Sauté de bœuf marocain OU Boulette de lentilles*,True,True,True
+Filet de lieu sauce tomate,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de soja à la tomate *,True,True,True
+Riz safrané,False,False,False
+Blanc de poulet sauce paprika OU Aiguillette de blé aux carottes*,False,False,False
+Tajine de veau OU Omelette*,False,True,True
+Filet de lieu sauce citron,False,False,False
+Bolognaise végétale,False,False,False
+Jambon braisé sauce chasseur OU Rôti de dinde OU Veggie mix *,False,False,False
+Parmentier de crécy OU Omelette*,False,True,True
+Dos de lieu,False,False,False
+Gratin de pommes de terre au fromage frais,False,True,True
+Rôti de porc OU Rôti de dinde OU Veggie mix mexicain*,False,False,False
+Émincé de poulet sauce colombo OU Boulette de lentilles*,True,True,True
+Sauté de bœuf flamand OU Galette de soja au citron*,True,True,True
+Filet de saumon sauce estragon,False,False,False
+Poulet rôti Label OU Galette de lentilles*,True,True,True
+Couscous de légumes,False,True,True
+Poisson pané OU Aiguillettes de blé aux carottes*,False,False,False
+Sauté de bœuf flamand OU Omelette *,False,True,True
+Filet de lieu à la sauce tomate,False,False,False
+Blanc de volaille à la crème OU Galette de soja au citron*,True,True,True
+Brandade de poisson,False,False,False
+Choucroute garnie OU Choucroute végétale,False,False,False
+Gnocchi à la romaine et sauce tomate,False,False,True
+Rôti de veau sauce forestière OU Aiguillette de blé aux carottes*,False,False,False
+Rôti de dinde Label  OU Boulette de lentilles*,True,True,True
+Filet de lieu au beurre persillé,False,False,False
+Galette à la tomate et au fromage,False,False,True
+Blanquette de veau OU Omelette*,False,True,True
+Timbale milanaise OU Timbale végétale*,False,False,False
+Lasagne OU Lasagne de légumes*,False,True,True
+Omelette,False,True,True
+"Dos de lieu, sauce crème",False,False,False
+Gratin de pâtes aux brocolis,False,True,True
+Poisson pané,False,False,False
+Escalope de dinde Label à la crème OU Aiguillettes de blé et carotte*,False,False,False
+Sauté de bœuf flamand OU Galettes de soja à la tomate*,True,True,True
+Filet de lieu sauce provençale,False,False,False
+Couscous de légumes,False,True,True
+Rougail de saucisse de porc OU saucisse de volaille OU Rougail végétale*,False,False,True
+Sauté de poulet marengo OU Galettes de lentilles corail*,True,True,True
+Saumon,False,False,False
+Riz safrané,False,False,False
+Poulet Label OU Boulette de lentilles*,True,True,True
+Rôti de porc OU Rôti de dinde OU Mix veggie mexicain*,False,False,False
+Hachis parmentier OU Galette de soja au citron*,True,True,True
+"Filet de lieu, sauce beurre et ciboulette",False,False,True
+Omelette,False,True,True
+"Poisson pané, citron",False,False,False
+Pâtes carbonara de porc OU de volaille OU végétale*,False,False,True
+Rôti de bœuf OU Omelette*,False,True,True
+"Filet de lieu, sauce tomate",False,False,True
+Haricots blancs à la provençale,False,False,True
+Rôti de dinde Label OU Mix veggie indian*,False,False,False
+Brandade de poisson,False,False,False
+Hachis parmentier OU Galette de soja à la tomate*,True,True,True
+Saumon à l'oseille,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de porc OU Sauté de dinde au paprika OU Galette de boulgour*,False,False,False
+Escalope de dinde Label sauce basquaise OU Omelette*,False,True,True
+Nugget's OU Nugget's végétale*,False,False,False
+Filet de lieu,False,False,False
+Omelette,False,True,True
+Sauté de porc au paprika OU Sauté de dinde OU mix veggie indian*,False,False,False
+Blanc de poulet Label sauce barbecue OU Aiguillettes de blé carotte*,False,False,False
+Sauté de bœuf marocain OU Galette de soja au citron*,True,True,True
+Filet de lieu,False,False,False
+Repas de réserve,False,False,False
+Rôti de porc OU Rôti de dinde OU Salade de pâtes*,False,False,False
+Galette saucisse de porc OU de volaille OU Galette gruyère et tomate cerise*,False,False,True
+Filet de saumon froid,False,False,False
+"Salade de lentilles, salade de pomme de terre, concombre et dés de feta",True,True,True
+Escalope de porc OU Rôti de dinde OU Omelette*,False,True,True
+Parmentier de courgette OU Aiguillette de blé*,False,False,False
+Gratin de pâtes au thon,False,True,False
+Poulet OU Omelette*,False,True,True
+Blanquette de veau OU Galette de soja au citron*,True,True,True
+Sauté de bœuf au paprika OU Aiguillettes de blé carottes*,False,False,False
+Carbonara de porc OU de volaille OU Carbonara végétale*,False,False,True
+"Filet de lieu, beurre citron",False,False,False
+Escalope de porc OU de dinde OU Galette de soja tomate*,True,True,True
+Galette saucisse de porc OU de volaille OU Aiguillette de blé*,False,False,True
+Lasagne OU Lasagne de légumes*,False,True,True
+Omelette,False,True,True
+Poulet OU Galette de soja à la tomate*,True,True,True
+Riz safrané,False,False,False
+Escalope de porc dijonnaise OU Rôti de dinde OU Mélange mexicain*,False,False,False
+Rôti de bœuf OU Boulette de lentilles*,True,True,True
+Filet de saumon OU Omelette*,False,True,True
+Gratin de boulgour,False,True,True
+Saucisse de porc OU de Volaille OU Mélange indien végétal*,False,False,True
+Blanquette de dinde OU Aiguillette de blé aux carottes*,False,False,False
+Sauté de bœuf provençale OU Galette de lentilles*,True,True,True
+Filet de lieu sauce beurre citron OU Galette de soja à la tomate*,True,True,True
+Couscous de légumes,False,True,True
+Fish and Chips,False,False,False
+Escalope de porc OU Rôti de dinde OU Mélange indien mix*,False,False,False
+Rôti de veau OU Galette de soja au citron*,True,True,True
+Filet de lieu au curry OU Tortillas*,False,False,False
+Rôti de dinde OU Galette de lentilles*,True,True,True
+Gratin de pâtes aux brocolis,False,True,True
+Brandade de poisson OU Nugget's végé et purée*,False,False,True
+Parmentier de crécy OU Aiguillettes de blé*,False,False,False
+Filet de lieu à la crème OU Omelette*,False,True,True
+Poulet OU Aiguillette de blé*,False,False,False
+Coquillettes de poireaux à la béchamel,False,False,False
+Escalope de porc OU Rôti de dinde OU Omelette*,False,True,True
+Pot au feu OU Boulette de lentilles*,True,True,True
+Filet de lieu sauce Suchet OU Mélange mix mexicain*,False,False,False
+Omelette,False,True,True
+Saucisse de porc OU de Volaille OU Mix veggie indien*,False,False,True
+Timbale milanaise de porc OU de Volaille OU Timbale végétale*,False,False,True
+Parmentier de crécy OU Galette de soja à la tomate*,True,True,True
+Filet de saumon à l'oseille OU Boulette de lentilles*,True,True,True
+Bolognaise végétale,False,False,False
+Sauté de porc agenais OU Rôti de dinde OU Mélange mix mexicain*,False,False,False
+Émincé de volaille à la crème OU Galette de soja au citron*,True,True,True
+Rôti de boeuf OU Omelette*,False,True,True
+Filet de lieu sauce beurre blanc OU Aiguilette de blé aux carottes*,False,False,False
+Rôti de dinde OU Galette de soja au citron*,True,True,True
+Carbonara de porc OU de Volaille OU Végétarienne*,True,True,True
+Galette de tomate fromage,False,False,True
+Blanquette de veau OU Mélange couscous*,False,False,False
+Filet de lieu à l'oseille OU Mix veggie mexicain*,False,False,False
+Poulet OU Aiguillette de blé aux carottes*,False,False,False
+Rôti de veau OU Galettes de lentilles*,True,True,True
+"Gnocchis à la romaine, sauce provençale",False,False,False
+Filet de saumon OU Omelette*,False,True,True
+Lasagnes OU Lasagnes de légumes*,False,True,True
+Omelette,False,True,True
+Brandade de poisson,False,False,False
+Filet de lieu sauce beurre blanc,False,False,False
+Haricots blancs à la provençale,False,False,True
+Poulet OU Galette de soja à la tomate*,True,True,True
+Escalope de porc dijonaise OU Rôti de dinde OU Aiguillettes de blé aux carottes*,False,False,False
+Bolognaise OU Mélange mexicain*,False,False,False
+Filet de lieu sauce crème,False,False,False
+Omelette,False,True,True
+Rôti de porc OU Sauté de dinde OU Mélange mexicain*,False,False,False
+Galette de tomate fromage,False,False,True
+Bœuf bourguignon OU Galette de lentilles*,True,True,True
+Filet de lieu,False,False,False
+Bolognaise végétale,False,False,False
+Sauté de porc agenais OU Rôti de dinde OU Aiguillette de blé aux carottes*,False,False,False
+Blanquette de dinde OU Boulette de lentilles*,True,True,True
+Lasagne OU Lasagne végétale *,False,False,False
+Filet de saumon à l'oseille,False,False,False
+Sauté de porc agenais OU Sauté de dinde OU Mélange mix à la provençale*,False,False,False
+Couscous de légumes,False,True,True
+Poisson pané beurre citron,False,False,False
+Rôti de boeuf OU Galette de soja à la tomate*,True,True,True
+Filet de lieu à la crème,False,False,False
+Paëlla végétarienne,True,True,True
+Rôti de dinde OU Galette de lentilles*,True,True,True
+Escalope de porc sauce dijonnaise OU Rôti de dinde OU Omelette*,False,True,True
+Ballotin de volaille à la châtaigne OU nuggets de blé,False,False,True
+Filet de lieu à la ciboulette,False,False,False
+Poulet OU Galette de lentilles*,True,True,True
+Tartiflette de porc OU Volaille OU Tartiflette végétarienne*,True,True,True
+Rôti de veau OU Mélange mix indien*,False,False,False
+Galette tomate fromage,False,False,True
+Filet de lieu sauce beurre citron,False,False,False
+Blanquette de veau OU Galette de soja citron*,True,True,True
+Boulette de lentilles sauce provençale,True,True,True
+Chipolatas OU Rôti de dinde OU Omelette*,False,True,True
+Rôti de dinde OU Aiguillettes de blé*,False,False,False
+Filet de saumon à l'oseille,False,False,False
+Lasagnes OU Lasagnes de légumes*,False,True,True
+Omelette,False,True,True
+Escalope de porc à la crème OU Rôti de dinde OU Boulette de lentilles*,True,True,True
+Rôti de bœuf OU Galette de soja à la tomate*,True,True,True
+Filet de lieu au curry,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de soja*,True,True,True
+Coquillettes poireaux béchamel,False,False,False
+Blanquette de volaille OU Aiguillette de blé*,False,False,True
+Sauté de bœuf flamand OU Boulette de lentilles*,True,True,True
+Filet de lieu sauce oseille,False,False,False
+Bolognaise végétale,False,False,False
+Nems aux légumes,False,True,True
+Escalope de porc aux champignons OU Rôti de dinde OU Tortillas*,False,False,False
+Rôti de veau OU Galette de soja à la tomate*,True,True,True
+Filet de saumon au beurre blanc,False,False,False
+Riz safrané,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de soja au citron*,True,True,True
+Poisson pané,False,False,False
+Sauté de bœuf marocain OU Omelette*,False,True,True
+Filet de lieu à la crème,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de soja à la tomate*,True,True,True
+Gratin de boulgour,False,True,True
+Sauté de poulet tandorri OU Mélange provençale*,False,False,False
+Rôti de bœuf OU Tortillas*,False,False,False
+Filet de lieu sauce tomate,False,False,False
+Escalope de porc OU Rôti de dinde OU Galette de soja à la tomate*,True,True,True
+Brandade de poisson,False,False,False
+Rôti de veau OU Mélange mexicain*,False,False,False
+Gnocchi à la romaine,False,False,False
+Filet de lieu sauce dieppoise,False,False,False
+Falafels,True,True,True
+Tajine de veau OU Boulette de lentilles*,True,True,True
+Croziflette OU Croziflette végétarienne*,True,True,True
+Émincé de poulet sauce forestière OU Omelette*,False,True,True
+Filet de saumon beurre citron,False,False,False
+Lasagne OU Lasagne végétale*,False,False,False
+Omelette,False,True,True
+Rôti de dinde OU Aiguillette de blé*,False,False,False
+Rôti de bœuf OU Boulette de lentilles*,True,True,True
+Filet de lieu beurre ciboulette,False,False,False
+Sauté de porc sauce chataîgne OU Rôti de dinde OU Croustillant fromager*,False,False,True
+Bolognaise végétale,False,False,False
+Poisson pané,False,False,False
+Parmentier épinards OU Omelette*,False,True,True
+Filet de lieu sauce Suchet,False,False,False
+Filet de lieu sauce hollandaise,False,False,False
+Haricots blancs à la provençale,False,False,True
+Poulet OU Pané de blé tomate mozzarella*,False,False,True
+Escalope de porc à la crème OU Rôti de dinde OU Tortillas*,False,False,False
+Sauté de bœuf aux champignons OU Mélange mexicain*,False,False,False
+Filet de lieu au curry,False,False,False
+Couscous de légumes,False,True,True
+Sauté de poulet OU,False,False,False
+Jambon braisé sauce forestière OU Rôti de dinde OU Aiguillettes de blé*,False,False,False
+Sauté de bœuf aux champignons OU Galette de millet*,False,False,False
+Filet de lieu beurre citron,False,False,False
+Sauté de porc sauce chataîgne OU Rôti de dinde OU Mélange indien*,False,False,False
+Gratin de boulgour,False,True,True
+Blanquette de volaille OU Tortillas*,False,False,True
+Rôti de veau OU Galette de tomate*,False,False,False
+Filet de saumon à l'oseille,False,False,False
+Couscous de légumes,False,True,True
+Rôti de porc OU Rôti de dinde OU Galette yumi texas*,False,False,False
+Coquillettes au thon,False,False,False
+Bolognaise OU Croustillant fromager*,False,False,True
+Filet de lieu sauce hollandaise,False,False,False
+Poulet OU Galette de soja au citron*,True,True,True
+Fallafels sauce provençale,False,False,False
+Brandade de poisson,False,False,False
+Sauté de bœuf goulash OU Boulette de lentilles*,True,True,True
+Filet de lieu beurre persillé,False,False,False
+Timbale milanaise de porc OU de Volaille OU Timballe végé*,False,False,True
+"Gnocchi à la romaine, sauce tomate",False,False,True
+Œuf florentine,False,False,False
+Blanquette de veau OU Croustillant fromager*,False,False,True
+Filet de lieu à l'armoricaine,False,False,False
+Filet de saumon beurre blanc,False,False,False
+Rôti de veau OU Tortillas*,False,False,False
+Galette fromage et tomate,False,False,True
+"Hamburger (galette végé, guacamole, fromage, salade)",False,False,True
+Lasagnes OU Lasagnes de légumes*,False,True,True
+Omelette,False,True,True
+Sauté de poulet tandoori OU Mélange mexicain*,False,False,False
+Rôti de boeuf OU Galette de millet*,False,False,True
+Filet de lieu à la crème,False,False,False
+Poulet rôti OU Galette de millet*,False,False,False
+Haricots blancs à la provençale,False,False,True
+Escalope de porc à la normande OU Rôti de dinde OU Mélange mexicain*,False,False,False
+Sauté de bœuf goulash OU Omelette*,False,True,True
+Filet de lieu sauce hollandaise,False,False,False
+Saucisse de porc OU de Volaille OU Aiguillettes de blé*,False,False,True
+Couscous de légumes,False,True,True
+Brandade de poisson,False,False,False
+Rôti de bœuf OU Boulette de lentilles*,True,True,True
+Filet de lieu à l'oseille,False,False,False
+Bolognaise végétale,False,False,False
+Moussaka de légumes,False,True,True
+Blanquette de volaille OU Tortillas*,False,False,True
+Rôti de bœuf OU Galette de soja au citron*,True,True,True
+Filet de saumon,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de porc agenais OU Pané au fromage*,False,False,True
+Poisson pané au citron,False,False,False
+PONT DE L'ASCENSION,False,False,False
+Sauté de poulet barbecue OU Boulettes de lentilles*,True,True,True
+Omelette,False,True,True
+Escalope de porc colombo OU Rôti de dinde OU Mélange indien*,False,False,False
+Sauté de bœuf sauce basquaise OU Galette de millet*,False,False,False
+Filet de lieu beurre persillé,False,False,False
+Haricots blancs à la provençale,False,False,True
+Rôti de porc à la moutarde OU Rôti de dinde OU Tortillas*,False,False,False
+Rôti de veau OU Mélange indien*,False,False,False
+Dos de lieu beurre citron,False,False,False
+Rôti de dinde OU Galette texas*,False,False,False
+Dahl de lentilles,True,True,True
+Brandade de poisson,False,False,False
+Bolognaise OU Boulette de lentilles*,True,True,True
+Filet de lieu noir beurre estragon,False,False,False
+Saucisse de porc OU de Volaille OU Galette de citron*,False,False,True
+Fallafels,False,False,False
+Émincé de poulet à la crème OU Omelette*,False,True,True
+MENU DE FÊTE,False,False,False
+Filet de saumon,False,False,False
+Poulet sauce barbecue OU Galette de tomate,False,False,False
+Couscous de légumes,False,True,True
+Jambon braisé aux herbes OU Rôti de dinde OU Mélange indien*,False,False,False
+Sauté de bœuf tandoori OU Boulette de lentilles*,True,True,True
+Filet de lieu,False,False,False
+Poisson pané,False,False,False
+REPAS DE RÉSERVE,False,False,False
+Galette tomate fromage,False,False,True
+Rôti de dinde,False,False,False
+Poulet OU galette texas yumi*,False,False,False
+Lieu noir à la tomate,False,False,False
+Parmentier de courgettes OU Boulette de lentilles*,True,True,True
+Paëlla OU Paëlla végétale*,False,False,True
+Escalope de porc OU sauté de dinde à la crème OU Tortillas*,False,False,False
+Poisson pané à la tomate,False,False,False
+Lieu noir beurre ciboulette,False,False,True
+Rôti de veau OU Mélange indien*,False,False,False
+Jambon braisé sauce barbecue OU pois chiches*,True,True,True
+Rôti de bœuf OU Boulette de lentilles*,True,True,True
+Sauté de bœuf au paprika OU Galette au citron*,False,False,False
+"Salade de pâtes, tomate cerise, bâtonnet de concombre sauce fromage blanc, viande froide",False,False,True
+Lasagnes OU Lasagnes de légumes*,False,True,True
+Omelette,False,True,True
+Poulet OU Galette de boulgour*,False,False,False
+Boulgour de légumes,False,True,True
+Jambon braisé sauce barbecue OU Rôti de dinde OU Mélange provençale*,False,False,False
+Sauté de bœuf à la provençale OU Tortillas*,False,False,False
+Filet de lieu noir beurre ciboulette,False,False,False
+Émincé de dinde à la crème OU Galette de millet*,False,False,False
+Haricots blancs à la provençale,False,False,True
+Timbale milanaise de porc OU de Volaille OU Timbale végé*,False,False,True
+Sauté de bœuf à la provençale OU Boulette de lentilles*,True,True,True
+Lieu noir à la tomate,False,False,False
+Omelette,False,True,True
+Timbale au thon,False,False,False
+Émincé de poule au pot sauce crème OU Nugget's végé*,False,False,False
+Sauté de bœuf à la provençale OU Omelette*,False,True,True
+Saumon à l'oseille,False,False,False
+Saucisse de porc OU Saucisse de volaille OU Galette de soja*,True,True,True
+Riz safrané,False,False,False
+Rôti de dinde à la moutarde OU Palet fromager*,False,False,True
+Tajine de veau OU Mélange mexicain*,False,False,False
+Lieu noir sauce curry,False,True,True
+Ravioles à la tomate gratinées,False,True,True
+Rôti de porc OU Rôti de dinde OU Galette Yumi texas*,False,False,False
+Brandade de poisson,False,False,False
+Pot au feu OU Boulette de lentilles*,True,True,True
+Lieu noir sauce poivron,False,False,False
+Dahl de lentilles corail,True,True,True
+Poulet OU Galette tomate mozza*,False,False,False
+Boulette de patate douce,False,False,False
+Saucisse de porc OU Saucisse de volaille OU Galettes de lentilles*,True,True,True
+Lieu noir,False,False,False
+Saucisse de porc OU Saucisse de Volaille OU Galette de soja*,True,True,True
+Couscous de légumes,False,True,True
+Rôti de dinde à la crème OU Mélange indien*,False,False,False
+Pot au feu OU Omelette*,False,True,True
+Saumon à l'estragon,False,False,False
+Escalope milanaise sauce tomate OU Croustillant fromager*,False,False,True
+Rôti de veau OU Galette de soja*,True,True,True
+Galette tomate fromage,False,False,True
+Tartiflette OU Tartiflette végé*,False,False,True
+Eiglefin beurre persillé,False,False,True
+Blanquette de veau OU Boulette de pois chiches*,True,True,True
+Parmentier de légumes d'hiver,False,True,True
+Jambon braisé à la moutarde OU Rôti de dinde OU Palet tomate mozza*,False,False,False
+Dos de lieu sauce hollandaise,False,False,False
+Lasagnes OU Lasagne végé*,False,False,True
+Omelette,False,True,True
+Poisson pané beurre citron,False,False,False
+Parmentier crécy OU Mélange indien*,False,False,False
+Couscous de légumes,False,True,True
+Poulet OU Mélange indien*,False,False,False
+Escalope de porc OU Rôti de dinde OU Omelette*,False,True,True
+Rôti de bœuf OU Boulettes de lentille*,False,False,False
+Lieu noir beurre citron,False,False,False
+Boulgour de légumes,False,True,True
+Carbonade Flamande OU Nugget's croc fromage*,False,False,True
+Jambon braisé OU Rôti de dinde OU Galette soja citron*,True,True,True
+Bolognaise OU Omelette *,False,True,True
+Filet de lieu noir sauce à l'oseille,False,False,False
+Saucisse de porc OU de Volaille OU Aiguillette de carottes*,False,False,True
+Pâtes au potiron et mozzarella,False,False,True
+Escalope de dinde à la crème OU mélange mexicain*,False,False,False
+Sauté de bœuf marengo OU Galette de millet*,False,False,False
+Lieu noir sauce dieppoise,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de soja*,True,True,True
+"Parmentier purée de potiron, protéine de pois",False,False,True
+Poisson pané,False,False,False
+Rôti de veau OU Tortillas*,False,False,False
+Saumon,False,False,False
+Sauté de porc dijonnais OU Rôti de dinde OU Galette tomate mozza*,False,False,False
+Bolognaise végé,False,False,False
+Poisson beurre blanc,False,False,False
+REPAS DE NOËL,False,False,False
+Lieu noir sauce paprika,False,False,True
+Gnocchi à la romaine sauce tomate,False,False,True
+Saucisse de porc OU de Volaille OU Aiguillette de carottes*,False,False,True
+Blanquette de veau OU Pané fromager*,False,False,True
+Émincé de dinde tandorii OU Omelette*,False,True,True
+Églefin sauce beurre blanc,False,False,False
+Escalope de dinde à la crème OU Galettes de millet,False,False,False
+Rôti de veau OU Mélange provençale*,False,False,False
+Carbonara de porc OU de Volaille OU Végé*,False,False,True
+Galette tomate fromage,False,False,True
+Saumon,False,False,False
+Omelette,False,True,True
+Lasagne OU Lasagne végé*,False,False,False
+Poisson pané,False,False,False
+Parmentier de potiron OU Boulette de lentilles*,True,True,True
+Lieu noir sauce armoricaine,False,False,False
+Haricots blancs à la provençale,False,False,True
+Poulet OU Galette de lentilles*,True,True,True
+"Escalope de dinde, sauce forestière OU Mélange indien*",False,False,False
+Parmentier au potiron OU Omelette*,False,True,True
+Filet de lieu noir à la crème,False,False,False
+Couscous de légumes,False,True,True
+Rôti de porc OU Sauté de dinde OU Galette de soja*,True,True,True
+Rôti de dinde OU Boulette de lentilles*,True,True,True
+Parmentier de potiron OU Tortillas *,False,False,False
+Filet de saumon à l'oseille,False,False,False
+Sauté de porc sauce charcutière OU Rôti de dinde OU Galette texas*,False,False,False
+Gratin de boulgour,False,True,True
+Poisson pané,False,False,False
+Nems végé,False,False,False
+Filet de lieu au curry,False,False,False
+Cassoulet OU Cassoulet végé*,False,False,False
+Dahl de lentilles,True,True,True
+Escalope de porc à la crème OU Rôti de dinde OU Omelette*,False,True,True
+Sauté de veau sauce aux marrons OU Aiguillettes de blé*,False,False,False
+Filet de lieu sauce suchet,False,False,False
+Sauté de porc sauce charcutière OU Rôti de dinde OU Galette de soja*,True,True,True
+Curry de légumes,False,True,True
+Escalope de dinde OU Mélange mexicain*,False,False,False
+Rôti de boeuf OU Boulette de lentilles*,True,True,True
+Filet de lieu beurre ciboulette,False,False,False
+Gnocchi à la romaine sauce tomate,False,False,True
+Rôti de veau OU Pané fromagé*,False,False,False
+Croziflette de porc OU de Volaille OU Végé*,False,False,True
+Émincé de poulet OU Mélange indien*,False,False,False
+Églefin,False,False,False
+Gratin de pâte mozza potiron,False,True,True
+Saucisse de porc OU de Volaille OU Nugget's végé*,False,False,True
+Blanquette de veau OU Boulette de lentilles*,True,True,True
+Poulet OU Galette tomate mozza*,False,False,False
+Saumon au beurre blanc,False,False,False
+Lasagne OU Lasagne végé*,False,False,False
+Omelette,False,True,True
+Escalope de porc aux champignons OU Rôti de dinde OU Galette de soja*,True,True,True
+Bolognaise OU Mélange indien*,False,False,False
+Lieu sauce armoricaine,False,False,False
+Haricots blancs à la provençale,False,False,True
+Poulet OU Mélange indien*,False,False,False
+Poisson pané au citron,False,False,False
+Sauté de bœuf OU Galette de quinoa à la provençale*,True,True,True
+Lieu noir sauce hollandaise,False,False,False
+Pâtes potiron mozza,False,False,True
+Saucisse de porc OU de Volaille OU Mélange indien*,False,False,True
+Escalope de dinde à la crème OU Omelette*,False,True,True
+Sauté de veau sauce tajine OU Boulette de lentilles*,True,True,True
+Lieu noir beurre persillé,False,False,True
+Sauté de porc sauce tomate OU Rôti de dinde OU Mélange mexicain*,False,False,False
+Paëlla végé,False,False,True
+Dos de lieu à la crème,False,False,False
+Sauté de bœuf bourguignon OU Boulette de lentilles*,True,True,True
+Saumon,False,False,False
+Couscous de légumes,False,True,True
+Rougail Saucisse de porc OU de Volaille OU Végé*,False,False,True
+Escalope de porc sauce charcutier OU Rôti de dinde OU Nugge't végé*,False,False,False
+Parmentier crécy OU Tortillas*,False,False,False
+Lieu noir sauce grenobloise,False,False,False
+Rôti de porc OU Rôti de dinde OU Mélange provençale*,False,False,False
+Boulgour de légumes,False,True,True
+Carbonara de porc OU de Volaille OU Végé*,False,False,True
+Parmentier crécy OU Croq' fromage*,False,False,True
+Lieu sauce oseille,False,False,False
+Dahl de lentilles,True,True,True
+Sauté de poulet sauce chasseur OU Galette de haricots rouges*,False,False,True
+Cassoulet de porc OU de Volaille OU Cassoulet végé*,False,False,True
+Dos de lieu au curry,False,True,True
+Saucisse de porc OU de Volaille OU Mélange Méxicain*,False,False,True
+Escalope de dinde colombo OU Croq'fromage*,False,False,True
+Blanquette de veau OU Pané de blé tomate mozza*,False,False,False
+Galette tomate fromage,False,False,True
+Saumon,False,False,False
+Timbale de thon,False,False,False
+Rôti de veau sauce provençale OU Mélange Indien*,False,False,False
+Croustillant fromager,False,False,True
+Poulet OU Galette millet*,False,False,False
+Eglefin sauce armoricaine,False,False,False
+Lasagne OU Lasagne de légumes*,False,True,True
+Gnocchi à la romaine sauce tomate,False,False,True
+Rôti de dinde OU Omelette*,False,True,True
+Dos de Lieu beurre persillé,False,False,True
+Saucisse de porc OU de Volaille OU Mélange mexicain*,False,False,True
+"Sauté de dinde, sauce barbecue OU Tortillas*",False,False,False
+Sauté de boeuf OU Boulette de lentilles*,True,True,True
+Dos de lieu à la crème,False,False,False
+Bolognaise végé,False,False,False
+Chili volaille OU Veggie mexicain*,False,False,True
+Poisson pané,False,False,False
+PONT,False,False,False
+Saucisse de porc OU de Volaille OU Mélange mexicain*,False,False,True
+Omelette,False,True,True
+Blanquette de poulet OU Galette de tomate mozza*,False,False,False
+Bolognaise OU Omelette*,False,True,True
+Saumon beurre ciboulette,False,False,False
+Œufs durs au curry,False,True,True
+Rôti de dinde OU Galette de lentilles vertes*,True,True,True
+Bolognaise OU Boulette de lentilles vertes*,True,True,True
+Dos de lieu,False,False,False
+Curry de légumes,False,True,True
+Poulet OU Nuget's végé*,False,False,False
+Rôti de dinde,False,False,False
+Sauté de veau sauce lyonnaise OU Galette yumi texas*,False,False,False
+Lieu noir  beurre sauce oseille,False,False,False
+"Carottes batonnet, houmous, salade de lentilles, concombre féta, riz niçois",True,True,True
+Rôti de porc OU Rôti de dinde OU Mélange indien*,False,False,False
+Galette fromage tomate,False,False,True
+Sauté de boeuf marocain OU Galette de haricots blanc*,False,False,True
+Lieu noir,False,False,False
+Poulet OU Mélange mexicain*,False,False,False
+"Œufs durs sauce cocktail, taboulé",False,True,True
+Falafels sauce boulgour,True,True,True
+MENU DE FÊTE,False,False,False
+Saumon sauce dieppoise,False,False,False
+Paëlla OU Paëlla végé*,False,False,True
+Omelette,False,True,True
+Brandade de poisson,False,False,False
+Rôti de boeuf OU Boulette de lentilles*,True,True,True
+Lieu noir mayonnaise,False,False,False
+Dahl de lentilles corail,True,True,True
+Rôti de dinde OU Mélange indien*,False,False,False
+Timbale milanaise de porc OU Volaille OU Timbale végé*,False,False,True
+REPAS DE RÉSERVE,False,False,False
+Riz au thon,False,False,False
+Couscous de légumes,False,True,True
+Tortillas,False,False,False
+Galette saucisse de porc OU de Volaille OU Nugget's végé*,False,False,True
+Rôti de dinde OU Omelette*,False,True,True
+Omelette,False,True,True
+Boulgour de légumes,False,True,True
+Lieu,False,False,False
+"Club sandwich' (Pain de mie complet, œuf dur, houmous de pois chiches, tomates, emmental, salade verte)",True,True,True
+Parmentier de courgette OU Galette de lentilles vertes*,True,True,True
+"Saumon, sauce à l'oseille",False,False,False
+Poisson pané beurre citron,False,False,False
+Galette saucisse de porc OU de Volaille OU Aiguillette de blé*,False,False,True
+Lasagne OU Lasagne végé*,False,False,False
+Omelette,False,True,True
+Timbale au thon,False,False,False
+Sauté de bœuf bourguignon OU Galette de lentilles*,True,True,True
+Lieu noir à la crème,False,False,False
+Rôti de dinde OU Mélange Mexicain*,False,False,False
+"Œuf dur, sauce cocktail",False,False,True
+Croq' fromage sauce tomate,False,False,True
+Bolognaise OU Galette de lentilles vertes*,True,True,True
+Saumon,False,False,False
+Haricots blancs provençale,False,False,True
+Poulet OU Mix indien*,False,False,False
+"Omelette, sauce tomate",False,True,True
+Sauté de bœuf agenais OU Boulettes de lentilles*,True,True,True
+"Lieu noir, sauce diéppoise",False,False,False
+Rôti de porc OU de Dinde OU Mélange indien*,False,False,False
+Dahl de lentilles corail,True,True,True
+Rôti de dinde OU Pané tomate mozza*,False,False,False
+Sauté de poulet forestier OU Tortillas*,False,False,False
+Lieu noir beurre persillé,False,False,True
+Saucisse de porc OU de Volaille OU Mélange mexicain*,False,False,True
+Couscous de légumes,False,True,True
+Tortillas,False,False,False
+Poulet OU Nugget's végé*,False,False,False
+Lieu noir beurre citron,False,False,False
+Omelette,False,True,True
+Égréné de légumes provençale,False,True,True
+Escalope de porc au curry OU Rôti de dinde OU Galette de lentilles vertes*,True,True,True
+Rôti de bœuf OU Aiguillettes de blé*,False,False,False
+Saumon beurre citron,False,False,False
+Rôti de porc OU de Dinde OU Pané de tomate*,False,False,False
+Curry de légumes,False,True,True
+Timbale au thon,False,False,False
+Sauté de bœuf bourguignon OU Galette de haricots rouges*,False,False,True
+Lieu noir,False,False,False
+Carbonara de porc OU de Volaille OU végé*,False,False,True
+Galette fromage champignons béchamel,False,True,True
+Poisson pané,False,False,False
+Rôti de veau OU Croq' fromage*,False,False,True
+Eglefin,False,False,False
+Brandade de poisson,False,False,False
+Blanquette de veau OU Mix indien*,False,False,False
+Omelette,False,True,True
+Saumon sauce oseille,False,False,False
+Tarte fromage,False,True,True
+Omelette,False,True,True
+Sauté de poulet à la crème OU Tortillas*,False,False,False
+Sauté de bœuf Bourguignon OU Boulette de lentilles vertes*,True,True,True
+Lieu noir au parprika,False,False,False
+Dahl de lentilles corail,True,True,True
+Poulet OU Mélange mexicain*,False,False,False
+Omelette,False,True,True
+Rôti de bœuf OU Galette de lentilles vertes*,True,True,True
+Lieu noir,False,False,False
+Gratin de boulgour,False,True,True
+Sauté de porc au paprika OU Rôti de dinde OU Mélange indien*,False,False,False
+Rôti de dinde OU Tortillas*,False,False,False
+Rôti de bœuf OU Boulette de haricots rouges*,False,False,True
+Lieu noir,False,False,False
+Saucisse de porc OU de Volaille OU Mélange mexicain*,False,False,True
+Fish and chips,False,False,False
+Tortillas sauce boulgour,False,False,False
+Bolognaise OU Omelette*,False,True,True
+Saumon,False,False,False
+Sauté de porc au paprika OU Rôti de dinde OU Mélange indien*,False,False,False
+Curry de légumes,False,True,True
+Timbale au thon,False,False,False
+Sauté de poulet sauce tajine OU Aiguillette de blé carottes*,False,False,False
+Lieu noir sauce armoricaine,False,False,False
+Couscous de légumes,False,True,True
+Rôti de dinde à la crème OU Mélange mexicain*,False,False,False
+Brandade de poisson,False,False,False
+Sauté de bœuf flamand OU Omelette*,False,True,True
+Lieu noir,False,False,False
+Poulet OU Mélange indien*,False,False,False
+Bolognaise végé,False,False,False
+Poisson pané,False,False,False
+REPAS DE NOËL,False,False,False
+Lieu noir sauce hollandaise,False,False,False
+Rôti de dinde OU Mélange mexicain*,False,False,False
+Gnocchi à la romaine,False,False,False
+Carbonara de porc OU de Volaille OU Végé*,False,False,True
+Eglefin,False,False,False
+Tortis mozza patate douce,False,False,False
+Tartiflette de porc OU de Volaille OU Végé*,False,False,True
+Blanquette de poulet OU Pané fromage*,False,False,True
+Saumon beurre persillé,False,False,False
+Tarte au fromage,False,True,True
+Omelette,False,True,True
+Escalope de porc charcutière OU Rôti de dinde OU Mélange indien*,False,False,False
+Rôti de boeuf OU Boulette de lentilles vertes*,True,True,True
+Lieu sauce estragon,False,False,True
+Couscous de légumes,False,True,True
+Poulet OU Galette de haricots rouges*,False,False,True
+Omelette aux champignons,False,True,True
+Rôti de bœuf OU Aiguillette de blé*,False,False,False
+Lieu beurre persillé,False,False,True
+Gratin de boulgour,False,True,True
+Saucisse de porc OU de Volaille  OU Galette de lentilles vertes*,True,True,True
+Émincé de volaille sauce forestière OU Mélange indien*,False,False,True
+Rôti de boeuf OU Pané tomates mozza*,False,False,False
+Lieu sauce armoricaine,False,False,False
+Saucisse de porc OU de Volaille OU Galette de lentilles*,True,True,True
+Curry de légumes,False,True,True
+Tortillas pomme de terre,False,False,False
+Sauté de bœuf sauce goulash OU Boulette de pois chiches*,True,True,True
+Saumon,False,False,False
+Poulet OU Galette de lentilles vertes*,True,True,True
+Égréné de pois provençale,False,False,False
+Arancini,False,False,False
+Sauté de bœuf sauce goulash OU Tortillas*,False,False,False
+Lieu noir beurre ciboulette,False,False,True
+Sauté de porc dijonnais OU Rôti de Dinde OU Boulette de soja tomate*,True,True,True
+Samoussa,False,False,False
+Poisson pané,False,False,False
+Sauté de poulet OU Croc' fromage*,False,False,True
+Lieu noir sauce oseille,False,False,False
+Dahl de lentilles corail,True,True,True
+Timbale milanaise de porc OU de Volaille OU timbale végé*,False,False,True
+Sauté de poulet sauce crème coco OU Omelette*,False,True,True
+Poisson pané beurre citron,False,False,False
+Lieu noir beurre estragon,False,False,True
+Saucisse de porc OU de Volaille OU Végé*,False,False,True
+Croziflette de porc OU de volaille OU Végé*,False,False,True
+Couscous de légumes,False,True,True
+Rôti de veau OU Tortillas*,False,False,False
+Eglefin beurre blanc,False,False,False
+Galette fromage champignons,False,True,True
+Blanquette de veau à la crème OU Boulette soja tomate*,True,True,True
+Carbonara de porc OU de Volaille OU Végé*,False,False,True
+Poulet OU Pané tomate mozza*,False,False,False
+Saumon sauce hollandaise,False,False,False
+Tarte au fromage,False,True,True
+Omelette,False,True,True
+Brandade de poisson,False,False,False
+Rôti de dinde OU Galette de haricots rouges*,False,False,True
+Lieu noir beurre persillé,False,False,True
+Curry de légumes,False,True,True
+Couscous OU Couscous végé*,False,True,True
+Tortillas,False,False,False
+Parmentier purée verte OU Boulette de lentilles vertes*,True,True,True
+Lieu noir beurre persillé,False,False,True
+Haricots blancs à la provençale,False,False,True
+Rôti de porc OU de Dinde OU Saucisse végé*,False,False,False
+Escalope de dinde à la crème OU Omelette*,False,True,True
+Sauté de bœuf bourguignon OU Galette de haricots rouges*,False,False,True
+Lieu noir,False,False,False
+Dahl de lentilles,True,True,True
+Timbale milanaise de porc OU de Volaille OU Timbale végé*,False,False,True
+Rôti de bœuf OU Pané fromager*,False,False,True
+Saumon,False,False,False
+Saucisse de porc OU de Volaille OU Saucisse végé*,False,False,True
+Couscous de légumes,False,True,True
+Poisson pané beurre citron,False,False,False
+Rôti de veau OU Tortillas*,False,False,False
+Lieu noir au curry,False,True,True
+Boulgour de légumes,False,True,True
+Poulet OU Boulette de tomate*,False,False,False
+Omelette,False,True,True
+Rôti de dinde OU Galette de quinoa à la provençale*,True,True,True
+Lieu noir,False,False,False
+Escalope de dinde OU Boulette de soja tomate*,True,True,True
+"Burger végé (Galette végé, guacamole, fromage, salade verte)",False,False,True
+Carbonara de porc OU de Volaille OU Végé*,False,False,True
+Blanquette de veau OU Boulette de pois chiche au cumin*,False,False,True
+Eglefin beurre à l'oseille,False,False,False
+Brandade de poisson,False,False,False
+Galette tomate fromage,False,False,True
+Rôti de veau OU Mélange mexicain*,False,False,False
+Saumon,False,False,False
+Tarte au fromage,False,True,True
+Omelette,False,True,True
+PONT,False,False,False
+Lasagne Végé,False,False,False
+Pané tomate mozza,False,False,False
+Omelette,False,True,True
+Rôti de bœuf OU Boulette de tomate soja*,True,True,True
+Lieu noir beurre blanc,False,False,False
+"Fajitas (Égréné végétal de pois, poivron crème, fromage)",False,False,True
+Escalope de porc à la crème OU Rôti de dinde OU Mélange de légumineuses*,False,False,False
+Sauté de bœuf à la provençale OU Galette de lentilles corail*,True,True,True
+Lieu noir beurre ciboulette,False,False,True
+Rôti de porc OU Rôti de dinde OU Boulette de soja tomate*,True,True,True
+Curry de légumes,False,True,True
+Saucisse Végé,False,False,False
+Sauté de bœuf à la provençale OU Galette de haricots blancs*,False,False,True
+Lieu sauce oseille,False,False,False
+Rôti de porc OU Rôti de dinde OU Saucisse Végé*,False,False,False
+Œuf dur sauce cocktail et Taboulé,False,True,True
+Poisson pané,False,False,False
+Rôti de bœuf OU Omelette*,False,True,True
+Saumon,False,False,False
+"Salade de lentilles féta, tartinade de tomate, riz niçois",True,True,True
+Sauté de porc paprika OU Rôti de dinde OU Galette de haricots rouges *,False,False,True
+Omelette sauce tomate,False,True,True
+Rôti de bœuf OU Mélange de légumineuses*,False,False,False
+Lieu beurre ciboulette,False,False,True
+Poulet OU Mélange mexicain*,False,False,False
+Salade de pâtes tomates et billes de mozza,False,False,True
+Falafels sauce boulgour,True,True,True
+Rôti de bœuf OU Pavé tomate mozza*,False,False,False
+Lieu beurre aux fines herbes,False,False,False
+Dahl de lentilles corail,True,True,True
+Rôti de dinde OU Galette de lentilles vertes*,True,True,True
+Brandade de poisson,False,False,False
+Repas de fin d'année,False,False,False
+"Salade fromagère, riz au thon, tomate cerise",False,False,False
+Égréné protéine de pois sauce provençale,False,False,False
+Poulet OU Boulette de soja tomate,True,True,True
+Timbale milanaise de porc OU de Volaille OU Timbale végé*,False,False,True
+,False,False,False
+Saumon froid,False,False,False
+Œuf dur sauce cocktail et Taboulé,False,True,True
+Rôti de bœuf froid OU Croq' fromage*,False,False,True
+Tortillas,False,False,False
+Lieu noir froid mayonnaise,False,False,False
+Omelette,False,True,True
+Poulet OU Boulette de soja champignons*,True,True,True
+Carbonara de porc OU de volaille OU Végé*,False,False,True
+Escalope de dinde OU Galette de haricots rouges*,False,False,True
+Lieu noir sauce hollandaise,False,False,False
+Sauté de bœuf au paprika OU Pané tomate mozza*,False,False,False
+"Salade bar' (Salade de lentilles,féta, houmous, concombre, riz au thon)",True,True,True
+Lieu noir beurre blanc,False,False,False
+Croq'fromage,False,False,True
+Lasagnes ou Lasagne Végé*,False,False,True
+Omelette,False,True,True
+Rôti de dinde OU Galette de haricots rouge*,False,False,True
+Rôti de bœuf OU Aiguillette de blé*,False,False,False
+Lieu noir sauce estragon,False,False,True
+Haricots blancs provençale,False,False,True
+Poulet OU Galette de soja tomate*,True,True,True
+Escalope de porc sauce charcutière OU Rôti de dinde OU Omelette*,False,True,True
+Sauté de bœuf flamand OU Boulette de lentilles*,True,True,True
+Lieu noir beurre persillé,False,False,True
+Couscous de légumes,False,True,True
+Poisson sauce provençale,False,False,False
+Œuf dur et Taboulé,False,True,True
+Sauté de bœuf Flamand OU Pané tomate mozza*,False,False,False
+Lieu sauce oseille,False,False,False
+Rôti de porc OU Sauté de poulet OU Mélange indien*,False,False,False
+Égréné protéine de pois sauce provençale,False,False,False
+Escalope de dinde OU Omelette*,False,True,True
+Rôti de veau OU Aiguillettes de blé*,False,False,False
+Saumon,False,False,False
+Dahl de lentilles,True,True,True
+Sauté de porc dijonais OU Rôti de dinde OU Galette de haricots rouges *,False,False,True
+Poisson pané,False,False,False
+Sauté de boeuf bourguignon OU Boulettes de pois chiches*,True,True,True
+Lieu beurre citron,False,False,False
+Curry de légumes,False,True,True
+Poulet OU Mélange légumineuses*,False,False,False
+Œufs durs sauce curry,False,True,True
+Parmentier crécy OU Boulette de lentilles corail*,True,True,True
+Lieu noir sauce crème,False,False,False
+Saucisse de porc OU de Volaille OU Végé*,False,False,True
+Paëlla Végé,False,False,True
+Œuf poché,False,False,False
+Parmentier crécy OU Pané tomate mozza*,False,False,False
+Lieu noir beurre blanc,False,False,False
+Gratin de pâtes brocolis,False,True,True
+Brandade de poisson,False,False,False
+Sauté de veau marengo OU Mélange légumineuses*,False,False,False
+Rôti de dinde OU Omelette*,False,True,True
+Eglefin sauce suchet,False,False,False
+Croq' fromage,False,False,True
+Dos de lieu au curry,False,True,True
+Galette tomate fromage,False,False,True
+Rôti de veau OU Boulette de lentilles corail*,True,True,True
+Lasagnes de légumes,False,True,True
+Omelette,False,True,True
+Escalope de porc OU Rôti de dinde OU Boulette de lentilles corail*,True,True,True
+Bolognaise OU Pané tomate mozza*,False,False,False
+Lieu noir beurre persillé,False,False,True
+Haricots blancs à la provençale,False,False,True
+Œufs mollets,False,False,False
+Rôti de bœuf OU Galette tomate mozza*,False,False,False
+Dos de lieu noir sauce hollandaise,False,False,False
+Saucisse de porc OU Saucisse de volaille OU Galette de haricots rouges*,False,False,True
+"Galette végé, (œufs brouillés, tomates séchées, fromage)",False,False,True
+Rôti de dinde OU Mélange indien*,False,False,False
+Sauté de bœuf goulash OU Boulette de lentilles*,True,True,True
+Lieu noir sauce tomate,False,False,True
+Saucisse de porc OU Saucisse de volaille OU Boulette de soja champignons*,True,True,True
+Dahl de lentilles corail,True,True,True
+Escalope de porc OU Rôti de dinde OU Omelette*,False,True,True
+Blanquette de volaille OU Aiguillette de blé*,False,False,True
+Saumon beurre estragon,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de haricots rouges*,False,False,True
+Œufs durs sauce curry,False,True,True
+Poisson pané,False,False,False
+Parmentier OU Mélange mexicain*,False,False,False
+Lieu noir suchet,False,False,False
+Curry de légumes,False,True,True
+Poulet OU Boulette de soja tomate*,True,True,True
+Omelette,False,True,True
+Bourguignon OU Pané fromager*,False,False,True
+Lieu noir à l'armoricaine,False,False,False
+Bolognaise végé,False,False,False
+Saucisse de porc OU Saucisse de volaille OU Boulette de soja champignons*,True,True,True
+Brandade de poisson,False,False,False
+Menu de Noël,False,False,False
+Lieu noir beurre ciboulette,False,False,True
+Croq' fromage,False,False,True
+Carbonara de porc OU de Volaille OU Végé*,False,False,True
+Rôti de veau OU Omelette*,False,True,True
+Eglefin beurre citron,False,False,False
+Tartiflette de porc OU de Volaille OU Végé*,False,False,True
+Blanquette de veau OU Galette de lentilles vertes*,True,True,True
+Galette tomate fromage,False,False,True
+Saumon beurre blanc,False,False,False
+Lasagnes OU Lasagnes végé*,False,False,True
+Omelette,False,True,True
+Arancini au fromage,False,False,True
+Parmentier OU Mélange indien*,False,False,False
+Lieu sauce paprika,False,False,True
+Bolognaise Végé,False,False,False
+Poulet OU Boulette de soja tomate*,True,True,True
+Œufs mollets,False,False,False
+Rôti de veau OU Pané tomate mozza*,False,False,False
+Lieu noir beurre persillé,False,False,True
+Dalh de lentilles corail,True,True,True
+Saucisse de porc OU Saucisse de volaille OU Boulette de soja tomate*,True,True,True
+Rôti de dinde OU Omelette*,False,True,True
+Bolognaise OU Aiguillette de blé carottes*,False,False,False
+Lieu noir au curry,False,True,True
+Sauté de porc agenais OU Rôti de dinde OU Boulette de lentilles verte*,True,True,True
+Samoussa végé,False,False,False
+Omelette,False,True,True
+Sauté de bœuf Goulash OU Pané de tomate mozza*,False,False,False
+Saumon,False,False,False
+Poulet OU Mélange végé*,False,False,False
+Couscous de légumes,False,True,True
+Poisson pané sauce tomate,False,False,False
+Cassoulet de porc OU de Volaille OU Végé*,False,False,True
+Lieu noir beurre oseille,False,False,False
+Rôti de porc OU de Dinde OU Boulette de soja champignons*,True,True,True
+"Tacos (émincé végétal, légumes, sauce crème champignons)",False,True,True
+Croziflette de porc OU de Volaille OU Végé*,False,False,True
+Rôti de veau OU Pané fromager*,False,False,True
+Eglefin,False,False,False
+Œufs mollet,False,False,False
+Poulet OU Mélange végé*,False,False,False
+Brandade de poisson,False,False,False
+Blanquette de veau OU Galette de haricot rouge*,False,False,False
+Saumon,False,False,False
+Lasagnes OU Lasagnes végé*,False,False,True
+Omelette,False,True,True
+Rôti de dinde OU Mélange végé*,False,False,False
+Rôti de bœuf OU Galette de lentilles corail *,True,True,True
+Lieu noir sauce paprika,False,False,True
+Poulet OU Saucisse végé*,False,False,False
+"Fajitas (poivron, crème, émincé végétal)",False,False,True
+"Bolognaise végétal, lentilles",True,True,True
+Rôti de bœuf OU Boulette de lentilles corail*,True,True,True
+"Saumon, sauce estragon",False,False,True
+Gratin de brocolis,False,True,True
+Sauté de porc sauce charcutière OU Rôti de dinde OU Saucisse végé*,False,False,False
+Escalope de dinde OU Mélange légumineuse*,False,False,False
+Bolognaise OU Omelette*,False,True,True
+Lieu noir à la crème,False,False,False
+Égréné provençale,False,False,False
+Rôti de porc OU Rôti de dinde OU Boulette de soja tomate*,True,True,True
+Œufs durs,False,False,False
+Pot au feu OU Aiguillettes de blé carottes*,False,False,False
+Lieu beurre persillé,False,False,True
+Sauté de porc sauce charcutière OU Rôti de dinde OU Boulette de soja champignons*,True,True,True
+"Burger végé (Galette végé, guacamole, fromage, salade verte)",False,False,True
+Brandade de poisson,False,False,False
+Blanquette de veau OU Pané mozza tomate*,False,False,False
+Lieu noir beurre blanc,False,False,False
+Poulet OU Nugget's végé*,False,False,False
+Dalh de lentilles corail,True,True,True
+Timbale au thon,False,False,False
+Saucisse de porc OU Saucisse de volaille OU Saucisse végé*,False,False,False
+Saumon,False,False,False
+Cassoulet de porc OU de Volaille OU Végé*,False,False,True
+Blanquette de veau OU Mélange légumineuses*,False,False,False
+Arrancini fromage,False,False,True
+Escaloppe de dinde OU Galette quinoa provençale*,True,True,True
+Eglefin,False,False,False
+Carbonara de Porc OU Carbonara de Volaille OU Carbonara végé*,False,False,True
+Boulgour aux petits légumes,False,True,True
+Galette tomate fromage,False,False,True
+Rôti de veau OU Croustillant fromager *,False,False,True
+Saumon,False,False,False
+Lasagne  OU Lasagne végé*,False,False,False
+Escalope de porc OU Rôti de dinde OU Omelette*,False,True,True
+Parmentier OU Boulette de haricot blanc*,False,False,False
+"Dos de lieu, sauce hollandaise",False,False,False
+Curry de légumes,False,True,True
+Poulet OU Mélange légumineuses*,False,False,False
+Tortillas,False,False,False
+Poisson beurre ciboulette,False,False,False
+Couscous de légumes,False,True,True
+Sauté de porc provençale OU Rôti de dinde OU Boulette de soja tomate*,True,True,True
+Rôti de dinde OU Pané de blé tomate mozza*,False,False,False
+Poisson beurre blanc,False,False,False
+"Aiguillette égréné haric&co, poivron, sauce crème",False,False,False
+Haricots blancs provençale,False,False,True
+Œuf dur au curry,False,True,True
+Sauté de bœuf sauce basquaise OU Boulette de lentilles*,True,True,True
+Lieu noir sauce tomate,False,False,True
+Saucisse de porc OU Saucisse de volaille OU Saucisse végé*,False,False,False
+Omelette sauce boulgour,False,True,True
+Poisson pané,False,False,False
+Parmentier de pomme de terre OU Galette de haricots blancs*,False,False,True
+Lieu noir au curry,False,True,True
+Dahl de lentilles corail,True,True,True
+Poulet OU Mélange légumineuses*,False,False,False
+Brandade de poisson,False,False,False
+PONT,False,False,False
+Paëlle végé,False,False,False
+Omelette,False,True,True
+Escalope de volaille OU Aiguillette de blé carotte*,False,False,False
+Sauté de veau sauce tajine OU pané tomate mozza *,False,False,False
+Lieu noir,False,False,False
+Égréné protéine de pois,False,False,False
+"Gnocchis à la romaine, sauce tomate",False,False,True
+Rôti de dinde OU Boulette de lentilles*,True,True,True
+Saumon sauce oseille,False,False,False
+Poulet OU Boulette de soja Champignon*,True,True,True
+"Salade de pâtes, tomates, billes de mozza",False,False,True
+Escalope de dinde OU Omelette*,False,True,True
+Falafels sauce boulgour,True,True,True
+Lieu beurre citron,False,False,False
+Curry de légumes,False,True,True
+Poisson pané,False,False,False
+Escalope de porc OU Rôti de dinde OU Mélange de légumineuse*,False,False,False
+Repas de fin d'année,False,False,False
+"Piémontaise, tomate cerise",False,False,False
+"Œuf dur froid, sauce cocktail et Taboulé",False,True,True
+Sauté de poulet à la crème OU Boulette de soja tomate*,True,True,True
+Timbale de porc OU de Volaille OU Timbale végé*,False,False,True
+Repas de réserve,False,False,False
+Saumon froid,False,False,False
+"Club sandwich (houmous, fromage œuf dur, salade verte)",False,True,True
+"Boulgour de légumes, sauce boulgour",False,True,True
+Rôti de dinde OU Boulette de lentilles*,True,True,True
+Rôti de bœuf OU Croq fromage*,False,False,True
+"Lieu noir, sauce méditerranéenne",False,False,False
+Falafels sauce Yaourt,True,True,True
+"Sauté de bœuf, sauce provençale OU Galette de Haricots blancs*",False,False,True
+Galette saucisse de porc OU de Volaille OU Végé*,False,False,True
+Lieu noir mayonnaise,False,False,False
+Rôti de porc OU Rôti de dinde OU Galette de haricots rouges*,False,False,True
+Parmentier de courgette OU Boulette de tomate*,False,False,False
+Omelette,False,True,True
+"Salade de pâtes, tomates",False,False,True
+Saumon,False,False,False
+Poulet OU Boulette de soja champignon*,True,True,True
+Arrancini,False,False,False
+Poisson pané,False,False,False
+Pâtes carbonara de porc OU de Volaille OU Végé*,False,False,True
+Eglefin beurre fines herbes,False,False,False
+"Club sandwich (Pain de mie, houmous, tomate, œuf dur, emmental, salade verte)",False,True,True
+Escalope de dinde OU Galette de haricots rouges*,False,False,True
+Parmentier de légumes d'été,False,True,True
+Rôti de bœuf OU Omelette*,False,True,True
+"Lieu noir, sauce hollandaise",False,False,False
+Œuf dur sauce cocktail,False,False,True
+Paëlla,False,False,True
+Sauté de bœuf paprika OU Pané de tomate mozza*,False,False,False
+Poulet OU Nugget's de blé*,False,False,False
+Parmentier de courgette OU Galette de haricot rouge*,False,False,True
+"Salad bar' (salade de lentille, féta, houmous, concombre, riz au thon)",False,True,True
+Dahl de lentilles,True,True,True
+Timballe au thon,False,False,False
+Lieu noir beurre blanc,False,False,False
+Galette saucisse de porc OU de Volaille OU Végé*,False,False,True
+Couscous de légumes,False,True,True
+Croq' fromage,False,False,True
+Lasagne OU Lasagne végé*,False,False,False
+Omelette,False,True,True
+Rôti de dinde OU Galette de haricots rouges*,False,False,True
+Bolognaise OU Aiguillettes de blé*,False,False,False
+Lieu noir sauce armoricaine,False,False,False
+Dahl de lentilles corail,True,True,True
+Poulet OU Mélange légumineuses*,False,False,False
+Tortillas,False,False,False
+Bolognaise tortis ou boulettes de lentilles corail,True,True,True
+Lieu à la crème,False,False,False
+Gratin de brocolis,False,True,True
+Sauté de porc Agenais ou galettes de haricots rouges ou rôti de dinde,False,False,True
+Jambon braisé sauce barbecue,False,False,False
+Sauté de bœuf bourguignon OU boulette de lentilles corail*,True,True,True
+Lieu,False,False,False
+Saucisse porc ou volaille ou végé*,False,False,True
+Haricots blancs provençale,False,False,True
+Œuf dur au curry,False,True,True
+Rôti de bœuf au jus OU pané de tomate mozzarella*,False,False,True
+Saumon,False,False,False
+Saucisse porc ou volaille ou végé*,False,False,True
+Tortillas sauce tomate,False,False,True
+Brandade de poisson,False,False,False
+Rôti de veau sauce forestière OU Croq fromage*,False,False,True
+Lieu noir,False,False,False
+Curry de légumes,False,True,True
+Fish and chips,False,False,False
+Timbale au thon,False,False,False
+Parmentier crécy,False,False,False
+Lieu beurre citron,False,False,False
+"Pâte méxicaine (maïs, haricots rouges)",False,False,True
+Saucisse végétarienne,True,False,False
+Rôti de dinde label au jus ou omelette,False,True,True
+Sauté de bœuf Flamand OU aiguillettes de blé carottes*,False,False,False
+Lieu noir,False,False,False
+Couscous de légumes,False,True,True
+Blanquette de veau label,False,False,False
+Galette,False,False,True
+Cassoulet Porc Ou volaille Ou Végétarien,True,True,True
+Eglefin beurre blanc,False,False,False
+Croq fromage,False,False,True
+Rôti de veau label au jus OU Galette de haricots rouges*,False,False,True
+Escalope de dinde OU Tortillas*,False,False,False
+Pâte carbonara ou dinde ou végé*,False,False,False
+Saumon,False,False,False
+Lasagne de bœuf ou légumes,False,True,True
+Omelette,False,True,True
+Escalope de porc OU Rôti de dinde OU Nugget's de blé*,False,False,False
+Rôti de bœuf au jus OU Galette de quinoa provençale*,True,True,True
+Lieu sauce Hollandaise,False,False,False
+Couscous de légumes,False,True,True
+Escalope de porc au jus OU rôti de dinde OU Pané de tomate mozza,False,False,False
+Sauté de bœuf aux olives OU omelette,False,True,True
+Dos de lieu beurre persillé,False,False,True
+Rôti de porc au jus OU rôti de dinde OU mélange de légumes secs,False,True,True
+Tortis,False,False,False
+Omelette,False,True,True
+Galette tomate fromage,False,False,True
+Lieu à la tomate,False,False,False
+Saucisse porc ou volaille ou saucisse végé,False,False,True
+Dahl de lentilles corail,True,True,True
+Rôti de dinde OU Tortillas,False,False,False
+Blanquette de volaille OU boulettes de pois chiches,True,True,True
+Saumon à l'oseille,False,False,False
+Rôti de porc au jus OU rôti de dinde OU mélange de légumes secs,False,True,True
+Œuf dur sauce curry,False,True,True
+Poisson pané,False,False,False
+Sauté de bœuf sauce chataigne Ou Galette de quinoa provençale,True,True,True
+Lieu noir sauce armoricaine,False,False,False
+Curry de légumes,False,True,True
+Poulet au jus Ou Mélange légumes secs,False,True,True
+Brandade de poisson,False,False,False
+Sauté de bœuf sauce chataîgne OU Boulette de pois chiches,True,True,True
+Lieu beurre citron,False,False,False
+"Bolognaise (carottes, lentilles)",True,True,True
+Saucisse végétarienne,True,False,False
+Tortillas,False,False,False
+,False,False,False
+Lieu noir sauce paprika,False,False,True
+Croq fromage,False,False,True
+Tortis carbonara Porc OU Volaille Ou végé,False,False,True
+Rôti de veau au jus OU omelette,False,True,True
+,False,False,False
+Tartiflette Poc ou volaille ou Végé,False,False,True
+Blanquette de veau Ou Galette de lentilles vertes,True,True,True
+Galette tomate fromage,False,False,True
+Dos de lieu beurre blanc,False,False,False
+Tarte fromage,False,True,True
+Omelette,False,True,True
+Arrancini fromage,False,False,True
+Sauté de bœuf sauce chataigne Ou pané tomate mozza,False,False,False
+Saumon sauce paprika,False,False,False

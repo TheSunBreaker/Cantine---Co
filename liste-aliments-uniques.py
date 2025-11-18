@@ -1,29 +1,34 @@
 import pandas as pd
+import re
 
-#On charge notre dataset de pré-traité
-df = pd.read_csv("menus_cantines_pretraite.csv", sep=";", dtype=str,  encoding="utf-8")
+# --- CONFIG ---
+input_csv = "plats_extraits.csv"              # fichier source
+output_csv = "plats_uniques.csv"     # fichier final
+col_plat = "Plat"                    # nom de ta colonne
+# ---------------
 
-#Petite fonction pour normaliser les noms d'aliment
-def clean(col):
-    return (col
-        .str.lower()
-        .str.normalize('NFKD')
-        .str.encode('ascii', errors='ignore')
-        .str.decode('utf-8')
-        .str.strip()
-        .str.replace(r" +", " ", regex=True)
-    )
+# Chargement du CSV
+df = pd.read_csv(input_csv)
 
-df['Légumes_clean'] = clean(df['Légumes'])
-df['Plat_clean'] = clean(df['Plat'])
-df['Entrée_clean'] = clean(df['Entrée'])
-df['Dessert_clean'] = clean(df['Dessert'])
-df['Laitage_clean'] = clean(df['Laitage'])
-df['Gouter_clean'] = clean(df['Gouter'])
+# Mise en minuscules
+df[col_plat] = df[col_plat].astype(str).str.lower()
 
-legumes_prop = df['Légumes_clean'].dropna().unique()
-print(len(legumes_prop))
+# Fonction pour séparer uniquement sur "ou" en tant que mot
+def split_plats(texte):
+    if not isinstance(texte, str):
+        return []
+    parts = re.split(r'\bou\b', texte)
+    return [p.strip() for p in parts if p.strip()]
 
-plat_prop = df['Plat_clean'].dropna().unique()
-print(len(plat_prop))
-print(plat_prop)
+# Extraire tous les plats de toutes les lignes
+all_plats = []
+for texte in df[col_plat]:
+    all_plats.extend(split_plats(texte))
+
+# Retirer les doublons tout en gardant l'ordre d'apparition
+plats_uniques = list(dict.fromkeys(all_plats))
+
+# Export CSV final
+pd.DataFrame({"Plat_unique": plats_uniques}).to_csv(output_csv, index=False)
+
+print("Fichier généré :", output_csv)

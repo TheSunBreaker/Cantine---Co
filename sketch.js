@@ -389,6 +389,21 @@ class FoodItem {
 // ========== CONFIGURATION DU CALENDRIER ==========
 // ?????????????????????????????????????????????
 
+// Pour obtenir l'année IS0 d'une date
+function getISOYear(date) {
+  // Copier la date pour ne pas la modifier
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  
+  // Positionner au jeudi de la semaine ISO (référence ISO)
+  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+
+  return d.getUTCFullYear();
+}
+// const date = new Date(timestamp);
+// const isoYear = getISOYear(date);
+// ou getISOYear(new Date("2021-01-01")); // ➜ 2020
+/************************************************ */
+
 
 // Pour convertir les chaînes booléennes en vrais booléens 
 function toBool(x){
@@ -436,7 +451,7 @@ function preload() {
 
   // On charge le CSV avec loadTable(), séparateur ',' et reconnaissance des en-têtes
   dataSet = loadTable(
-    "menus_cantines_pretraite_v2_prix_excel_fiendly_norm.csv",
+    "menus_cantines_final_v3_ultimate.csv",
     "csv",
     "header"
   );
@@ -491,8 +506,13 @@ function theDataForTheDataVizGraphicsCrafter(){
     toAdd['month'] = parseInt(splittedDate[1]) - 1
     // Aussi le numéro de mois
 
-    toAdd['year'] = parseInt(Table[expeditionner]['Année'])
-    // L'année également
+    toAdd['calYear'] = parseInt(Table[expeditionner]['Année'])
+    // L'année calendaire aussi,
+
+    toAdd['year'] = parseInt(Table[expeditionner]['AnnéeISO'])
+    // L'année ISO également
+
+
 
     intervalDataWeNeed.push(toAdd)
 
@@ -648,8 +668,8 @@ function setup() {
     Table.push(row);
 
     
-    // On initialise une variable qui retiendra la semaine précisée de son année, à laquelle appartient le jour current. Elle servira de clé dans le tableau des semaines de l'intervalle selectionné. Cette semaine précise, si elle existe pas déjà dans le tableau comme clé, sera donc créée. Si elle existe, on ajoute l'indice dans Table du jour en question au tableau
-    let currWeek = `${Table[i]['Année']}-${Table[i]['Semaine']}`;
+    // On initialise une variable qui retiendra la semaine précisée de son année ISO, à laquelle appartient le jour current. Elle servira de clé dans le tableau des semaines de l'intervalle selectionné. Cette semaine précise, si elle existe pas déjà dans le tableau comme clé, sera donc créée. Si elle existe, on ajoute l'indice dans Table du jour en question au tableau
+    let currWeek = `${Table[i]['AnnéeISO']}-${Table[i]['Semaine']}`;
 
     (intervalDataVegeWeeksWeNeed[currWeek] ??= []).push(i)// Cette écriture va, si la clé existe pour l'objet simplement ajouter via push ce qu'on veut ajouter, sinond d'abord créer la clé qui sera initialisée à vide, puis ensuite push
 
@@ -1022,7 +1042,7 @@ function aggregateData() {
     intervalDataWeNeed.forEach((day, index) => {
       // ✅ Lecture directe des champs pré-calculés
       const monthNum = day.month; // 0-11
-      const year = day.year;
+      const year = day.calYear; // Année calendaire
       
       // Nouveau mois détecté
       if (currentMonth === null || monthNum !== currentMonth || year !== currentYear) {
@@ -1699,7 +1719,7 @@ function drawMonthLabels(graphX, graphY, graphW, graphH) {
     
     chartPoints.forEach((point) => {
       const date = new Date(point.timestamp);
-      const year = date.getFullYear();
+      const year = getISOYear(date);
       
       if (year !== lastYear) {
         lastYear = year;
@@ -1729,10 +1749,10 @@ function drawMonthLabels(graphX, graphY, graphW, graphH) {
       text(`${months[date.getMonth()]}`, point.x, graphY + graphH + 15);
 
       // Année si changement
-      if (index === 0 || new Date(chartPoints[Math.max(0, index - 2)].timestamp).getFullYear() !== date.getFullYear()) {
+      if (index === 0 || getISOYear(new Date(chartPoints[Math.max(0, index - 2)].timestamp)) !== getISOYear(date)) {
         textSize(15);
         fill(CHART_CONFIG.colors.text + 'AA');
-        text(date.getFullYear(), point.x, graphY + graphH + 23);
+        text(getISOYear(date), point.x, graphY + graphH + 23);
       }
     });
   }
@@ -1746,10 +1766,10 @@ function drawMonthLabels(graphX, graphY, graphW, graphH) {
       text(`${months[date.getMonth()]}`, point.x, graphY + graphH + 15);
       
       // Année au changement
-      if (index === 0 || new Date(chartPoints[index - 1].timestamp).getFullYear() !== date.getFullYear()) {
+      if (index === 0 || getISOYear(new Date(chartPoints[index - 1].timestamp)) !== getISOYear(date)) {
         textSize(15);
         fill(CHART_CONFIG.colors.text + 'AA');
-        text(date.getFullYear(), point.x, graphY + graphH + 30);
+        text(getISOYear(date), point.x, graphY + graphH + 30);
       }
       
       // Jours agrégés
@@ -1805,10 +1825,10 @@ function drawDayLabels(graphX, graphY, graphW, graphH) {
     text(`${date.getDate()}/${date.getMonth() + 1}`, point.x, graphY + graphH + 10);
     
     // Année si changement
-    if (index === 0 || new Date(chartPoints[Math.max(0, index - step)].timestamp).getFullYear() !== date.getFullYear()) {
+    if (index === 0 || getISOYear(new Date(chartPoints[Math.max(0, index - step)].timestamp)) !== getISOYear(date)) {
       textSize(15);
       fill(CHART_CONFIG.colors.text + '99');
-      text(date.getFullYear(), point.x, graphY + graphH + 22);
+      text(getISOYear(date), point.x, graphY + graphH + 22);
     }
   });
 }
