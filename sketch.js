@@ -590,10 +590,25 @@ function setup() {
   // On convertit les lignes de dataSet en objets JavaScript pour plus de commodité
   Table = [];
 
+  ///**** Préparatif des opérations de mise à jour du carton menu */
+  // Obtention de la date du jour en format ISO (YYYY/MM/DD)
+  const TODAY = new Date();
+  const day = String(TODAY.getDate()).padStart(2, '0');
+  const month = String(TODAY.getMonth() + 1).padStart(2, '0'); // Les mois commencent à 0
+  const year = TODAY.getFullYear();
+  const formattedToday = `${year}-${month}-${day}`;
+
+  // Indexe de la ligne correspondant à la date idéale 
+  let idealDateIndex = -1;
+  // Booléen indiquant si on a trouvé la date idéale
+  let foundIdealDate = false;
+
   // Initialisation de notre structure dédiée aux semaines
   intervalDataVegeWeeksWeNeed = {}
 
-  for (let i = 0; i < dataSet.getRowCount(); i++) {
+  let i; // Itérateur
+
+  for (i = 0; i < dataSet.getRowCount(); i++) {
     let valuesRow = dataSet.getRow(i);
     let row = {};
 
@@ -667,6 +682,14 @@ function setup() {
 
     Table.push(row);
 
+    // On verifie si la date d'aujoud'hui est antérieure ou égale à la date de la ligne courrante, auquel cas on prendra cette date comme date idéale
+    if (!foundIdealDate && formattedToday <= row['Date']) {
+
+      idealDateIndex = i
+      foundIdealDate = true 
+    
+    }
+  
     
     // On initialise une variable qui retiendra la semaine précisée de son année ISO, à laquelle appartient le jour current. Elle servira de clé dans le tableau des semaines de l'intervalle selectionné. Cette semaine précise, si elle existe pas déjà dans le tableau comme clé, sera donc créée. Si elle existe, on ajoute l'indice dans Table du jour en question au tableau
     let currWeek = `${Table[i]['AnnéeISO']}-${Table[i]['Semaine']}`;
@@ -682,6 +705,69 @@ function setup() {
   // ___________ dernière _________________________________
   endDate = Table[Table.length - 1]['Date'];
   timeStampEndDate = dateStringToTimestamp(endDate)
+
+
+  /////////************ Opérations pour mise à jour de carton menu d'acceuil */
+
+  if (!foundIdealDate) {
+    // Si on a pas trouvé de date idéale, on prend la dernière date du dataset
+    idealDateIndex = i - 1
+  }
+
+  // On vérifie si la date idéale trouvée est aujourd'hui ou demain ou hier
+  let idealDate = Table[idealDateIndex]['Date'];
+
+  const idealDateDate = new Date(idealDate);
+
+  // On normalise les dates pour ne garder que année/mois/jour
+  const normalizedToday = normalize(TODAY);
+  const normalizedIdealDate = normalize(idealDateDate); 
+
+  // On convertit les deux dates en timeStamps pour faire la différenc
+  const diffInMs = normalizedIdealDate - normalizedToday;
+  const diffInDays = diffInMs / DAY; 
+
+  let textForMenuDateAreaDateZone = "";
+
+  // On remplit le texte selon le cas
+  if (diffInDays === 0) {
+      console.log("Même jour");
+      textForMenuDateAreaDateZone = "'aujourd'hui";
+  } else if (diffInDays === -1) {
+      console.log("La date est la veille");
+      textForMenuDateAreaDateZone = "'hier";
+  } else if (diffInDays === 1) {
+      console.log("La date est le lendemain");
+      textForMenuDateAreaDateZone = "e demain";
+  } else {
+      console.log("Cette date n'est ni hier, ni aujourd'hui, ni demain");
+      textForMenuDateAreaDateZone = `u ${idealDateDate.toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      })}`;
+  }
+
+  const menuDateArea = document.querySelector("#menu-date-area");
+
+  // Mise à jour du texte avec la date du jour
+  menuDateArea.innerText = `(Menu d${textForMenuDateAreaDateZone})`;
+
+  // Puis, on rempli le carton de menu avec les données de la ligne idéale
+  const menuData = {
+      entrée: Table[idealDateIndex]['Entrée'],
+      plat: Table[idealDateIndex]['Plat'],
+      légume: Table[idealDateIndex]['Légumes'],
+      laitage: Table[idealDateIndex]['Laitage'],
+      dessert: Table[idealDateIndex]['Dessert'],
+      gouter1: Table[idealDateIndex]['Gouter'],
+      gouter2: Table[idealDateIndex]['Gouter_02']
+  };
+
+
+  updateWelcomePageMenu(menuData);
+
+
 
   // Position initiale des deux poignées
   handle1Y = height * 0.3;
@@ -745,6 +831,32 @@ function setup() {
   // Quand tout est setup ici, on lance le sketch2
   new p5(sketchVege);
 
+}
+
+// Normaliser une date en année/mois/jour, simplement 
+function normalize(date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
+
+// Fonction de mise à jour du carton de menu de la première page
+function updateWelcomePageMenu(data) {
+    const container = document.getElementById("menuContent");
+    let html = "";
+
+    for (const key in data) {
+        if (data[key] !== "") {
+            html += `
+                <div class="menu-item">
+                    <div class="menu-item-name">
+                        ${key.charAt(0).toUpperCase() + key.slice(1)}
+                    </div>
+                    <div class="menu-item-value">${data[key].charAt(0).toUpperCase() + data[key].slice(1)}</div>
+                </div>
+            `;
+        }
+    }
+
+    container.innerHTML = html;
 }
 
 function draw() {
