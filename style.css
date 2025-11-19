@@ -110,7 +110,7 @@ button {
 /* --- Contenu de texte principal --- */
 .info {
   max-width: 600px;
-  margin-left: 60px;
+  margin-left: 20%;
 }
 
 .info h1 {
@@ -139,6 +139,13 @@ button {
   transform: rotate(-2deg);
   box-sizing: border-box;
   position: relative;
+  z-index: 10;
+}
+
+#overlay .postit {
+  position: absolute;
+  left: 29%;
+  bottom: 10%;
 }
 
 .postit h2 {
@@ -212,4 +219,104 @@ img{
     right: -12px;
     width: 100px;
   }
+}
+
+/* Yeux encore inaboutit, en chantier..., possiblement même jamais poursuivi comme idée */
+.litle-boy-eyes{
+
+  position: fixed;
+  bottom: 120px;
+  right: 80px;
+  width: 5px;
+  height: 7px;
+  border-radius: 50%;
+  background: black;
+  z-index: 10001;
+  display: none;
+}
+
+
+
+/* ====== STYLES CARTON MENU ====== */
+/* ====== CARTON MENU EN HAUT À GAUCHE ====== */
+.menu-container {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+
+    width: 340px;
+
+    padding: 25px 28px 30px;
+    background: #faf7f0;
+    border-radius: 16px;
+
+    /* Texture papier */
+    background-image: url("https://i.imgur.com/2zZ5x7R.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    /* Ombres raffinées */
+    box-shadow:
+        0 6px 15px rgba(60, 40, 20, 0.25),
+        0 0 25px rgba(0, 0, 0, 0.12) inset;
+
+    border: 1px solid rgba(160, 140, 110, 0.4);
+
+    transform: rotate(6deg);
+
+    z-index: 5;
+}
+
+/* ===== TITRE ===== */
+.menu-title {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: #614737;
+    letter-spacing: 1.5px;
+    /* text-transform: uppercase; */
+
+    i{
+
+        font-size: 0.7em;
+        color: #8a7866;
+    }
+}
+
+/* Filet décoratif */
+.menu-separator {
+    width: 60%;
+    margin: 10px auto 18px;
+    height: 2px;
+    background: linear-gradient(to right, #b8a374, #d8c58a, #b8a374);
+    border-radius: 2px;
+}
+
+/* ===== ITEMS ===== */
+.menu-item {
+    margin: 12px 0;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    border-bottom: 1px dashed rgba(120, 100, 80, 0.3);
+}
+
+.menu-item-name {
+    font-weight: bold;
+    color: #5d4b3a;
+}
+
+.menu-item-value {
+    color: #4b3a2a;
+}
+
+.menu-footer {
+    margin-top: 18px;
+    text-align: center;
+    font-style: italic;
+    color: #8a7866;
+    font-size: 0.9em;
 }
