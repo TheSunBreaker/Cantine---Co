@@ -31,9 +31,11 @@ let timeStampStartDate;
 let timeStampEndDate; 
 
 
-// Des tableaux pour retenir les valeurs de pourcentages qui nous intéressent dans l'intervalle qui nous intéresse
+// Des structures pour retenir les valeurs de pourcentages qui nous intéressent dans l'intervalle qui nous intéresse
 let intervalDataWeNeed
 let intervalDataVegeWeeksWeNeed
+let sandwichEuros
+const SANDWICHWIDTH = 500
 
 // Tableau pou retenir les aléatoires des points du cercle rougr fait main
 let randomForHandCirle
@@ -488,6 +490,14 @@ function theDataForTheDataVizGraphicsCrafter(){
   // On initialise la structure tableaux à vide
   intervalDataWeNeed = []
 
+  // Initialisation de la structure des coûts totaux du sandwich 
+  sandwichEuros = {
+    totalCost: 0,
+    bioCost: 0,
+    durableCost: 0,
+    localOnlyCost: 0,
+  }
+
   // Tant que la date sur laquelle on est est plus petite que la date de début d'intrval, on continue
   while(Table[expeditionner].Date < startDate){
 
@@ -500,6 +510,12 @@ function theDataForTheDataVizGraphicsCrafter(){
   while(expeditionner < Table.length && Table[expeditionner].Date <= endDate){
 
     let toAdd = Table[expeditionner].statsData
+
+    sandwichEuros.totalCost += Table[expeditionner].statsData.dayCost
+    sandwichEuros.bioCost += Table[expeditionner].statsData.dayBioCost
+    sandwichEuros.durableCost += Table[expeditionner].statsData.dayDurCost
+    sandwichEuros.localOnlyCost += Table[expeditionner].statsData.dayLocOnlyCost
+
     toAdd['timeStamp'] = new Date(Table[expeditionner].Date).getTime();
     // On va ajouter la titmestamp du jour dans l'objet
 
@@ -667,6 +683,8 @@ function setup() {
     //_____________ du total de coût pour marque de terre source (qui est justement facultatif comme élément comptant comme critère pour produit durable)
     let dayLocCost
 
+    let dayLocOnlyCost // On retiendra le coût uniquement local avant d'ajouter le durable
+
     // On additionne tous les coûts de la journée
     dayCost = row['Prix_entree'] + row['Prix_plat'] + row['Prix_legumes'] + row['Prix_laitage'] + row['Prix_dessert'] + row['Prix_gouter'] + row['Prix_gouter_02']
 
@@ -679,10 +697,12 @@ function setup() {
     // Comme pour le cas bio, sauf qu'ici on considère les booléens indiquant si oui ou non marque de terre source
     dayLocCost = row['Prix_entree'] * row['Entrée_loc'] + row['Prix_plat'] * row['Plat_loc'] + row['Prix_legumes'] * row['Légumes_loc'] + row['Prix_laitage'] * row['Laitage_loc'] + row['Prix_dessert'] * row['Dessert_loc'] + row['Prix_gouter'] * row['Gouter_loc'] + row['Prix_gouter_02'] * row['Gouter_02_loc']
 
+    dayLocOnlyCost = dayLocCost // On retient le coût uniquement local avant d'ajouter le durable
+
     dayLocCost = dayLocCost + dayDurCost // Cas où on intègre Marque de Terre Source comme critère durable
 
     // On peut ajouter ces nouvelles données comme 'colonne' supplémentaire de la ligne
-    row.statsData = { dayCost, dayBioCost, dayDurCost, dayLocCost };
+    row.statsData = { dayCost, dayBioCost, dayDurCost, dayLocCost, dayLocOnlyCost };
 
     Table.push(row);
 
@@ -875,6 +895,45 @@ function drawOlive(x, y, w = 30, h = 18) {
   ellipse(x + w*0.3, y, w*0.35, h*0.35);
 }
 
+function drawPlacard(x, y, price) {
+
+  push();
+  textAlign(CENTER, CENTER);
+  rectMode(CENTER);
+
+  // --- Ombre au sol ---
+  noStroke();
+  fill(0, 50); // légère transparence
+  ellipse(x, y + 50, 80, 20);
+
+  // --- Pique (pied) ---
+  fill(139, 69, 19);
+  beginShape();
+  vertex(x - 8, y + 20);   // gauche haut
+  vertex(x + 8, y + 20);   // droite haut
+  vertex(x, y + 60);       // bas pointu
+  endShape(CLOSE);
+
+  // --- Planche de la pancarte ---
+  fill(255, 240, 200);
+  stroke(150, 100, 50);
+  strokeWeight(3);
+  rect(x, y - 10, 150, 70, 10);
+
+  // --- Texte du prix ---
+  noStroke();
+  fill(0);
+
+  // Symbole euro plus gros
+  textSize(32);
+  text("€", x - 30, y - 10);
+
+  // Montant
+  textSize(24);
+  text(price, x + 30, y - 10);
+
+  pop();
+}
 
 // Fonction de dessin principale
 function draw() {
@@ -1107,6 +1166,11 @@ text("Au", rect2X + 8, rect2Y + 5);
 
   /********************************** POUR LE FLOATING CALENDAR GRAPHIQUE */
  //??????????????????????????????????????????????????????????????????????????
+
+
+ /////************************** POUR LE SANDWICH GRAPHIC */
+
+  drawPlacard(CHART_CONFIG.x + SANDWICHWIDTH + 199, 100, sandwichEuros.totalCost.toFixed(2) );
 
 }
 

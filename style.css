@@ -320,3 +320,20 @@ img{
     color: #8a7866;
     font-size: 0.9em;
 }
+
+/* ====== FIN STYLES CARTON MENU ====== */
+
+/* ====== STYLES SANDWICH ====== */
+
+.sandwich-table{
+  
+  position: absolute;
+  left: calc(25% + 15px);
+  top: 13px;
+}
+
+.garniture{
+  
+  width: 100%;
+  height: 97px;
+}
