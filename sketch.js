@@ -5,7 +5,9 @@ let canvas;
 // Structure d'objets qui contiendra nos données en mémoire vive
 let Table
 
+// Assets éléments graphiques
 let burgerImg;
+let olive;
 
 // Date de début et de fin d'intervalle
 let startDate
@@ -457,6 +459,8 @@ function preload() {
   );
 
   burgerImg = loadImage("burger.png")
+  olive = loadImage("olive-detouree.png")
+
 
 }
 
@@ -952,9 +956,11 @@ function draw() {
   // line(sliderX - 15, handle2Y, sliderX + 15, handle2Y);
 
   // Poignée 1
-  drawOlive(sliderX, handle1Y);
+  // drawOlive(sliderX, handle1Y);
+  image(olive, sliderX - 15, handle1Y - 9, 30, 18);
   // Poignée 2
-  drawOlive(sliderX, handle2Y);
+  // drawOlive(sliderX, handle2Y);
+  image(olive, sliderX - 15, handle2Y - 9, 30, 18);
 
 
  
@@ -987,9 +993,9 @@ let rectW = 120;
 let rectH = 50;
 
 // Il faut controller que les ardoises ne débordent pas hors du cadre. On va le faire avec constrain
-let rect1X = sliderX + sliderAreaHalfWidth + 3;
+let rect1X = sliderX + sliderAreaHalfWidth + 7; // + 3
 let rect1Y = constrain(handle1Y - 50, 0, height - 2 * rectH); // On prend en compte la taille de l'autre adroise potentiellement, si on est bas
-let rect2X = sliderX + sliderAreaHalfWidth + 3;
+let rect2X = sliderX + sliderAreaHalfWidth + 7; // + 3
 let rect2Y = constrain(handle2Y, rectH, height - rectH); // On prend en compte la taille de l'autre adroise potentiellement, si on est hauts
 
 rect(rect1X, rect1Y, rectW, rectH, 10, 10, 10, 0);   // pour startDate
