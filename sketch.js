@@ -859,6 +859,20 @@ function updateWelcomePageMenu(data) {
     container.innerHTML = html;
 }
 
+// Fonction de dessin des olives selecteurs
+function drawOlive(x, y, w = 30, h = 18) {
+  // 1) Corps vert
+  noStroke();
+  fill(60, 180, 60);
+  ellipse(x, y, w, h);
+
+  // 2) Trou noir (légèrement décalé pour effet 3D)
+  fill(20); // noir profond
+  ellipse(x + w*0.3, y, w*0.35, h*0.35);
+}
+
+
+// Fonction de dessin principale
 function draw() {
   
   background(CHART_CONFIG.colors.background);
@@ -914,6 +928,11 @@ function draw() {
   rect(sliderX - sliderAreaHalfWidth, verticalStickMagins - 5, sliderAreaHalfWidth * 2, height - 2 * verticalStickMagins + 5 * 2, 30)
   pop()
 
+ // Gros volume entre poignées 1 et 2
+  stroke(129, 77, 11)
+  strokeWeight(9);
+  line(sliderX, handle1Y, sliderX, handle2Y)
+
   // Barre verticale
   stroke(0);
   strokeWeight(2);
@@ -923,20 +942,22 @@ function draw() {
   // Burger slider
   image(burgerImg, sliderX - 150, height - verticalStickMagins - 83, 300, 200)
 
-
-  // Poignée 1
-  strokeWeight(6);
-  line(sliderX - 15, handle1Y, sliderX + 15, handle1Y);
-
-  // Poignée 2
-  line(sliderX - 15, handle2Y, sliderX + 15, handle2Y);
-
-  // Gros volume entre poignées 1 et 2
-  strokeWeight(9);
-  line(sliderX, handle1Y, sliderX, handle2Y)
-
   strokeWeight(1);
 
+  // // Poignée 1
+  // strokeWeight(6);
+  // line(sliderX - 15, handle1Y, sliderX + 15, handle1Y);
+
+  // // Poignée 2
+  // line(sliderX - 15, handle2Y, sliderX + 15, handle2Y);
+
+  // Poignée 1
+  drawOlive(sliderX, handle1Y);
+  // Poignée 2
+  drawOlive(sliderX, handle2Y);
+
+
+ 
 
   // // Dates avec police stylée, légèrement décalées
   // textSize(18)
