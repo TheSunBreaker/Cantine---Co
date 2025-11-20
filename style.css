@@ -88,6 +88,21 @@ button {
   font-size: 1em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   width: 150px;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: -25px;
+    border-radius: 50%;
+    transition: .5s;
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-color: pink;
+    z-index: -1;
+  }
 }
 
 #btnStats {
@@ -103,7 +118,12 @@ button {
 
 
 #btnStats:hover, #btnContexte:hover, #btnVegeLud:hover{
-  background-color: pink;
+
+  &::before{
+    width: 330px;
+    bottom: -165px;
+    left: -165px;
+  }
 }
 
 
