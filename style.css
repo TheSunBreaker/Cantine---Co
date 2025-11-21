@@ -3,14 +3,25 @@ html, body {
   padding: 0;
   overflow-y: auto; /* on remet le scroll normal */
   scroll-behavior: smooth; /* active le smooth scroll */
-  font-family: "Caveat", "Segoe UI", sans-serif;;
+  font-family: "Inter", "Caveat", "Segoe UI", sans-serif;;
 
   --fixed-Width: 1251px;
   --fixed-Height: 573px;
 }
 
+@font-face {
+  font-family: "Chaumon-Script";
+  src: url("chaumont_script/ChaumontScript-Regular.woff2") format("woff2"),
+       url("chaumont_script/ChaumontScript-Regular.woff") format("woff");
+}
+
 *{
   box-sizing: border-box;
+}
+
+h1{
+
+  font-family: "Chaumon-Script";
 }
 
 body{
@@ -39,7 +50,14 @@ button {
   border: 2px dashed #f44336;
   background: transparent;
   color: white;
-  font-family: 'Caveat';
+  font-family: 'Inter';
+  font-size: 0.7em;
+
+}
+
+#canvas1 > button, #canvas2 button{
+
+  font-size: 0.5em;
 }
 
 /* --- L'overlay principal --- */
@@ -47,14 +65,56 @@ button {
   width: var(--fixed-Width);
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   z-index: 1;
   box-sizing: border-box;
   position: relative;
 }
+
+#overlay{
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row
+}
+
+.action-appeal{
+
+  position: absolute;
+  bottom: 60px;
+  right: 160px;
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bolder;
+  transform: translateY(0);
+  animation: come-baby-come 2s ease-in-out infinite;
+
+  
+  &::after{
+    content: '>';
+    font-size: 3em;
+    writing-mode: sideways-lr;
+    font-family: "Chaumon-script";
+    writing-mode: vertical-lr;
+    position: absolute;
+    bottom: -35px;
+    right: calc(50% - 24px);
+  }
+}
+
+@keyframes come-baby-come {
+
+  0%, 100%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(15px);
+  }
+}
+
 
  section#trans-zone1, section#trans-zone2{
 
@@ -68,7 +128,7 @@ button {
     top: 2%;
     }
 
-  background: url("8291.jpg");
+  background: url("BackGrounds/nape-cantine-bg.jpg");
   background-size: 50%;
   background-repeat: repeat;
 }
@@ -85,7 +145,6 @@ button {
   border: 2px dashed #f44336;  padding: 12px 24px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   width: 150px;
   z-index: 1;
@@ -132,11 +191,14 @@ button {
 .info {
   max-width: 600px;
   margin-left: 20%;
+  margin-top: 0;
+
 }
 
 .info h1 {
-  font-size: 2.5em;
+  font-size: 6em;
   margin-bottom: 0.2em;
+  margin-top: 0;
 }
 
 .info p {
@@ -148,36 +210,6 @@ button {
   font-style: italic;
   color: #555;
   margin-bottom: 1em;
-}
-
-/* --- Le post-it à gauche --- */
-.postit {
-  background-color: #fff89a;
-  box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.3);
-  width: 220px;
-  height: 200px;
-  padding: 20px;
-  transform: rotate(-2deg);
-  box-sizing: border-box;
-  position: relative;
-  z-index: 10;
-}
-
-#overlay .postit {
-  position: absolute;
-  left: 29%;
-  bottom: 10%;
-}
-
-.postit h2 {
-  margin-top: 0;
-  font-size: 1.3em;
-  color: #333;
-}
-
-.postit p {
-  font-size: 1em;
-  color: #444;
 }
 
 .for-vege-1{
@@ -233,13 +265,6 @@ img{
     width: 200px;
   }
 
-  &.carrot{
-
-    position: absolute;
-    bottom: -25px;
-    right: -12px;
-    width: 100px;
-  }
 }
 
 /* Yeux encore inaboutit, en chantier..., possiblement même jamais poursuivi comme idée */
@@ -262,7 +287,7 @@ img{
 /* ====== CARTON MENU EN HAUT À GAUCHE ====== */
 .menu-container {
     position: absolute;
-    top: -15px;
+    bottom: -5px;
     left: -10px;
 
     width: 340px;
@@ -291,11 +316,12 @@ img{
 /* ===== TITRE ===== */
 .menu-title {
     text-align: center;
-    font-family: "Playfair Display", serif;
+    font-family: "Caveat", "Playfair Display", serif;
     font-size: 1.8em;
     margin-bottom: 8px;
     color: #614737;
     letter-spacing: 1.5px;
+
     /* text-transform: uppercase; */
 
     i{
@@ -316,8 +342,8 @@ img{
 
 /* ===== ITEMS ===== */
 .menu-item {
-    margin: 12px 0;
-    padding: 6px 0;
+    margin: 2px 0;
+    padding: 0px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -328,10 +354,15 @@ img{
 .menu-item-name {
     font-weight: bold;
     color: #5d4b3a;
+    margin-right: 10px;
+    font-family: "Inter";
+    font-size: 80%;
+
 }
 
 .menu-item-value {
     color: #4b3a2a;
+    font-family: "Caveat";
 }
 
 .menu-footer {
@@ -340,6 +371,8 @@ img{
     font-style: italic;
     color: #8a7866;
     font-size: 0.9em;
+    font-family: "Caveat";
+
 }
 
 /* ====== FIN STYLES CARTON MENU ====== */
@@ -350,7 +383,7 @@ img{
   
   position: absolute;
   left: calc(25% + 15px);
-  top: 30px;
+  top: 37px;
 
   & > svg:first-child{
     transform: translateY(8px);

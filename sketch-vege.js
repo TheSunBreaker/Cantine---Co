@@ -68,7 +68,7 @@ let sketchVege = function(p){
         // Création des clusters initiaux (années)
         createYearClusters();
 
-        p.textFont('Caveat')
+        p.textFont('Inter')
 
     }
 
