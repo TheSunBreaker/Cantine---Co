@@ -389,9 +389,40 @@ class FoodItem {
 
 
 /************************************************ */
-// Variables et classes pour le calendar flottant 
-// ========== CONFIGURATION DU CALENDRIER ==========
+// Variables et classes pour le sandwich chart 
+// ========== CONFIGURATION DU SANDWICH ==========
+
+// Hauteurs actuelles et cibles pour l'animation
+let currentHeights = {
+  tomato: 0,
+  lettuce: 0,
+  cheese: 0,
+  meat: 0
+};
+
+let targetHeights = {
+  tomato: 0,
+  lettuce: 0,
+  cheese: 0,
+  meat: 0
+};
+
+// Vitesse de transition (interpolation)
+let transitionSpeed = 0.1; // Entre 0 et 1 (0.1 = transition douce)
+
+
+// Animation du prix sur la pancarte
+let currentDisplayedPrice = 0;
+let targetDisplayedPrice = 0;
+
+// Hauteur totale disponible pour la garniture (en pixels)
+let garnitureHeight = 0;
+
+
+
 // ?????????????????????????????????????????????
+
+
 
 // Pour obtenir l'année IS0 d'une date
 function getISOYear(date) {
@@ -836,8 +867,23 @@ function setup() {
 
 
 
-  //**********************POUR LE FLOATING CALENDAR GRAPHIQUE */
-  // ??????????????????????????????????????????????????????????
+  //**********************POUR LE FLOATING SANDWICH CHART */
+
+  
+  // Récupérer la hauteur de la div "garniture"
+  let garnitureDiv = select('.garniture');
+  if (garnitureDiv) {
+    garnitureHeight = garnitureDiv.size().height;
+  }
+  
+  // Calculer les hauteurs initiales
+  updateTargetHeights();
+  
+  // Initialiser les hauteurs actuelles aux valeurs cibles (pas d'animation au départ)
+  currentHeights = {...targetHeights};
+  
+  // Créer les éléments SVG pour chaque couche
+  createSandwichLayers();
 
 
   // Pour du deboogage potentiel
@@ -894,6 +940,36 @@ function drawOlive(x, y, w = 30, h = 18) {
   fill(20); // noir profond
   ellipse(x + w*0.3, y, w*0.35, h*0.35);
 }
+
+function drawSandwichLabel(x, y, label = "Poulet") {
+  push();
+  translate(x, y);
+  rotate(-PI / 12); // Légère inclinaison pour effet dynamique
+
+  // Style
+  stroke(50);
+  fill(255);
+  strokeWeight(2);
+
+  // --- 1) Le petit cercle de l'étiquette ---
+  let r = 18; // rayon de la pastille
+  ellipse(0, 0, r * 5, r * 2);
+
+  // --- 2) Le pic en bois ---
+  stroke(160, 120, 60);
+  strokeWeight(4);
+  line(0, r, 0, r + 20); // la tige
+
+  // --- 3) Le texte au centre ---
+  noStroke();
+  fill(0);
+  textAlign(CENTER, CENTER);
+  textSize(11);
+  text(label, 0, 0);
+
+  pop();
+}
+
 
 function drawPlacard(x, y, price) {
 
@@ -1164,14 +1240,29 @@ text("Au", rect2X + 8, rect2Y + 5);
   //drawInstructions();
 
 
-  /********************************** POUR LE FLOATING CALENDAR GRAPHIQUE */
- //??????????????????????????????????????????????????????????????????????????
+  /********************************** POUR LE SANDWICH */
 
+  
+  // Interpolation douce vers les hauteurs cibles
+  currentHeights.tomato = lerp(currentHeights.tomato, targetHeights.tomato, transitionSpeed);
+  currentHeights.lettuce = lerp(currentHeights.lettuce, targetHeights.lettuce, transitionSpeed);
+  currentHeights.cheese = lerp(currentHeights.cheese, targetHeights.cheese, transitionSpeed);
+  currentHeights.meat = lerp(currentHeights.meat, targetHeights.meat, transitionSpeed);
 
- /////************************** POUR LE SANDWICH GRAPHIC */
+  // Mettre à jour les données du sandwich
+  updateSandwichData();
+  
+  // Animation du prix sur la pancarte
+  currentDisplayedPrice = lerp(currentDisplayedPrice, targetDisplayedPrice, transitionSpeed);
+  
+  // Mettre à jour l'affichage des couches
+  updateSandwichLayers();
+  
+  // Mettre à jour la pancarte avec le prix animé
+  updatePlacard();
 
-  drawPlacard(CHART_CONFIG.x + SANDWICHWIDTH + 199, 100, sandwichEuros.totalCost.toFixed(2) );
-
+  // Dessiner les étiquettes du sandwich
+  drawSandwichLabel(width * 0.35, 15, "Bio :");
 }
 
 
@@ -1187,8 +1278,6 @@ function determineAggregation() {
   else if (numDays < 180) currentAggregation = 'week';
   else currentAggregation = 'month';
 }
-
-
 
 // ========== AGRÉGATION DES DONNÉES PAR PÉRIODE (VERSION OPTIMISÉE) ==========
 function aggregateData() {
@@ -2390,6 +2479,10 @@ function riverGraphicsNCoAcutualization(){
   replayAnimation();
 
   updateAggregationInfo();
+
+
+  // MAJ du sandwich
+  updateSandwichData();
 }
 
 
@@ -2402,15 +2495,606 @@ function riverGraphicsNCoAcutualization(){
 
 
 /********************************************** */
-/**************DEBUT ZONE FONCTIONS FLOATING AND SAILING CALENDAR */
+/**************DEBUT ZONE FONCTIONS SANDWICH CHARTS */
 /********************************************** */
 
+// ============================================
+// FONCTION À APPELER QUAND LES DONNÉES CHANGENT
+// ============================================
+
+function updateSandwichData(newData) {
+  
+  // Mettre à jour le prix cible pour l'animation
+  targetDisplayedPrice = sandwichEuros.totalCost;
+  
+  // Recalculer les hauteurs cibles
+  updateTargetHeights();
+  
+  // L'animation se fera automatiquement dans draw()
+}
+
+// ============================================
+// CALCUL DES HAUTEURS CIBLES
+// ============================================
+
+function updateTargetHeights() {
+  if (sandwichEuros.totalCost === 0) {
+    // Pas de données = sandwich vide
+    targetHeights.tomato = 0;
+    targetHeights.lettuce = 0;
+    targetHeights.cheese = 0;
+    targetHeights.meat = 0;
+    return;
+  }
+  
+  // Calcul des pourcentages
+  let bioPercent = sandwichEuros.bioCost / sandwichEuros.totalCost;
+  let durablePercent = (sandwichEuros.durableCost - sandwichEuros.bioCost) / sandwichEuros.totalCost;
+  let localPercent = sandwichEuros.localOnlyCost / sandwichEuros.totalCost;
+  let remainingPercent = 1 - bioPercent - durablePercent - localPercent;
+  
+  // S'assurer que les pourcentages sont positifs
+  bioPercent = max(0, bioPercent);
+  durablePercent = max(0, durablePercent);
+  localPercent = max(0, localPercent);
+  remainingPercent = max(0, remainingPercent);
+  
+  // Conversion en hauteur de pixels
+  targetHeights.tomato = bioPercent * garnitureHeight;
+  targetHeights.lettuce = durablePercent * garnitureHeight;
+  targetHeights.cheese = localPercent * garnitureHeight;
+  targetHeights.meat = remainingPercent * garnitureHeight;
+}
 
 
-// ???????????????????????????????????????????????
+
+
+// ============================================
+// CRÉATION DES COUCHES SVG
+// ============================================
+
+
+function createSandwichLayers() {
+  let garnitureDiv = select('.garniture');
+  if (!garnitureDiv) return;
+  
+  // Vider le contenu existant
+  garnitureDiv.html('');
+  
+  // Définir la position relative pour le conteneur
+  garnitureDiv.style('position', 'relative');
+  
+  // Créer la barre de référence 100% à gauche avec texte
+  let leftBarContainer = createDiv('').parent(garnitureDiv);
+  leftBarContainer.id('left-reference-container');
+  leftBarContainer.style('position', 'absolute');
+  leftBarContainer.style('left', '-35px');
+  leftBarContainer.style('top', '0');
+  leftBarContainer.style('width', '40px');
+  leftBarContainer.style('height', '100%');
+  leftBarContainer.style('display', 'flex');
+  leftBarContainer.style('flex-direction', 'column');
+  leftBarContainer.style('align-items', 'center');
+  
+  leftBarContainer.html(`
+    <div style="position : absolute ; bottom : 100% ; margin-bottom : 5px ; writing-mode: vertical-rl; transform: rotate(180deg); color: #000; font-weight: bold; font-size: 12px; font-family: Arial, sans-serif;">100%</div>
+    <div style="width: 5px; flex-grow: 1; background-color: #000; border-radius: 1px;"></div>
+  `);
+  
+  // Créer les 4 couches dans l'ordre (de bas en haut)
+  // 1. Viande (rose avec texture)
+  let meatSvg = createDiv('').parent(garnitureDiv);
+  meatSvg.id('meat-layer');
+  meatSvg.class('sandwich-layer');
+  meatSvg.style('position', 'absolute');
+  meatSvg.style('bottom', '0');
+  meatSvg.style('width', '100%');
+  meatSvg.style('overflow', 'visible');
+  meatSvg.style('line-height', '0');
+  
+  // 2. Fromage (jaune avec texture)
+  let cheeseSvg = createDiv('').parent(garnitureDiv);
+  cheeseSvg.id('cheese-layer');
+  cheeseSvg.class('sandwich-layer');
+  cheeseSvg.style('position', 'absolute');
+  cheeseSvg.style('width', '100%');
+  cheeseSvg.style('overflow', 'visible');
+  cheeseSvg.style('line-height', '0');
+  cheeseSvg.style('cursor', 'pointer');
+  
+  // 3. Salade (verte ondulée)
+  let lettuceSvg = createDiv('').parent(garnitureDiv);
+  lettuceSvg.id('lettuce-layer');
+  lettuceSvg.class('sandwich-layer');
+  lettuceSvg.style('position', 'absolute');
+  lettuceSvg.style('width', '100%');
+  lettuceSvg.style('overflow', 'visible');
+  lettuceSvg.style('line-height', '0');
+  lettuceSvg.style('cursor', 'pointer');
+  
+  // 4. Tomates (rouges ondulées)
+  let tomatoSvg = createDiv('').parent(garnitureDiv);
+  tomatoSvg.id('tomato-layer');
+  tomatoSvg.class('sandwich-layer');
+  tomatoSvg.style('position', 'absolute');
+  tomatoSvg.style('top', '0');
+  tomatoSvg.style('width', '100%');
+  tomatoSvg.style('overflow', 'visible');
+  tomatoSvg.style('line-height', '0');
+  tomatoSvg.style('cursor', 'pointer');
+  
+  // Créer les barres de pourcentage à droite
+  createPercentageBars(garnitureDiv);
+  
+  // Créer le tooltip
+  createTooltip();
+  
+  // Ajouter les événements hover
+  setupHoverEvents();
+}
+
+
+// ============================================
+// MISE À JOUR DES COUCHES
+// ============================================
+
+
+function updateSandwichLayers() {
+  // Mise à jour de la viande (couche du bas)
+  let meatLayer = select('#meat-layer');
+  if (meatLayer) {
+    meatLayer.style('height', currentHeights.meat + 'px');
+    meatLayer.html(generateMeatSVG(currentHeights.meat));
+  }
+  
+  // Mise à jour du fromage (au-dessus de la viande)
+  let cheeseLayer = select('#cheese-layer');
+  if (cheeseLayer) {
+    cheeseLayer.style('height', currentHeights.cheese + 'px');
+    cheeseLayer.style('bottom', currentHeights.meat + 'px');
+    cheeseLayer.html(generateCheeseSVG(currentHeights.cheese));
+  }
+  
+  // Mise à jour de la salade (au-dessus du fromage)
+  let lettuceLayer = select('#lettuce-layer');
+  if (lettuceLayer) {
+    lettuceLayer.style('height', currentHeights.lettuce + 'px');
+    lettuceLayer.style('bottom', (currentHeights.meat + currentHeights.cheese) + 'px');
+    lettuceLayer.html(generateLettuceSVG(currentHeights.lettuce));
+  }
+  
+  // Mise à jour des tomates (en haut)
+  let tomatoLayer = select('#tomato-layer');
+  if (tomatoLayer) {
+    tomatoLayer.style('height', currentHeights.tomato + 'px');
+    tomatoLayer.html(generateTomatoSVG(currentHeights.tomato));
+  }
+  
+  // Mise à jour des barres de pourcentage
+  updatePercentageBars();
+}
+
+
+// ============================================
+// GÉNÉRATION DES SVG POUR CHAQUE INGRÉDIENT
+// ============================================
+
+// TOMATES (deux rondelles vues de côté, côte à côte)
+function generateTomatoSVG(height) {
+  if (height < 2) return ''; // Trop petit pour afficher
+  
+  let svg = `
+    <svg width="500" height="${height}" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+      <defs>
+
+        <!-- Dégradé de tomate plus rouge et saturé -->
+        <linearGradient id="tomato-side-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   style="stop-color:#B80000;stop-opacity:1" />
+          <stop offset="20%"  style="stop-color:#E60000;stop-opacity:1" />
+          <stop offset="50%"  style="stop-color:#FF3A2E;stop-opacity:1" />
+          <stop offset="80%"  style="stop-color:#E60000;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#A00000;stop-opacity:1" />
+        </linearGradient>
+
+        <!-- Pattern avec pépins désordonnés -->
+        <pattern id="tomato-seeds-side" x="0" y="0" width="40" height="25" patternUnits="userSpaceOnUse">
+          <ellipse cx="5" cy="5"  rx="1.5" ry="1" fill="#FFEAA7" opacity="0.45"/>
+          <ellipse cx="12" cy="8" rx="1.3" ry="0.8" fill="#FFEAA7" opacity="0.4"/>
+          <ellipse cx="20" cy="4" rx="1.4" ry="0.9" fill="#FFEAA7" opacity="0.35"/>
+          <ellipse cx="28" cy="10" rx="1.2" ry="0.7" fill="#FFEAA7" opacity="0.4"/>
+          <ellipse cx="18" cy="15" rx="1.4" ry="1" fill="#FFEAA7" opacity="0.45"/>
+          <ellipse cx="8"  cy="18" rx="1.3" ry="0.8" fill="#FFEAA7" opacity="0.35"/>
+          <ellipse cx="26" cy="18" rx="1.5" ry="1" fill="#FFEAA7" opacity="0.5"/>
+          <ellipse cx="32" cy="6"  rx="1.2" ry="0.7" fill="#FFEAA7" opacity="0.4"/>
+        </pattern>
+
+      </defs>
+
+      <!-- Rondelle 1 -->
+      <rect x="10" y="0" width="210" height="${height}"
+            fill="url(#tomato-side-grad)" rx="3"/>
+      <rect x="10" y="0" width="210" height="${height}"
+            fill="url(#tomato-seeds-side)" rx="3"/>
+      <rect x="10" y="0" width="210" height="${height}"
+            fill="none" stroke="#8A0000" stroke-width="2" rx="3"/>
+
+      <!-- Rondelle 2 -->
+      <rect x="280" y="0" width="210" height="${height}"
+            fill="url(#tomato-side-grad)" rx="3"/>
+      <rect x="280" y="0" width="210" height="${height}"
+            fill="url(#tomato-seeds-side)" rx="3"/>
+      <rect x="280" y="0" width="210" height="${height}"
+            fill="none" stroke="#8A0000" stroke-width="2" rx="3"/>
+    </svg>
+  `;
+  
+  return svg;
+}
+
+
+// SALADE (verte avec formes ondulées des 2 côtés)
+function generateLettuceSVG(height) {
+  if (height < 2) return '';
+  
+  let waveAmp = Math.min(8, height / 3); // Amplitude des vagues adaptée
+  
+  let svg = `
+    <svg width="500" height="${height}" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+      <defs>
+        <!-- Forme ondulée haut et bas -->
+        <clipPath id="lettuce-waves">
+          <path d="M 0,${waveAmp} Q 50,0 100,${waveAmp} T 200,${waveAmp} T 300,${waveAmp} T 400,${waveAmp} T 500,${waveAmp} 
+                   L 500,${height - waveAmp} Q 450,${height} 400,${height - waveAmp} 
+                   T 300,${height - waveAmp} T 200,${height - waveAmp} T 100,${height - waveAmp} T 0,${height - waveAmp} Z" />
+        </clipPath>
+        
+        <!-- Texture de nervures de salade -->
+        <pattern id="lettuce-veins" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 20,0 L 20,40" stroke="#1E8449" stroke-width="1" opacity="0.3"/>
+          <path d="M 20,10 Q 15,12 10,15" stroke="#1E8449" stroke-width="0.8" fill="none" opacity="0.25"/>
+          <path d="M 20,10 Q 25,12 30,15" stroke="#1E8449" stroke-width="0.8" fill="none" opacity="0.25"/>
+          <path d="M 20,25 Q 15,27 10,30" stroke="#1E8449" stroke-width="0.8" fill="none" opacity="0.25"/>
+          <path d="M 20,25 Q 25,27 30,30" stroke="#1E8449" stroke-width="0.8" fill="none" opacity="0.25"/>
+        </pattern>
+      </defs>
+      
+      <!-- Base verte -->
+      <rect x="0" y="0" width="500" height="${height}" 
+            fill="#27AE60" clip-path="url(#lettuce-waves)"/>
+      
+      <!-- Nervures de la salade -->
+      <rect x="0" y="0" width="500" height="${height}" 
+            fill="url(#lettuce-veins)" clip-path="url(#lettuce-waves)"/>
+      
+      <!-- Variations de vert (ondulations) -->
+      <ellipse cx="100" cy="${height / 2}" rx="80" ry="${Math.max(15, height/4)}" 
+               fill="#2ECC71" opacity="0.4" clip-path="url(#lettuce-waves)"/>
+      <ellipse cx="300" cy="${height / 2}" rx="100" ry="${Math.max(20, height/3)}" 
+               fill="#229954" opacity="0.3" clip-path="url(#lettuce-waves)"/>
+      <ellipse cx="200" cy="${height / 3}" rx="60" ry="${Math.max(12, height/5)}" 
+               fill="#1E8449" opacity="0.2" clip-path="url(#lettuce-waves)"/>
+      
+      <!-- Contours ondulés -->
+      <path d="M 0,${waveAmp} Q 50,0 100,${waveAmp} T 200,${waveAmp} T 300,${waveAmp} T 400,${waveAmp} T 500,${waveAmp}" 
+            stroke="#1E8449" stroke-width="1.5" fill="none"/>
+      <path d="M 0,${height - waveAmp} Q 50,${height} 100,${height - waveAmp} 
+               T 200,${height - waveAmp} T 300,${height - waveAmp} T 400,${height - waveAmp} T 500,${height - waveAmp}" 
+            stroke="#1E8449" stroke-width="1.5" fill="none"/>
+    </svg>
+  `;
+  return svg;
+}
+
+// FROMAGE (jaune avec texture)
+function generateCheeseSVG(height) {
+  if (height < 2) return '';
+  
+  let svg = `
+    <svg width="500" height="${height}" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+      <defs>
+        <!-- Texture du fromage (trous) -->
+        <pattern id="cheese-holes" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <ellipse cx="10" cy="15" rx="4" ry="5" fill="#D68910" opacity="0.4"/>
+          <ellipse cx="30" cy="10" rx="3" ry="4" fill="#D68910" opacity="0.3"/>
+          <ellipse cx="25" cy="30" rx="3.5" ry="4.5" fill="#D68910" opacity="0.35"/>
+        </pattern>
+        
+        <linearGradient id="cheese-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#F9E79F;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#F39C12;stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Base jaune -->
+      <rect x="0" y="0" width="500" height="${height}" fill="#F39C12"/>
+      
+      <!-- Trous du fromage -->
+      <rect x="0" y="0" width="500" height="${height}" fill="url(#cheese-holes)"/>
+      
+      <!-- Dégradé subtil -->
+      <rect x="0" y="0" width="500" height="${height}" 
+            fill="url(#cheese-gradient)" opacity="0.3"/>
+    </svg>
+  `;
+  return svg;
+}
+
+// VIANDE (rose avec texture marbrée)
+function generateMeatSVG(height) {
+  if (height < 2) return '';
+  
+  let svg = `
+    <svg width="500" height="${height}" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+      <defs>
+        <!-- Texture de la viande (marbrures) -->
+        <pattern id="meat-texture" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 10,20 Q 20,10 30,20 T 50,20" 
+                stroke="#D98880" stroke-width="2" fill="none" opacity="0.4"/>
+          <path d="M 5,40 Q 15,35 25,40 T 45,40" 
+                stroke="#E6B0AA" stroke-width="1.5" fill="none" opacity="0.3"/>
+          <circle cx="40" cy="15" r="2" fill="#C39BD3" opacity="0.2"/>
+        </pattern>
+        
+        <linearGradient id="meat-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#F1948A;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#EC7063;stop-opacity:0" />
+          <stop offset="100%" style="stop-color:#CB4335;stop-opacity:0.6" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Base rose -->
+      <rect x="0" y="0" width="500" height="${height}" fill="#EC7063"/>
+      
+      <!-- Marbrures -->
+      <rect x="0" y="0" width="500" height="${height}" fill="url(#meat-texture)"/>
+      
+      <!-- Dégradé pour le relief -->
+      <rect x="0" y="0" width="500" height="${height}" 
+            fill="url(#meat-gradient)" opacity="0.2"/>
+    </svg>
+  `;
+  return svg;
+}
+
+// ============================================
+// CRÉATION DES BARRES DE POURCENTAGE À DROITE
+// ============================================
+
+function createPercentageBars(parent) {
+  // Conteneur pour la barre verte (BIO) - avec label
+  let greenBarContainer = createDiv('').parent(parent);
+  greenBarContainer.id('green-bar-container');
+  greenBarContainer.style('position', 'absolute');
+  greenBarContainer.style('right', '-35px');
+  greenBarContainer.style('top', '0');
+  greenBarContainer.style('width', '40px');
+  greenBarContainer.style('height', '100%');
+  
+  // Conteneur pour la barre bleue (DURABLE) - avec label
+  let blueBarContainer = createDiv('').parent(parent);
+  blueBarContainer.id('blue-bar-container');
+  blueBarContainer.style('position', 'absolute');
+  blueBarContainer.style('right', '-48px');
+  blueBarContainer.style('top', '0');
+  blueBarContainer.style('width', '40px');
+  blueBarContainer.style('height', '100%');
+  
+  // Conteneur pour la barre violette (DURABLE + MTS) - avec label
+  let purpleBarContainer = createDiv('').parent(parent);
+  purpleBarContainer.id('purple-bar-container');
+  purpleBarContainer.style('position', 'absolute');
+  purpleBarContainer.style('right', '-61px');
+  purpleBarContainer.style('top', '0');
+  purpleBarContainer.style('width', '40px');
+  purpleBarContainer.style('height', '100%');
+}
+
+// ============================================
+// MISE À JOUR DES BARRES DE POURCENTAGE
+// ============================================
+
+function updatePercentageBars() {
+  let greenContainer = select('#green-bar-container');
+  let blueContainer = select('#blue-bar-container');
+  let purpleContainer = select('#purple-bar-container');
+  
+  if (!greenContainer || !blueContainer || !purpleContainer) return;
+  
+  let bioPercent = (sandwichEuros.bioCost / sandwichEuros.totalCost * 100);
+  let durablePercent = (sandwichEuros.durableCost / sandwichEuros.totalCost * 100);
+  let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
+  let totalWithMTSPercent = (totalDurableWithMTS / sandwichEuros.totalCost * 100);
+  
+  // Hauteurs = hauteur exacte de ce qu'elles représentent
+  let greenHeight = currentHeights.tomato;
+  let blueHeight = currentHeights.tomato + currentHeights.lettuce;
+  let purpleHeight = currentHeights.tomato + currentHeights.lettuce + currentHeights.cheese;
+  
+  // Barre verte (BIO) - commence en haut de la garniture
+  let greenColor = bioPercent >= 20 ? '#27AE60' : '#E74C3C';
+  greenContainer.html(`
+    <div style="position: absolute; top: 0; width: 100%; height: ${greenHeight}px; display: flex; flex-direction: column; align-items: center;">
+      <div style="position: absolute ; bottom : 100% ; writing-mode: vertical-rl; transform: rotate(180deg); color: ${greenColor}; font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style : italic ; font-family: Arial, sans-serif;">bio</div>
+      <div class="percentage-bar-rect" data-type="bio" style="width: 5px; flex-grow: 1; background-color: ${greenColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+    </div>
+  `);
+  
+  // Barre bleue (DURABLE) - commence en haut de la garniture
+  let blueColor = durablePercent >= 50 ? '#3498DB' : '#E74C3C';
+  blueContainer.html(`
+    <div style="position: absolute; top: 0; width: 100%; height: ${blueHeight}px; display: flex; flex-direction: column; align-items: center;">
+      <div style="position: absolute ; bottom : 100% ; writing-mode: vertical-rl; transform: rotate(180deg); color: ${blueColor}; font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style : italic ; font-family: Arial, sans-serif;">dur</div>
+      <div class="percentage-bar-rect" data-type="durable" style="width: 5px; flex-grow: 1; background-color: ${blueColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+    </div>
+  `);
+  
+  // Barre violette (DURABLE + MTS) - commence en haut de la garniture
+  let purpleColor = totalWithMTSPercent >= 50 ? '#9B59B6' : '#E74C3C';
+  purpleContainer.html(`
+    <div style="position: absolute; top: 0; width: 100%; height: ${purpleHeight}px; display: flex; flex-direction: column; align-items: center;">
+      <div style="position: absolute ; bottom : 100% ; writing-mode: vertical-rl; transform: rotate(180deg); color: ${purpleColor}; font-weight: bold; font-size: 11px; margin-bottom: 5px; font-style : italic ; font-family: Arial, sans-serif;">dur(+MTS)</div>
+      <div class="percentage-bar-rect" data-type="mts" style="width: 5px; flex-grow: 1; background-color: ${purpleColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+    </div>
+  `);
+  
+  // Réattacher les événements après la mise à jour du HTML
+  setTimeout(() => {
+    setupHoverEvents();
+  }, 50);
+}
+
+// ============================================
+// CRÉATION DU TOOLTIP
+// ============================================
+
+function createTooltip() {
+  let tooltip = createDiv('').id('sandwich-tooltip');
+  tooltip.style('position', 'fixed');
+  tooltip.style('background-color', 'rgba(0, 0, 0, 0.85)');
+  tooltip.style('color', 'white');
+  tooltip.style('padding', '10px 15px');
+  tooltip.style('border-radius', '8px');
+  tooltip.style('font-family', 'Arial, sans-serif');
+  tooltip.style('font-size', '14px');
+  tooltip.style('pointer-events', 'none');
+  tooltip.style('opacity', '0');
+  tooltip.style('transition', 'opacity 0.2s ease');
+  tooltip.style('z-index', '10000');
+  tooltip.style('white-space', 'nowrap');
+  tooltip.style('box-shadow', '0 4px 8px rgba(0,0,0,0.3)');
+}
+
+
+// ============================================
+// CONFIGURATION DES ÉVÉNEMENTS HOVER
+// ============================================
+
+function setupHoverEvents() {
+  let tooltip = select('#sandwich-tooltip');
+  if (!tooltip) return;
+  
+  // Retirer tous les anciens event listeners pour éviter les doublons
+  document.querySelectorAll('.sandwich-layer, .percentage-bar-rect').forEach(el => {
+    let newEl = el.cloneNode(true);
+    el.parentNode.replaceChild(newEl, el);
+  });
+  
+  // Fonction helper pour gérer le hover avec des éléments natifs
+  function attachHoverToElement(selector, type) {
+    let elements = document.querySelectorAll(selector);
+    
+    elements.forEach(element => {
+      element.addEventListener('mouseenter', function(e) {
+        let content = '';
+        
+        if (type === 'bio') {
+          let bioPercent = (sandwichEuros.bioCost / sandwichEuros.totalCost * 100).toFixed(1);
+          let bioEuros = sandwichEuros.bioCost.toFixed(2);
+          let isCompliant = bioPercent >= 20;
+          
+          content = `
+            <div style="font-weight: bold; margin-bottom: 5px;">🍅 Produits BIO</div>
+            <div>${bioEuros}€ (${bioPercent}%)</div>
+            <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
+              ${isCompliant ? '✓' : '✗'} Seuil légal : 20%
+            </div>
+          `;
+          
+          // Grossir la barre
+          let bar = document.querySelector('.percentage-bar-rect[data-type="bio"]');
+          if (bar) bar.style.width = '9px';
+          
+        } else if (type === 'durable') {
+          let durablePercent = (sandwichEuros.durableCost / sandwichEuros.totalCost * 100).toFixed(1);
+          let durableEuros = sandwichEuros.durableCost.toFixed(2);
+          let isCompliant = durablePercent >= 50;
+          
+          content = `
+            <div style="font-weight: bold; margin-bottom: 5px;">🥬 Produits DURABLES</div>
+            <div>${durableEuros}€ (${durablePercent}%)</div>
+            <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
+              ${isCompliant ? '✓' : '✗'} Seuil légal : 50%
+            </div>
+          `;
+          
+          // Grossir la barre
+          let bar = document.querySelector('.percentage-bar-rect[data-type="durable"]');
+          if (bar) bar.style.width = '16px';
+          
+        } else if (type === 'mts') {
+          let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
+          let totalPercent = (totalDurableWithMTS / sandwichEuros.totalCost * 100).toFixed(1);
+          let mtsPercent = (sandwichEuros.localOnlyCost / sandwichEuros.totalCost * 100).toFixed(1);
+          let totalEuros = totalDurableWithMTS.toFixed(2);
+          let isCompliant = totalPercent >= 50;
+          
+          content = `
+            <div style="font-weight: bold; margin-bottom: 5px;">🧀 Durable incluant Marque de Terre Source</div>
+            <div>${totalEuros}€ (${totalPercent}%)</div>
+            <div style="font-size: 12px; margin-top: 3px;">dont ${mtsPercent}% de MTS</div>
+            <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
+              ${isCompliant ? '✓' : '✗'} Seuil légal : 50%
+            </div>
+          `;
+          
+          // Grossir la barre
+          let bar = document.querySelector('.percentage-bar-rect[data-type="mts"]');
+          if (bar) bar.style.width = '16px';
+        }
+        
+        tooltip.elt.innerHTML = content;
+        tooltip.elt.style.opacity = '1';
+      });
+      
+      element.addEventListener('mouseleave', function() {
+        // Retarder la disparition du tooltip pour éviter les clignotements
+        setTimeout(() => {
+          // Vérifier si la souris est toujours sur un élément interactif
+          let hoveredElement = document.querySelector(':hover');
+          let isStillHovering = false;
+          while (hoveredElement) {
+            if (hoveredElement.classList.contains('sandwich-layer') || 
+                hoveredElement.classList.contains('percentage-bar-rect')) {
+              isStillHovering = true;
+              break;
+            }
+            hoveredElement = hoveredElement.parentElement;
+          }
+          
+          if (!isStillHovering) {
+            tooltip.elt.style.opacity = '0';
+            // Réduire toutes les barres
+            document.querySelectorAll('.percentage-bar-rect').forEach(bar => {
+              bar.style.width = '8px';
+            });
+          }
+        }, 100);
+      });
+      
+      element.addEventListener('mousemove', function(e) {
+        tooltip.elt.style.left = (e.clientX + 15) + 'px';
+        tooltip.elt.style.top = (e.clientY + 15) + 'px';
+      });
+    });
+  }
+  
+  // Attacher les événements aux couches et aux barres
+  attachHoverToElement('#tomato-layer, .percentage-bar-rect[data-type="bio"]', 'bio');
+  attachHoverToElement('#lettuce-layer, .percentage-bar-rect[data-type="durable"]', 'durable');
+  attachHoverToElement('#cheese-layer, .percentage-bar-rect[data-type="mts"]', 'mts');
+}
+
+// ============================================
+// MISE À JOUR DE LA PANCARTE AVEC ANIMATION
+// ============================================
+
+function updatePlacard() {
+  // Appeler ta fonction drawPlacard avec le prix animé
+ drawPlacard(CHART_CONFIG.x + SANDWICHWIDTH + 199, 100, currentDisplayedPrice.toFixed(2));
+}
 
 /********************************************** */
-/**************FIN ZONE FONCTIONS FLOATING AND SAILING CALENDAR */
+/**************FIN ZONE FONCTIONS SANDWICH CHARTS */
 /********************************************** */
 
 

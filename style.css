@@ -90,6 +90,7 @@ button {
   width: 150px;
   z-index: 1;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
 
   &::before{
     content: '';
@@ -111,7 +112,7 @@ button {
 }
 
 #btnVegeLud{
-  
+   
   display: block; /* toujours visible */
   top : 120px
 }
@@ -349,11 +350,16 @@ img{
   
   position: absolute;
   left: calc(25% + 15px);
-  top: 13px;
+  top: 30px;
+
+  & > svg:first-child{
+    transform: translateY(8px);
+  }
 }
 
 .garniture{
   
   width: 100%;
-  height: 97px;
+  height: 100px;
+  position: relative;
 }
