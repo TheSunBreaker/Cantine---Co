@@ -972,7 +972,7 @@ function drawSandwichLabel(x, y, label = "Poulet", color = "#000") {
 
   // Style
   stroke("gold");
-  fill(255);
+  fill(255, 240, 200);
   strokeWeight(2);
 
   // --- 1) Le petit cercle de l'étiquette ---
@@ -1027,18 +1027,19 @@ function drawPlacard(x, y, price) {
   fill(0);
 
   // Symbole euro plus gros
-  textSize(36);
-  text("€", x - 40, y - 10);
+  textSize(38);
+  text("€", x - 43, y - 10);
 
   // Montant
-  textSize(28);
-  text(price, x + 15, y - 10);
+  textSize(30);
+  text(price, x + 12, y - 10);
 
   // Infos de précision
   let detailsText = `* Du ${startParts[2]} ${months[parseInt(startParts[1]) - 1]} ${startParts[0]} au ${endParts[2]} ${months[parseInt(endParts[1]) - 1]} ${endParts[0]}`;
   textSize(10);
   text(detailsText, x, y-35);
-  text("De repas par élève", x, y + 15);
+  textSize(11);
+  text("De repas, par élève, servis", x, y + 15);
 
   pop();
 }
