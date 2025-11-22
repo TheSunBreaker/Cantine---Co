@@ -17,6 +17,12 @@ let meat;
 let startDate
 let endDate 
 
+// Tableau des mois
+const months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+
+let startParts // ["2023","01","26"]
+let endParts // ["2025","07","23"]
+
 // Variables liées au réglage de l'intervalle de dates
 let handle1Y, handle2Y;
 let dragging1 = false;
@@ -771,6 +777,9 @@ function setup() {
   endDate = Table[Table.length - 1]['Date'];
   timeStampEndDate = dateStringToTimestamp(endDate)
 
+  startParts = startDate.split('-'); // ["2023","01","26"]
+  endParts = endDate.split('-');     // ["2025","07","23"]
+
 
   /////////************ Opérations pour mise à jour de carton menu d'acceuil */
 
@@ -878,7 +887,7 @@ function setup() {
 
 
   //**********************POUR LE FLOATING SANDWICH CHART */
-
+  // Initialiser la hauteur de la garniture
   
   // Récupérer la hauteur de la div "garniture"
   let garnitureDiv = select('.garniture');
@@ -894,6 +903,10 @@ function setup() {
   
   // Créer les éléments SVG pour chaque couche
   createSandwichLayers();
+
+  // Initialiser le prix affiché aux valeurs cibles (aucune animation au départ)
+  currentDisplayedPrice = sandwichEuros.totalCost;
+  targetDisplayedPrice = sandwichEuros.totalCost;
 
 
   // Pour du deboogage potentiel
@@ -993,33 +1006,39 @@ function drawPlacard(x, y, price) {
   // --- Ombre au sol ---
   noStroke();
   fill(0, 50); // légère transparence
-  ellipse(x, y + 50, 80, 20);
+  ellipse(x, y + 80, 80, 20);
 
   // --- Pique (pied) ---
   fill(139, 69, 19);
   beginShape();
   vertex(x - 8, y + 20);   // gauche haut
   vertex(x + 8, y + 20);   // droite haut
-  vertex(x, y + 60);       // bas pointu
+  vertex(x, y + 90);       // bas pointu
   endShape(CLOSE);
 
   // --- Planche de la pancarte ---
   fill(255, 240, 200);
   stroke(150, 100, 50);
   strokeWeight(3);
-  rect(x, y - 10, 150, 70, 10);
+  rect(x, y - 10, 160, 80, 10);
 
   // --- Texte du prix ---
   noStroke();
   fill(0);
 
   // Symbole euro plus gros
-  textSize(32);
-  text("€", x - 30, y - 10);
+  textSize(36);
+  text("€", x - 40, y - 10);
 
   // Montant
-  textSize(24);
-  text(price, x + 30, y - 10);
+  textSize(28);
+  text(price, x + 15, y - 10);
+
+  // Infos de précision
+  let detailsText = `* Du ${startParts[2]} ${months[parseInt(startParts[1]) - 1]} ${startParts[0]} au ${endParts[2]} ${months[parseInt(endParts[1]) - 1]} ${endParts[0]}`;
+  textSize(10);
+  text(detailsText, x, y-35);
+  text("De repas par élève", x, y + 15);
 
   pop();
 }
@@ -1125,11 +1144,8 @@ textAlign(CENTER, CENTER);
 textSize(16);
 textFont('Caveat');
 
-let startParts = startDate.split('-'); // ["2023","01","26"]
-let endParts = endDate.split('-');     // ["2025","07","23"]
-
-// Tableau des mois
-let months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+startParts = startDate.split('-'); // ["2023","01","26"]
+endParts = endDate.split('-');     // ["2025","07","23"]
 
 // Dessiner ardoise stylisée
 fill(15, 23, 42); // couleur ardoise marron foncé
@@ -1262,9 +1278,6 @@ text("Au", rect2X + 8, rect2Y + 5);
   currentHeights.cheese = lerp(currentHeights.cheese, targetHeights.cheese, transitionSpeed);
   currentHeights.meat = lerp(currentHeights.meat, targetHeights.meat, transitionSpeed);
 
-  // Mettre à jour les données du sandwich
-  updateSandwichData();
-  
   // Animation du prix sur la pancarte
   currentDisplayedPrice = lerp(currentDisplayedPrice, targetDisplayedPrice, transitionSpeed);
   
@@ -2565,7 +2578,7 @@ function riverGraphicsNCoAcutualization(){
 // FONCTION À APPELER QUAND LES DONNÉES CHANGENT
 // ============================================
 
-function updateSandwichData(newData) {
+function updateSandwichData() {
   
   // Mettre à jour le prix cible pour l'animation
   targetDisplayedPrice = sandwichEuros.totalCost;
@@ -2590,21 +2603,29 @@ function updateTargetHeights() {
     return;
   }
   
-  // Calcul des pourcentages
+  // Calcul des pourcentages CORRECTS
+  // BIO (tomates)
   let bioPercent = sandwichEuros.bioCost / sandwichEuros.totalCost;
-  let durablePercent = (sandwichEuros.durableCost - sandwichEuros.bioCost) / sandwichEuros.totalCost;
+  
+  // DURABLE sans bio (salade) = durable total - bio
+  let durableOnlyPercent = (sandwichEuros.durableCost - sandwichEuros.bioCost) / sandwichEuros.totalCost;
+  
+  // Marque Terre Source (fromage)
   let localPercent = sandwichEuros.localOnlyCost / sandwichEuros.totalCost;
-  let remainingPercent = 1 - bioPercent - durablePercent - localPercent;
+  
+  // RESTE (viande) = 100% - (durable total + MTS)
+  let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
+  let remainingPercent = 1 - (totalDurableWithMTS / sandwichEuros.totalCost);
   
   // S'assurer que les pourcentages sont positifs
   bioPercent = max(0, bioPercent);
-  durablePercent = max(0, durablePercent);
+  durableOnlyPercent = max(0, durableOnlyPercent);
   localPercent = max(0, localPercent);
   remainingPercent = max(0, remainingPercent);
   
   // Conversion en hauteur de pixels
   targetHeights.tomato = bioPercent * garnitureHeight;
-  targetHeights.lettuce = durablePercent * garnitureHeight;
+  targetHeights.lettuce = durableOnlyPercent * garnitureHeight;
   targetHeights.cheese = localPercent * garnitureHeight;
   targetHeights.meat = remainingPercent * garnitureHeight;
 }
@@ -2628,11 +2649,12 @@ function createSandwichLayers() {
   let leftBarContainer = createDiv('').parent(garnitureDiv);
   leftBarContainer.id('left-reference-container');
   leftBarContainer.style('position', 'absolute');
-  leftBarContainer.style('left', '-35px');
+  leftBarContainer.style('left', '-15px');
   leftBarContainer.style('top', '0');
-  leftBarContainer.style('width', '40px');
+  leftBarContainer.style('width', '5px');
   leftBarContainer.style('height', '100%');
   leftBarContainer.style('display', 'flex');
+  leftBarContainer.style('font-weight', 'bolder');
   leftBarContainer.style('flex-direction', 'column');
   leftBarContainer.style('align-items', 'center');
   
@@ -2690,7 +2712,8 @@ function createSandwichLayers() {
   createTooltip();
   
   // Ajouter les événements hover
-  setupHoverEvents();
+  // setupHoverEvents();
+  setupHoverLogic();
 }
 
 // ============================================
@@ -2728,8 +2751,8 @@ function updateSandwichLayers() {
     tomatoLayer.html(generateTomatoSVG(currentHeights.tomato));
   }
   
-  // Mise à jour des barres de pourcentage
-  updatePercentageBars();
+  // Mise à jour des barres de pourcentage (hauteurs ET couleurs)
+  updateBarsDisplay();
 }
 
 // ============================================
@@ -2913,37 +2936,49 @@ function generateMeatSVG(height) {
   return svg;
 }
 
+
 // ============================================
 // CRÉATION DES BARRES DE POURCENTAGE À DROITE
 // ============================================
 
 function createPercentageBars(parent) {
-  // Conteneur pour la barre verte (BIO) - avec label
-  let greenBarContainer = createDiv('').parent(parent);
-  greenBarContainer.id('green-bar-container');
-  greenBarContainer.style('position', 'absolute');
-  greenBarContainer.style('right', '-35px');
-  greenBarContainer.style('top', '0');
-  greenBarContainer.style('width', '40px');
-  greenBarContainer.style('height', '100%');
+  // UN SEUL conteneur pour toutes les barres
+  let barsContainer = createDiv('').parent(parent);
+  barsContainer.id('bars-container');
+  barsContainer.style('position', 'absolute');
+  barsContainer.style('left', 'calc(100% + 10px)');
+  barsContainer.style('top', '0');
+  barsContainer.style('width', 'fit-content');
+  barsContainer.style('height', '100%');
+  barsContainer.style('display', 'flex');
+  barsContainer.style('flex-direction', 'row');
+  barsContainer.style('justify-content', 'flex-start');
+  barsContainer.style('align-items', 'flex-start');
+  barsContainer.style('gap', '5px');
+  barsContainer.style('font-weight', 'bolder');
+  barsContainer.style('pointer-events', 'none'); // Le conteneur ne bloque pas
+
   
-  // Conteneur pour la barre bleue (DURABLE) - avec label
-  let blueBarContainer = createDiv('').parent(parent);
-  blueBarContainer.id('blue-bar-container');
-  blueBarContainer.style('position', 'absolute');
-  blueBarContainer.style('right', '-48px');
-  blueBarContainer.style('top', '0');
-  blueBarContainer.style('width', '40px');
-  blueBarContainer.style('height', '100%');
-  
-  // Conteneur pour la barre violette (DURABLE + MTS) - avec label
-  let purpleBarContainer = createDiv('').parent(parent);
-  purpleBarContainer.id('purple-bar-container');
-  purpleBarContainer.style('position', 'absolute');
-  purpleBarContainer.style('right', '-61px');
-  purpleBarContainer.style('top', '0');
-  purpleBarContainer.style('width', '40px');
-  purpleBarContainer.style('height', '100%');
+  // Créer les 3 barres avec leur structure HTML (UNE SEULE FOIS)
+  barsContainer.html(`
+    <!-- Barre verte (BIO) -->
+    <div id="bar-bio-wrapper" style="height: 0px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+      <div id="bar-bio-label" style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter; color: #27AE60;">bio</div>
+      <div id="bar-bio" class="percentage-bar-rect" data-type="bio" style="width: 5px; flex-grow: 1; background-color: #27AE60; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+    </div>
+    
+    <!-- Barre bleue (DURABLE) -->
+    <div id="bar-durable-wrapper" style="height: 0px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+      <div id="bar-durable-label" style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter; color: #3498DB;">dur</div>
+      <div id="bar-durable" class="percentage-bar-rect" data-type="durable" style="width: 5px; flex-grow: 1; background-color: #3498DB; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+    </div>
+    
+    <!-- Barre violette (DURABLE + MTS) -->
+    <div id="bar-mts-wrapper" style="height: 0px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+      <div id="bar-mts-label" style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 11px; margin-bottom: 5px; font-style: italic; font-family: Inter; color: #9B59B6;">dur(+MTS)</div>
+      <div id="bar-mts" class="percentage-bar-rect" data-type="mts" style="width: 5px; flex-grow: 1; background-color: #9B59B6; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+    </div>
+  `);
 }
 
 
@@ -2951,54 +2986,98 @@ function createPercentageBars(parent) {
 // MISE À JOUR DES BARRES DE POURCENTAGE
 // ============================================
 
-function updatePercentageBars() {
-  let greenContainer = select('#green-bar-container');
-  let blueContainer = select('#blue-bar-container');
-  let purpleContainer = select('#purple-bar-container');
+// function updatePercentageBars() {
+//   let barsContainer = select('#bars-container');
+//   if (!barsContainer) return;
   
-  if (!greenContainer || !blueContainer || !purpleContainer) return;
+//   let bioPercent = (sandwichEuros.bioCost / sandwichEuros.totalCost * 100);
+//   let durablePercent = (sandwichEuros.durableCost / sandwichEuros.totalCost * 100);
+//   let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
+//   let totalWithMTSPercent = (totalDurableWithMTS / sandwichEuros.totalCost * 100);
   
+//   // Hauteurs = hauteur exacte de ce qu'elles représentent
+//   let greenHeight = currentHeights.tomato;
+//   let blueHeight = currentHeights.tomato + currentHeights.lettuce;
+//   let purpleHeight = currentHeights.tomato + currentHeights.lettuce + currentHeights.cheese;
+  
+//   // Couleurs
+//   let greenColor = bioPercent >= 20 ? '#27AE60' : '#E74C3C';
+//   let blueColor = durablePercent >= 50 ? '#3498DB' : '#E74C3C';
+//   let purpleColor = totalWithMTSPercent >= 50 ? '#9B59B6' : '#E74C3C';
+  
+//   // Mettre à jour tout le conteneur avec les 3 barres
+//   barsContainer.html(`
+//     <!-- Barre verte (BIO) -->
+//     <div style="position: absolute; left: 0px; top: 0; height: ${greenHeight}px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+//       <div style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); color: ${greenColor}; font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter;">bio</div>
+//       <div class="percentage-bar-rect" data-type="bio" style="width: 5px; flex-grow: 1; background-color: ${greenColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+//     </div>
+    
+//     <!-- Barre bleue (DURABLE) -->
+//     <div style="position: absolute; left: 10px; top: 0; height: ${blueHeight}px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+//       <div style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); color: ${blueColor}; font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter;">dur</div>
+//       <div class="percentage-bar-rect" data-type="durable" style="width: 5px; flex-grow: 1; background-color: ${blueColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+//     </div>
+    
+//     <!-- Barre violette (DURABLE + MTS) -->
+//     <div style="position: absolute; left: 20px; top: 0; height: ${purpleHeight}px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+//       <div style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); color: ${purpleColor}; font-weight: bold; font-size: 11px; margin-bottom: 5px; font-style: italic; font-family: Inter;">dur(+MTS)</div>
+//       <div class="percentage-bar-rect" data-type="mts" style="width: 5px; flex-grow: 1; background-color: ${purpleColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+//     </div>
+//   `);
+  
+//   // Réattacher les événements après la mise à jour du HTML
+//   setTimeout(() => {
+//     reattachHoverEvents();
+//   }, 150);
+// }
+
+
+// ============================================
+// MISE À JOUR DE L'AFFICHAGE DES BARRES (hauteurs + couleurs)
+// ============================================
+
+function updateBarsDisplay() {
+  // Calcul des pourcentages
   let bioPercent = (sandwichEuros.bioCost / sandwichEuros.totalCost * 100);
   let durablePercent = (sandwichEuros.durableCost / sandwichEuros.totalCost * 100);
   let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
   let totalWithMTSPercent = (totalDurableWithMTS / sandwichEuros.totalCost * 100);
   
-  // Hauteurs = hauteur exacte de ce qu'elles représentent
+  // Calcul des hauteurs
   let greenHeight = currentHeights.tomato;
   let blueHeight = currentHeights.tomato + currentHeights.lettuce;
   let purpleHeight = currentHeights.tomato + currentHeights.lettuce + currentHeights.cheese;
   
-  // Barre verte (BIO) - commence en haut de la garniture
+  // Calcul des couleurs (selon seuils)
   let greenColor = bioPercent >= 20 ? '#27AE60' : '#E74C3C';
-  greenContainer.html(`
-    <div style="position: absolute; top: 0; width: 100%; height: ${greenHeight}px; display: flex; flex-direction: column; align-items: center;">
-      <div style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); color: ${greenColor}; font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter;">bio</div>
-      <div class="percentage-bar-rect" data-type="bio" data-color="${greenColor}" style="width: 5px; flex-grow: 1; background-color: ${greenColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
-    </div>
-  `);
-  
-  // Barre bleue (DURABLE) - commence en haut de la garniture
   let blueColor = durablePercent >= 50 ? '#3498DB' : '#E74C3C';
-  blueContainer.html(`
-    <div style="position: absolute; top: 0; width: 100%; height: ${blueHeight}px; display: flex; flex-direction: column; align-items: center;">
-      <div style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); color: ${blueColor}; font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter;">dur</div>
-      <div class="percentage-bar-rect" data-type="durable" data-color="${blueColor}" style="width: 5px; flex-grow: 1; background-color: ${blueColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
-    </div>
-  `);
-  
-  // Barre violette (DURABLE + MTS) - commence en haut de la garniture
   let purpleColor = totalWithMTSPercent >= 50 ? '#9B59B6' : '#E74C3C';
-  purpleContainer.html(`
-    <div style="position: absolute; top: 0; width: 100%; height: ${purpleHeight}px; display: flex; flex-direction: column; align-items: center;">
-      <div style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); color: ${purpleColor}; font-weight: bold; font-size: 11px; margin-bottom: 5px; font-style: italic; font-family: Inter;">dur(+MTS)</div>
-      <div class="percentage-bar-rect" data-type="mts" data-color="${purpleColor}" style="width: 5px; flex-grow: 1; background-color: ${purpleColor}; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
-    </div>
-  `);
   
-  // Réattacher les événements après la mise à jour du HTML
-  setTimeout(() => {
-    setupHoverEvents();
-  }, 50);
+  // Mise à jour des wrappers (hauteurs)
+  let barBioWrapper = document.getElementById('bar-bio-wrapper');
+  let barDurableWrapper = document.getElementById('bar-durable-wrapper');
+  let barMtsWrapper = document.getElementById('bar-mts-wrapper');
+  
+  if (barBioWrapper) barBioWrapper.style.height = greenHeight + 'px';
+  if (barDurableWrapper) barDurableWrapper.style.height = blueHeight + 'px';
+  if (barMtsWrapper) barMtsWrapper.style.height = purpleHeight + 'px';
+  
+  // Mise à jour des couleurs des barres ET des labels
+  let barBio = document.getElementById('bar-bio');
+  let barBioLabel = document.getElementById('bar-bio-label');
+  if (barBio) barBio.style.backgroundColor = greenColor;
+  if (barBioLabel) barBioLabel.style.color = greenColor;
+  
+  let barDurable = document.getElementById('bar-durable');
+  let barDurableLabel = document.getElementById('bar-durable-label');
+  if (barDurable) barDurable.style.backgroundColor = blueColor;
+  if (barDurableLabel) barDurableLabel.style.color = blueColor;
+  
+  let barMts = document.getElementById('bar-mts');
+  let barMtsLabel = document.getElementById('bar-mts-label');
+  if (barMts) barMts.style.backgroundColor = purpleColor;
+  if (barMtsLabel) barMtsLabel.style.color = purpleColor;
 }
 
 
@@ -3013,7 +3092,7 @@ function createTooltip() {
   tooltip.style('color', 'white');
   tooltip.style('padding', '10px 15px');
   tooltip.style('border-radius', '8px');
-  tooltip.style('font-family', 'Inter');
+  tooltip.style('font-family', 'Arial, sans-serif');
   tooltip.style('font-size', '14px');
   tooltip.style('pointer-events', 'none');
   tooltip.style('opacity', '0');
@@ -3024,151 +3103,286 @@ function createTooltip() {
 }
 
 
+
+// ============================================
+// AJOUT DU STYLE CSS POUR LE GROSSISSEMENT DES BARRES
+// ============================================
+
+// Injecter le style CSS dans la page
+let style = document.createElement('style');
+style.textContent = `
+  .percentage-bar-rect {
+    width: 5px !important;
+  }
+  .percentage-bar-rect.bar-active {
+    width: 7px !important;
+    background-color: black !important;
+  }
+`;
+document.head.appendChild(style);
+
+
 // ============================================
 // CONFIGURATION DES ÉVÉNEMENTS HOVER
 // ============================================
 
-let currentHoveredType = null; // Variable pour tracker le hover actuel
+let tooltipActive = false;
 
-function setupHoverEvents() {
-  let tooltip = select('#sandwich-tooltip');
-  if (!tooltip) return;
-  
-  // Fonction pour cacher le tooltip et réinitialiser les barres
-  function hideTooltip() {
-    tooltip.elt.style.opacity = '0';
-    currentHoveredType = null;
-    // Réduire toutes les barres
-    document.querySelectorAll('.percentage-bar-rect').forEach(bar => {
-      bar.style.width = '5px';
-    });
-  }
-  
-  // Fonction pour afficher le tooltip et grossir la barre
-  function showTooltip(type, e) {
-    currentHoveredType = type;
-    let content = '';
-    
-    if (type === 'bio') {
-      let bioPercent = (sandwichEuros.bioCost / sandwichEuros.totalCost * 100).toFixed(1);
-      let bioEuros = sandwichEuros.bioCost.toFixed(2);
-      let isCompliant = bioPercent >= 20;
-      
-      content = `
-        <div style="font-weight: bold; margin-bottom: 5px;">🍅 Produits BIO</div>
-        <div>${bioEuros}€ (${bioPercent}%)</div>
-        <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
-          ${isCompliant ? '✓' : '✗'} Seuil légal : 20%
-        </div>
-      `;
-      
-      // Grossir la barre
-      let bar = document.querySelector('.percentage-bar-rect[data-type="bio"]');
-      if (bar) bar.style.width = '9px';
-      
-    } else if (type === 'durable') {
-      let durablePercent = (sandwichEuros.durableCost / sandwichEuros.totalCost * 100).toFixed(1);
-      let durableEuros = sandwichEuros.durableCost.toFixed(2);
-      let isCompliant = durablePercent >= 50;
-      
-      content = `
-        <div style="font-weight: bold; margin-bottom: 5px;">🥬 Produits DURABLES</div>
-        <div>${durableEuros}€ (${durablePercent}%)</div>
-        <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
-          ${isCompliant ? '✓' : '✗'} Seuil légal : 50%
-        </div>
-      `;
-      
-      // Grossir la barre
-      let bar = document.querySelector('.percentage-bar-rect[data-type="durable"]');
-      if (bar) bar.style.width = '9px';
-      
-    } else if (type === 'mts') {
-      let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
-      let totalPercent = (totalDurableWithMTS / sandwichEuros.totalCost * 100).toFixed(1);
-      let mtsPercent = (sandwichEuros.localOnlyCost / sandwichEuros.totalCost * 100).toFixed(1);
-      let totalEuros = totalDurableWithMTS.toFixed(2);
-      let isCompliant = totalPercent >= 50;
-      
-      content = `
-        <div style="font-weight: bold; margin-bottom: 5px;">🧀 Durable incluant Marque de Terre Source</div>
-        <div>${totalEuros}€ (${totalPercent}%)</div>
-        <div style="font-size: 12px; margin-top: 3px;">dont ${mtsPercent}% de MTS</div>
-        <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
-          ${isCompliant ? '✓' : '✗'} Seuil légal : 50%
-        </div>
-      `;
-      
-      // Grossir la barre
-      let bar = document.querySelector('.percentage-bar-rect[data-type="mts"]');
-      if (bar) bar.style.width = '9px';
-      
-    } else if (type === 'other') {
-      let otherPercent = (sandwichEuros.totalCost - sandwichEuros.bioCost - sandwichEuros.durableCost - sandwichEuros.localOnlyCost) / sandwichEuros.totalCost * 100;
-      let otherEuros = (sandwichEuros.totalCost - sandwichEuros.bioCost - sandwichEuros.durableCost - sandwichEuros.localOnlyCost).toFixed(2);
-      
-      content = `
-        <div style="font-weight: bold; margin-bottom: 5px;">🥩 Autres</div>
-        <div>${otherEuros}€ (${otherPercent.toFixed(1)}%)</div>
-      `;
+function setupHoverLogic() {
+  const tooltip = document.getElementById('sandwich-tooltip');
+
+  // Détection universelle
+  document.addEventListener('mousemove', e => {
+    const target = e.target.closest(
+      '.percentage-bar-rect, #tomato-layer, #lettuce-layer, #cheese-layer, #meat-layer'
+    );
+
+    if (!target) {
+      hideTooltip(tooltip);
+      return;
     }
-    
-    tooltip.elt.innerHTML = content;
-    tooltip.elt.style.opacity = '1';
-    
-    if (e) {
-      tooltip.elt.style.left = (e.clientX + 15) + 'px';
-      tooltip.elt.style.top = (e.clientY + 15) + 'px';
-    }
-  }
-  
-  // Fonction helper pour gérer le hover avec des éléments natifs
-  function attachHoverToElement(selector, type) {
-    let elements = document.querySelectorAll(selector);
-    
-    elements.forEach(element => {
-      element.addEventListener('mouseenter', function(e) {
-        showTooltip(type, e);
-      });
-      
-      element.addEventListener('mouseleave', function(e) {
-        // Vérifier immédiatement si on est encore sur un élément lié
-        setTimeout(() => {
-          if (currentHoveredType !== type) {
-            return; // Un autre élément a déjà pris le relai
-          }
-          
-          // Vérifier si on survole encore un élément lié à ce type
-          let relatedElements = document.querySelectorAll(selector);
-          let stillHovering = false;
-          
-          relatedElements.forEach(el => {
-            if (el.matches(':hover')) {
-              stillHovering = true;
-            }
-          });
-          
-          if (!stillHovering) {
-            hideTooltip();
-          }
-        }, 50);
-      });
-      
-      element.addEventListener('mousemove', function(e) {
-        if (currentHoveredType === type) {
-          tooltip.elt.style.left = (e.clientX + 15) + 'px';
-          tooltip.elt.style.top = (e.clientY + 15) + 'px';
-        }
-      });
-    });
-  }
-  
-  // Attacher les événements aux couches et aux barres
-  attachHoverToElement('#tomato-layer, .percentage-bar-rect[data-type="bio"]', 'bio');
-  attachHoverToElement('#lettuce-layer, .percentage-bar-rect[data-type="durable"]', 'durable');
-  attachHoverToElement('#cheese-layer, .percentage-bar-rect[data-type="mts"]', 'mts');
-  attachHoverToElement('#meat-layer', 'other');
+
+    const type = target.dataset.type || layerIdToType(target.id);
+    if (!type) return;
+
+    showTooltip(tooltip, type, e);
+  });
 }
+
+function layerIdToType(id) {
+  if (id === 'tomato-layer') return 'bio';
+  if (id === 'lettuce-layer') return 'durable';
+  if (id === 'cheese-layer') return 'mts';
+  if (id === 'meat-layer') return 'other';
+  return null;
+}
+
+function showTooltip(tooltip, type, e) {
+  tooltipActive = true;
+
+  tooltip.innerHTML = buildTooltipContent(type);
+
+  tooltip.style.left = (e.clientX + 15) + 'px';
+  tooltip.style.top = (e.clientY + 15) + 'px';
+  tooltip.style.opacity = '1';
+
+  updateActiveBar(type);
+}
+
+function hideTooltip(tooltip) {
+  if (!tooltipActive) return;
+  tooltipActive = false;
+
+  tooltip.style.opacity = '0';
+
+  // Retirer les barres actives
+  document.querySelectorAll('.percentage-bar-rect')
+    .forEach(el => el.classList.remove('bar-active'));
+}
+
+function updateActiveBar(type) {
+  document.querySelectorAll('.percentage-bar-rect')
+    .forEach(el => el.classList.remove('bar-active'));
+
+  const bar = document.querySelector(`.percentage-bar-rect[data-type="${type}"]`);
+  if (bar) bar.classList.add('bar-active');
+}
+
+function buildTooltipContent(type) {
+  if (type === 'bio') {
+    let percent = (sandwichEuros.bioCost / sandwichEuros.totalCost * 100).toFixed(1);
+    let euros = sandwichEuros.bioCost.toFixed(2);
+    let ok = percent >= 20;
+    return `
+      <div style="font-weight:bold;">🍅 Produits BIO</div>
+      <div>${euros}€ (${percent}%)</div>
+      <div style="font-size:12px;color:${ok?'#2ECC71':'#E74C3C'};">
+        ${ok?'✓':'✗'} Seuil légal : 20%
+      </div>`;
+  }
+
+  if (type === 'durable') {
+    let percent = (sandwichEuros.durableCost / sandwichEuros.totalCost * 100).toFixed(1);
+    let euros = sandwichEuros.durableCost.toFixed(2);
+    let ok = percent >= 50;
+    return `
+      <div style="font-weight:bold;">🥬 Produits DURABLES</div>
+      <div>${euros}€ (${percent}%)</div>
+      <div style="font-size:12px;color:${ok?'#2ECC71':'#E74C3C'};">
+        ${ok?'✓':'✗'} Seuil légal : 50%
+      </div>`;
+  }
+
+  if (type === 'mts') {
+    let total = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
+    let percent = (total / sandwichEuros.totalCost * 100).toFixed(1);
+    let mtsPercent = (sandwichEuros.localOnlyCost / sandwichEuros.totalCost * 100).toFixed(1);
+    let euros = total.toFixed(2);
+    let ok = percent >= 50;
+    return `
+      <div style="font-weight:bold;">🧀 Durable incluant MTS</div>
+      <div>${euros}€ (${percent}%)</div>
+      <div style="font-size:12px;">dont ${mtsPercent}% de MTS</div>
+      <div style="font-size:12px;color:${ok?'#2ECC71':'#E74C3C'};">
+        ${ok?'✓':'✗'} Seuil légal : 50%
+      </div>`;
+  }
+
+  if (type === 'other') {
+    let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
+    let otherCost = sandwichEuros.totalCost - totalDurableWithMTS;
+    let percent = (otherCost / sandwichEuros.totalCost * 100).toFixed(1);
+    return `
+      <div style="font-weight:bold;">🥩 Autres</div>
+      <div>${otherCost.toFixed(2)}€ (${percent}%)</div>`;
+  }
+
+  return '';
+}
+
+
+// let currentHoveredType = null;
+// let hoverTimeoutId = null;
+// let isTooltipVisible = false;
+
+// function setupHoverEvents() {
+//   let tooltip = select('#sandwich-tooltip');
+//   if (!tooltip) return;
+  
+//   // Fonction pour afficher le tooltip et grossir la barre
+//   function showTooltip(type, e) {
+//     if (hoverTimeoutId) {
+//       clearTimeout(hoverTimeoutId);
+//       hoverTimeoutId = null;
+//     }
+    
+//     currentHoveredType = type;
+//     isTooltipVisible = true;
+    
+//     // Retirer la classe active de toutes les barres
+//     document.querySelectorAll('.percentage-bar-rect').forEach(bar => {
+//       bar.classList.remove('bar-active');
+//     });
+    
+//     // Ajouter la classe active à la barre concernée
+//     let bar = document.querySelector(`.percentage-bar-rect[data-type="${type}"]`);
+//     if (bar) {
+//       bar.classList.add('bar-active');
+//     }
+    
+//     // Générer le contenu du tooltip
+//     let content = '';
+    
+//     if (type === 'bio') {
+//       let bioPercent = (sandwichEuros.bioCost / sandwichEuros.totalCost * 100).toFixed(1);
+//       let bioEuros = sandwichEuros.bioCost.toFixed(2);
+//       let isCompliant = bioPercent >= 20;
+      
+//       content = `
+//         <div style="font-weight: bold; margin-bottom: 5px;">🍅 Produits BIO</div>
+//         <div>${bioEuros}€ (${bioPercent}%)</div>
+//         <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
+//           ${isCompliant ? '✓' : '✗'} Seuil légal : 20%
+//         </div>
+//       `;
+//     } else if (type === 'durable') {
+//       let durablePercent = (sandwichEuros.durableCost / sandwichEuros.totalCost * 100).toFixed(1);
+//       let durableEuros = sandwichEuros.durableCost.toFixed(2);
+//       let isCompliant = durablePercent >= 50;
+      
+//       content = `
+//         <div style="font-weight: bold; margin-bottom: 5px;">🥬 Produits DURABLES</div>
+//         <div>${durableEuros}€ (${durablePercent}%)</div>
+//         <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
+//           ${isCompliant ? '✓' : '✗'} Seuil légal : 50%
+//         </div>
+//       `;
+//     } else if (type === 'mts') {
+//       let totalDurableWithMTS = sandwichEuros.durableCost + sandwichEuros.localOnlyCost;
+//       let totalPercent = (totalDurableWithMTS / sandwichEuros.totalCost * 100).toFixed(1);
+//       let mtsPercent = (sandwichEuros.localOnlyCost / sandwichEuros.totalCost * 100).toFixed(1);
+//       let totalEuros = totalDurableWithMTS.toFixed(2);
+//       let isCompliant = totalPercent >= 50;
+      
+//       content = `
+//         <div style="font-weight: bold; margin-bottom: 5px;">🧀 Durable incluant MTS</div>
+//         <div>${totalEuros}€ (${totalPercent}%)</div>
+//         <div style="font-size: 12px; margin-top: 3px;">dont ${mtsPercent}% de MTS</div>
+//         <div style="margin-top: 5px; font-size: 12px; color: ${isCompliant ? '#2ECC71' : '#E74C3C'};">
+//           ${isCompliant ? '✓' : '✗'} Seuil légal : 50%
+//         </div>
+//       `;
+//     } else if (type === 'other') {
+//       let otherCost = sandwichEuros.totalCost - sandwichEuros.bioCost - sandwichEuros.durableCost - sandwichEuros.localOnlyCost;
+//       let otherPercent = (otherCost / sandwichEuros.totalCost * 100).toFixed(1);
+//       let otherEuros = otherCost.toFixed(2);
+      
+//       content = `
+//         <div style="font-weight: bold; margin-bottom: 5px;">🥩 Autres</div>
+//         <div>${otherEuros}€ (${otherPercent}%)</div>
+//       `;
+//     }
+    
+//     tooltip.elt.innerHTML = content;
+//     tooltip.elt.style.opacity = '1';
+//     tooltip.elt.style.left = (e.clientX + 15) + 'px';
+//     tooltip.elt.style.top = (e.clientY + 15) + 'px';
+//   }
+  
+//   // Fonction pour cacher le tooltip
+//   function hideTooltip() {
+//     if (hoverTimeoutId) {
+//       clearTimeout(hoverTimeoutId);
+//       hoverTimeoutId = null;
+//     }
+    
+//     isTooltipVisible = false;
+//     currentHoveredType = null;
+//     tooltip.elt.style.opacity = '0';
+    
+//     // Retirer la classe active de toutes les barres
+//     document.querySelectorAll('.percentage-bar-rect').forEach(bar => {
+//       bar.classList.remove('bar-active');
+//     });
+//   }
+  
+//   // Attacher les événements UNE SEULE FOIS
+//   function attachEvents(selector, type) {
+//     let elements = document.querySelectorAll(selector);
+    
+//     elements.forEach(element => {
+//       element.addEventListener('mouseenter', function(e) {
+//         showTooltip(type, e);
+//       });
+      
+//       element.addEventListener('mouseleave', function() {
+//         hoverTimeoutId = setTimeout(() => {
+//           let stillHovering = false;
+//           document.querySelectorAll(selector).forEach(el => {
+//             if (el.matches(':hover')) stillHovering = true;
+//           });
+          
+//           if (!stillHovering && currentHoveredType === type) {
+//             hideTooltip();
+//           }
+//         }, 200);
+//       });
+      
+//       element.addEventListener('mousemove', function(e) {
+//         if (isTooltipVisible && currentHoveredType === type) {
+//           tooltip.elt.style.left = (e.clientX + 15) + 'px';
+//           tooltip.elt.style.top = (e.clientY + 15) + 'px';
+//         }
+//       });
+//     });
+//   }
+  
+//   // Attacher aux couches et barres
+//   attachEvents('#tomato-layer, .percentage-bar-rect[data-type="bio"]', 'bio');
+//   attachEvents('#lettuce-layer, .percentage-bar-rect[data-type="durable"]', 'durable');
+//   attachEvents('#cheese-layer, .percentage-bar-rect[data-type="mts"]', 'mts');
+//   attachEvents('#meat-layer', 'other');
+// }
 
 // ============================================
 // MISE À JOUR DE LA PANCARTE AVEC ANIMATION
@@ -3176,7 +3390,7 @@ function setupHoverEvents() {
 
 function updatePlacard() {
   // Appeler ta fonction drawPlacard avec le prix animé
- drawPlacard(CHART_CONFIG.x + SANDWICHWIDTH + 199, 100, currentDisplayedPrice.toFixed(2));
+ drawPlacard(CHART_CONFIG.x + SANDWICHWIDTH + 170, 110, currentDisplayedPrice.toFixed(2));
 }
 
 /********************************************** */

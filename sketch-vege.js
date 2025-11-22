@@ -84,6 +84,8 @@ let sketchVege = function(p){
                 isTransitioning = false;
             }
         }
+
+        p.cursor(p.ARROW);
         
         // Affichage selon la vue actuelle
         if (isTransitioning) {

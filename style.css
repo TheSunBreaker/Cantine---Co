@@ -144,6 +144,7 @@ button {
   color: black;
   border: 2px dashed #f44336;  padding: 12px 24px;
   border-radius: 8px;
+
   cursor: pointer;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   width: 150px;
