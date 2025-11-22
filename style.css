@@ -90,6 +90,7 @@ button {
   font-weight: bolder;
   transform: translateY(0);
   animation: come-baby-come 2s ease-in-out infinite;
+  cursor: pointer;
 
   
   &::after{
@@ -139,12 +140,13 @@ button {
   top: 20px;
   right: 20px;
   margin-left: 10px;
+  height: 65px;
   z-index: 1000;
   /* background-color: #333; */
   color: black;
   border: 2px dashed #f44336;  padding: 12px 24px;
   border-radius: 8px;
-
+  font-size: 0.9em;
   cursor: pointer;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   width: 150px;
@@ -164,17 +166,19 @@ button {
     background-color: pink;
     z-index: -1;
   }
+
+  box-sizing: border-box;
 }
 
 #btnStats {
   display: block; /* toujours visible */
-  top : 70px
+  top : 95px
 }
 
 #btnVegeLud{
    
   display: block; /* toujours visible */
-  top : 120px
+  top : 170px
 }
 
 
@@ -397,3 +401,60 @@ img{
   height: 100px;
   position: relative;
 }
+
+
+/* STYLES FRUITS LEGUMES DU SOL ET DU CIEL */
+
+section.ground{
+
+  height: 150px;
+}
+
+.vege-from-ground{
+  
+  position: absolute;
+  bottom: 0px;
+  left: 50px;
+  z-index: 10;
+  transform-origin: bottom center;
+  transform: rotate(-2deg);
+  width: fit-content;
+  min-height: fit-content;
+
+  img{
+    width: 250px;
+    transform: translateY(250px);
+  }
+
+}
+
+.vege-from-ground img{
+
+  transition : transform 2s ease-out;
+
+}
+
+.vege-from-ground.out-of-ground{
+
+  
+  animation: swinging-legume-or-fruit 5s ease-in-out infinite;
+  animation-delay: 1.9s;
+
+  img{
+    
+    transform: translateY(95px);
+  }
+}
+
+
+@keyframes swinging-legume-or-fruit {
+
+  0%, 100%{
+    transform: rotate(-2deg);
+  }
+
+  50%{
+    transform: rotate(2deg);
+  }
+}
+

@@ -502,7 +502,7 @@ function preload() {
   );
 
   // Chargement des assets images
-  burgerImg = loadImage("Assets/burger.png")
+  burgerImg = loadImage("Assets/burger-vege.png")
   olive = loadImage("Assets/olive-detouree.png")
   bretrave = loadImage("Assets/beterave.png")
   lettuce = loadImage("Assets/laitue.png")
@@ -623,18 +623,23 @@ function setup() {
   const btnStats = document.getElementById("btnStats");
   const btnContexte = document.getElementById("btnContexte");
   const btVege = document.getElementById("btnVegeLud");
+  const actionApp = document.querySelector(".action-appeal");
 
   btnStats.addEventListener("click", () => {
-    document.querySelector("#canvas1").scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#trans-zone1").scrollIntoView({ behavior: "smooth" });
   });
 
   
   btVege.addEventListener("click", () => {
-    document.querySelector("#canvas2").scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#trans-zone2").scrollIntoView({ behavior: "smooth" });
   });
 
   btnContexte.addEventListener("click", () => {
     document.querySelector("#overlay").scrollIntoView({ behavior: "smooth" });
+  });
+
+  actionApp.addEventListener("click", () => {
+    document.querySelector("#trans-zone1").scrollIntoView({ behavior: "smooth" });
   });
 
 
@@ -644,6 +649,26 @@ function setup() {
   //******************************* FIN GESTION DES MACHINS POUR L'OVERLAY ******* */
   //*************************************************** */
   //*************************************************** */
+
+
+  
+  //*************************************************** */
+  //*************************************************** */
+  //******************************* DEBUT GESTION FRUIT ET LEGUMES DANSANT ******* */
+  //*************************************************** */
+  //*************************************************** */
+
+    
+  const OrVegeOrFruitobserver = new IntersectionObserver(callBackForVegeOrFruitObserver, {
+    threshold: 0.6 // déclenche quand ~40% de l’élément est visible
+  });
+
+  const vegElements = document.querySelectorAll('.vege-from-ground');
+  vegElements.forEach(el => {
+    OrVegeOrFruitobserver.observe(el);
+  });
+
+
 
 
   step = 0.3;
@@ -1110,9 +1135,11 @@ function draw() {
   strokeWeight(2);
   line(sliderX, sliderY1, sliderX, sliderY2);
 
-  
+  push();
   // Burger slider
-  image(burgerImg, sliderX - 150, height - verticalStickMagins - 83, 300, 200)
+  imageMode(CENTER);
+  image(burgerImg, sliderX, height - verticalStickMagins + 50, 200, 100)
+  pop();
 
   strokeWeight(1);
 
@@ -2249,27 +2276,49 @@ function createControls() {
 
   const controlY = CHART_CONFIG.y - 45;
   const controlX = CHART_CONFIG.x;
+
+  const gap = 20; // espacement horizontal constant
+
   
+  // Fonction utilitaire pour placer un bouton après l'autre
+  function placeNextButton(prevBtn, btn, y) {
+    const prevWidth = prevBtn.elt.getBoundingClientRect().width;
+    const prevX = prevBtn.position().x;
+
+    const newX = prevX + prevWidth + gap;
+
+    btn.position(newX, y);
+  }
+  
+  
+  // --- 1) Création du premier bouton ---
   const btnBio = createButton('🌱 Bio');
   // Boutons pour changer le type de données
   //const btnBio = createButton('🌱 Bio');
   btnBio.position(controlX, controlY);
   btnBio.mousePressed(() => changeDataType('bio'));
   styleButton(btnBio);
+  btnBio.parent(mainContainer); // maintenant le bouton est dans le même container que le canvas
+  //btnBio.position(20, 20);     // position absolue par rapport au container
+  //btnBio.style('position','absolute');
   
+  // --- 2) Bouton suivant : Durable ---
   const btnDurable = createButton('♻️ Durable');
-  btnDurable.position(controlX + 100, controlY);
   btnDurable.mousePressed(() => changeDataType('durable'));
   styleButton(btnDurable);
-  
+  btnDurable.parent(mainContainer);
+  placeNextButton(btnBio, btnDurable, controlY);
+
+  // --- 3) Bouton suivant : Local ---
   const btnLocal = createButton('📍 Durable Local');
-  btnLocal.position(controlX + 220, controlY);
   btnLocal.mousePressed(() => changeDataType('local'));
   styleButton(btnLocal);
+  btnLocal.parent(mainContainer);
+  placeNextButton(btnDurable, btnLocal, controlY);
 
-  // Bouton pour rejouer l'animation
+
+  // --- 4) Bouton suivant : Replay et réinitialisation d'intervalle ---
   const btnReplay = createButton('🔥!');
-  btnReplay.position(controlX + 360, controlY);
   btnReplay.mousePressed(()=>{
 
     // On réinitialise les curseurs
@@ -2281,25 +2330,20 @@ function createControls() {
     riverGraphicsNCoAcutualization()
   });
   styleButton(btnReplay, true);
+  btnReplay.parent(mainContainer);
+  placeNextButton(btnLocal, btnReplay, controlY);
+
+
   
   // Info sur l'agrégation
   const infoDiv = createDiv();
-  infoDiv.position(controlX + 460, controlY + 5);
   infoDiv.style('color', CHART_CONFIG.colors.text);
   infoDiv.style('font-size', '12px');
   infoDiv.id('aggregation-info');
-  updateAggregationInfo();
-
-  
-  btnBio.parent(mainContainer); // maintenant le bouton est dans le même container que le canvas
-  //btnBio.position(20, 20);     // position absolue par rapport au container
-  //btnBio.style('position','absolute');
-  btnDurable.parent(mainContainer);
-  btnLocal.parent(mainContainer);
-  btnReplay.parent(mainContainer);
   infoDiv.parent(mainContainer);
+  placeNextButton(btnReplay, infoDiv, controlY + 5); // petit décalage vertical
 
-
+  updateAggregationInfo();
 
 }
 
@@ -2311,7 +2355,7 @@ function styleButton(btn, isSpecial = false) {
   btn.style('cursor', 'pointer');
   btn.style('font-size', '0.7em');
   //btn.style('border', '2px solid #8d6e63');
-  btn.style('border-radius', '8px');
+  btn.style('border-radius', '8px 8px 0px 8px');
   btn.style('background', isSpecial ? '#ff6b00' : '#fff8e1');
   btn.style('color', isSpecial ? '#fff' : '#3e2723');
   btn.style('font-weight', 'bold');
@@ -3559,6 +3603,23 @@ const observer = new IntersectionObserver((entries)=> {
     }
   })
 }, {threshold : 0.05})
+
+function callBackForVegeOrFruitObserver(entries){
+  entries.forEach(entry => {
+    const el = entry.target;
+
+    // entrée dans la fenêtre -> sort de terre
+    if (entry.isIntersecting) {
+      el.classList.add('out-of-ground');
+    } else {
+      // sortie de la fenêtre -> rentre dans la terre
+      el.classList.remove('out-of-ground');
+    }
+  });
+}
+
+
+
 
 //BIO : Agriculture Biologique
 //DUR : Produits durable
