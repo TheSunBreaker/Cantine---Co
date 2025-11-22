@@ -34,7 +34,7 @@ section{
 
   width: var(--fixed-Width);
   height: var(--fixed-Height);
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #canvas1, #canvas2{
@@ -122,16 +122,35 @@ button {
 
   h1{
 
-    width: 100%;
-    text-align: center;
+    width: fit-content;
     font-size: 100px;
     position: absolute;
+    left: 50%;
     top: 2%;
     }
 
-  background: url("BackGrounds/nape-cantine-bg.jpg");
+}
+
+section#trans-zone1{
+
+
+  background: url("BackGrounds/nape-purple-bg.jpg");
   background-size: 50%;
   background-repeat: repeat;
+
+  h1{
+
+    text-align: left;
+    left: 20px;
+  }
+}
+
+section#trans-zone2{
+
+  background: url("BackGrounds/nape-verte-bg.jpg");
+  background-size: 50%;
+  background-repeat: repeat;
+
 }
 
 /* Boutons repositionnés classiquement */
@@ -150,7 +169,6 @@ button {
   cursor: pointer;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   width: 150px;
-  z-index: 1;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
 
@@ -270,20 +288,6 @@ img{
     width: 200px;
   }
 
-}
-
-/* Yeux encore inaboutit, en chantier..., possiblement même jamais poursuivi comme idée */
-.litle-boy-eyes{
-
-  position: fixed;
-  bottom: 120px;
-  right: 80px;
-  width: 5px;
-  height: 7px;
-  border-radius: 50%;
-  background: black;
-  z-index: 10001;
-  display: none;
 }
 
 
@@ -407,26 +411,102 @@ img{
 
 section.ground{
 
-  height: 150px;
+  height: 110px;
+  overflow: visible !important;
+  position: relative;
+  z-index: 1000;
+
+
+  img{
+
+    width: 100%;
+    top: -34px;
+    position: absolute;
+  }
 }
 
 .vege-from-ground{
   
   position: absolute;
-  bottom: 0px;
-  left: 50px;
-  z-index: 10;
+  z-index: 100;
   transform-origin: bottom center;
-  transform: rotate(-2deg);
   width: fit-content;
   min-height: fit-content;
 
-  img{
-    width: 250px;
-    transform: translateY(250px);
+  &.carrot img{
+    width: 300px;
+    transform: translateY(310px);
+  }
+
+  &.radis img{
+    width: 310px;
+    transform: translateY(295px);
+  }
+
+  &.pumpkin img{
+    width: 450px;
+    transform: translateY(313px);
+  }
+
+  &.courj img{
+
+    width: 600px;
+    transform-origin: top right !important ;
+    transform: translateX(500px);
   }
 
 }
+
+.carrot{
+
+  transform: rotate(-2deg);
+  bottom: 0px;
+  left: 20px;
+
+  &.out-of-ground{
+      animation: swinging-carrot 5s ease-in-out infinite;
+
+  }
+}
+
+.radis{
+
+  transform: rotate(2deg);
+  bottom: 0px;
+  left: 360px;
+
+  &.out-of-ground{
+      animation: swinging-radis 6s ease-in-out infinite;
+
+  }
+}
+
+.pumpkin{
+
+  transform: rotate(-1.5deg);
+  bottom: 0px;
+  right: 90px;
+
+  &.out-of-ground{
+      animation: swinging-pumpkin 8s ease-in-out infinite;
+
+  }
+
+}
+
+.courj{
+
+  transform: rotate(.5deg);
+  right: -50px;
+  top: -60px;
+
+  &.out-of-ground{
+
+    animation: swinging-courj 4s ease-in-out infinite;
+
+  }
+}
+
 
 .vege-from-ground img{
 
@@ -436,18 +516,31 @@ section.ground{
 
 .vege-from-ground.out-of-ground{
 
-  
-  animation: swinging-legume-or-fruit 5s ease-in-out infinite;
-  animation-delay: 1.9s;
+    animation-delay: 1.9s;
 
-  img{
+  &.carrot img{
     
-    transform: translateY(95px);
+    transform: translateY(120px);
+  }
+
+  &.radis img{
+    
+    transform: translateY(130px);
+  }
+
+  &.pumpkin img{
+    
+    transform: translateY(160px);
+  }
+
+  &.courj img{
+
+    transform: translateX(0px);
   }
 }
 
 
-@keyframes swinging-legume-or-fruit {
+@keyframes swinging-carrot {
 
   0%, 100%{
     transform: rotate(-2deg);
@@ -458,3 +551,35 @@ section.ground{
   }
 }
 
+@keyframes swinging-radis {
+
+  0%, 100%{
+    transform: rotate(2deg);
+  }
+
+  50%{
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes swinging-pumpkin {
+
+  0%, 100%{
+    transform: rotate(-1.5deg);
+  }
+
+  50%{
+    transform: rotate(1.5deg);
+  }
+}
+
+@keyframes swinging-courj {
+
+   0%, 100%{
+    transform: rotate(.5deg);
+  }
+
+  50%{
+    transform: rotate(-0.5deg);
+  }
+}

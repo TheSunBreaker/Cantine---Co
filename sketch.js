@@ -69,10 +69,23 @@ const CHART_CONFIG = {
   
   // Couleurs thème "cantine"
   colors: {
-    bio: { line: '#7cb342', glow: '#aed581', food: '#6DAA2C'},
+    bio: { line: '#528B4C', glow: '#0C5C03', food: '#6DAA2C'},
     durable: { line: '#5e92f3', glow: '#90caf9', food: '#C7A76C' },
-    local: { line: '#ab47bc', glow: '#ce93d8', food : '#D89B2A'},
-    pot: '#F15A29', potShine: '#FF9966', potDark: '#832C00',
+    local: { line: '#BA0085', glow: '#ce93d8', food : '#D89B2A'},
+    // pot: '#F15A29', potShine: '#FF9966', potDark: '#832C00', 
+    // pot:      '#D4AF37',   // or principal
+    // potShine: '#FFE39F',   // reflets lumineux
+    // potDark:  '#8C6C13',   // ombre or foncé
+    // pot:      '#C89B3C',   // or chaud
+    // potShine: '#FFD27F',   // highlight plus chaud
+    // potDark:  '#7A5A12',   // ombres bronze foncé
+    
+    pot: '#757575',          // Gris métal marmite
+    potShine: '#bdbdbd',     // Reflets marmite
+    potDark: '#424242',      // Ombres marmite
+
+
+
     background: '#fef5e7',
     fire: ['#ff6b00', '#ff8800', '#ffaa00', '#ffcc00', '#ffe066'],
     rock: '#5d4037', text: '#3e2723',
@@ -1077,7 +1090,7 @@ function draw() {
   // Mise en place de la zone curseur
   
   noStroke();
-  fill("yellow");
+  fill("#ffe0c5ff");
 
 
   x = 0;
@@ -1318,7 +1331,7 @@ text("Au", rect2X + 8, rect2Y + 5);
   // Dessiner les étiquettes du sandwich
 
   // Etiquette bio
-  drawSandwichLabel(width * 0.34, 25, "Bio :", "#27AE60");
+  drawSandwichLabel(width * 0.34, 25, "Bio :", "#528B4C");
   let wIm = 50; // largeur désirée
   let hIm = bretrave.height * (wIm / bretrave.width); // hauteur calculée automatiquement
   push()
@@ -1347,7 +1360,7 @@ text("Au", rect2X + 8, rect2Y + 5);
   pop()
 
   // Etiquette durable incluant local
-  drawSandwichLabel(width * 0.50, 25, "Dur(+\nMTS) :", "#9B59B6");
+  drawSandwichLabel(width * 0.50, 25, "Dur(+\nMTS) :", "#BA0085");
   wIm = 50; // largeur désirée
   hIm = fromagePlusLegumes.height * (wIm / fromagePlusLegumes.width); // hauteur calculée automatiquement
   push()
@@ -2232,18 +2245,19 @@ function drawDayLabels(graphX, graphY, graphW, graphH) {
 // ========== TITRE DU GRAPHIQUE ==========
 function drawTitle() {
   textAlign(CENTER, TOP);
-  textSize(20);
+  textSize(30);
+  textFont('Chaumon-Script')
   textStyle(BOLD);
   
   const titles = {
     bio: '🌱 Évolution pourcentage Bio',
     durable: '♻️ Évolution pourcentage Durable',
-    local: '🥕 Évolution pourcentage Durable (Local inclus)'
+    local: '🥕 Évolution pourcentage Durable (Dont Marqe de Terre Source)'
   };
 
   fill(CHART_CONFIG.colors[currentDataType].line);
 
-  drawingContext.shadowBlur = 10;
+  drawingContext.shadowBlur = 0;
   drawingContext.shadowColor = CHART_CONFIG.colors[currentDataType].glow;
   
   text(
@@ -2257,6 +2271,7 @@ function drawTitle() {
   // Sous-titre avec la période
   textSize(20);
   textStyle(BOLD);
+  textFont("Inter")
   fill("#c0bcbcff");
   
   const startDateForLocal = new Date(startDate);
@@ -3008,8 +3023,8 @@ function createPercentageBars(parent) {
   barsContainer.html(`
     <!-- Barre verte (BIO) -->
     <div id="bar-bio-wrapper" style="height: 0px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
-      <div id="bar-bio-label" style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter; color: #27AE60;">bio</div>
-      <div id="bar-bio" class="percentage-bar-rect" data-type="bio" style="width: 5px; flex-grow: 1; background-color: #27AE60; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+      <div id="bar-bio-label" style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter; color: #528B4C;">bio</div>
+      <div id="bar-bio" class="percentage-bar-rect" data-type="bio" style="width: 5px; flex-grow: 1; background-color: #528B4C; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
     </div>
     
     <!-- Barre bleue (DURABLE) -->
@@ -3095,9 +3110,9 @@ function updateBarsDisplay() {
   let purpleHeight = currentHeights.tomato + currentHeights.lettuce + currentHeights.cheese;
   
   // Calcul des couleurs (selon seuils)
-  let greenColor = bioPercent >= 20 ? '#27AE60' : '#E74C3C';
+  let greenColor = bioPercent >= 20 ? '#528B4C' : '#E74C3C';
   let blueColor = durablePercent >= 50 ? '#3498DB' : '#E74C3C';
-  let purpleColor = totalWithMTSPercent >= 50 ? '#9B59B6' : '#E74C3C';
+  let purpleColor = totalWithMTSPercent >= 50 ? '#BA0085' : '#E74C3C';
   
   // Mise à jour des wrappers (hauteurs)
   let barBioWrapper = document.getElementById('bar-bio-wrapper');
