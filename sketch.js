@@ -2733,6 +2733,8 @@ function createSandwichLayers() {
   meatSvg.style('width', '100%');
   meatSvg.style('overflow', 'visible');
   meatSvg.style('line-height', '0');
+  meatSvg.style('cursor', 'pointer');
+
   
   // 2. Fromage (jaune avec texture)
   let cheeseSvg = createDiv('').parent(garnitureDiv);
@@ -2808,7 +2810,7 @@ function updateSandwichLayers() {
   let tomatoLayer = select('#tomato-layer');
   if (tomatoLayer) {
     tomatoLayer.style('height', currentHeights.tomato + 'px');
-    tomatoLayer.html(generateTomatoSVG(currentHeights.tomato));
+    tomatoLayer.html(generateBeetSVG(currentHeights.tomato));
   }
   
   // Mise à jour des barres de pourcentage (hauteurs ET couleurs)
@@ -2819,57 +2821,58 @@ function updateSandwichLayers() {
 // GÉNÉRATION DES SVG POUR CHAQUE INGRÉDIENT
 // ============================================
 
-// TOMATES (deux rondelles vues de côté, côte à côte)
-function generateTomatoSVG(height) {
+// Betterave (deux rondelles vues de côté, côte à côte)
+function generateBeetSVG(height) {
   if (height < 2) return ''; // Trop petit pour afficher
   
   let svg = `
     <svg width="500" height="${height}" xmlns="http://www.w3.org/2000/svg" style="display: block;">
       <defs>
 
-        <!-- Dégradé de tomate plus rouge et saturé -->
-        <linearGradient id="tomato-side-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%"   style="stop-color:#B80000;stop-opacity:1" />
-          <stop offset="20%"  style="stop-color:#E60000;stop-opacity:1" />
-          <stop offset="50%"  style="stop-color:#FF3A2E;stop-opacity:1" />
-          <stop offset="80%"  style="stop-color:#E60000;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#A00000;stop-opacity:1" />
+        <!-- Dégradé de betterave -->
+        <linearGradient id="beet-side-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   style="stop-color:#4A0038;stop-opacity:1" />
+          <stop offset="20%"  style="stop-color:#7A0058;stop-opacity:1" />
+          <stop offset="50%"  style="stop-color:#B30073;stop-opacity:1" />
+          <stop offset="80%"  style="stop-color:#7A0058;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#3A002B;stop-opacity:1" />
         </linearGradient>
 
-        <!-- Pattern avec pépins désordonnés -->
-        <pattern id="tomato-seeds-side" x="0" y="0" width="40" height="25" patternUnits="userSpaceOnUse">
-          <ellipse cx="5" cy="5"  rx="1.5" ry="1" fill="#FFEAA7" opacity="0.45"/>
-          <ellipse cx="12" cy="8" rx="1.3" ry="0.8" fill="#FFEAA7" opacity="0.4"/>
-          <ellipse cx="20" cy="4" rx="1.4" ry="0.9" fill="#FFEAA7" opacity="0.35"/>
-          <ellipse cx="28" cy="10" rx="1.2" ry="0.7" fill="#FFEAA7" opacity="0.4"/>
-          <ellipse cx="18" cy="15" rx="1.4" ry="1" fill="#FFEAA7" opacity="0.45"/>
-          <ellipse cx="8"  cy="18" rx="1.3" ry="0.8" fill="#FFEAA7" opacity="0.35"/>
-          <ellipse cx="26" cy="18" rx="1.5" ry="1" fill="#FFEAA7" opacity="0.5"/>
-          <ellipse cx="32" cy="6"  rx="1.2" ry="0.7" fill="#FFEAA7" opacity="0.4"/>
+        <!-- Pattern de pépins/brillances en tons roses/violets -->
+        <pattern id="beet-seeds-side" x="0" y="0" width="40" height="25" patternUnits="userSpaceOnUse">
+          <ellipse cx="5" cy="5"  rx="1.5" ry="1" fill="#FFB5E8" opacity="0.45"/>
+          <ellipse cx="12" cy="8" rx="1.3" ry="0.8" fill="#FFB5E8" opacity="0.40"/>
+          <ellipse cx="20" cy="4" rx="1.4" ry="0.9" fill="#FFB5E8" opacity="0.35"/>
+          <ellipse cx="28" cy="10" rx="1.2" ry="0.7" fill="#FFB5E8" opacity="0.40"/>
+          <ellipse cx="18" cy="15" rx="1.4" ry="1" fill="#FFB5E8" opacity="0.45"/>
+          <ellipse cx="8"  cy="18" rx="1.3" ry="0.8" fill="#FFB5E8" opacity="0.35"/>
+          <ellipse cx="26" cy="18" rx="1.5" ry="1" fill="#FFB5E8" opacity="0.50"/>
+          <ellipse cx="32" cy="6"  rx="1.2" ry="0.7" fill="#FFB5E8" opacity="0.40"/>
         </pattern>
 
       </defs>
 
       <!-- Rondelle 1 -->
       <rect x="10" y="0" width="210" height="${height}"
-            fill="url(#tomato-side-grad)" rx="3"/>
+            fill="url(#beet-side-grad)" rx="3"/>
       <rect x="10" y="0" width="210" height="${height}"
-            fill="url(#tomato-seeds-side)" rx="3"/>
+            fill="url(#beet-seeds-side)" rx="3"/>
       <rect x="10" y="0" width="210" height="${height}"
-            fill="none" stroke="#8A0000" stroke-width="2" rx="3"/>
+            fill="none" stroke="#2A001F" stroke-width="2" rx="3"/>
 
       <!-- Rondelle 2 -->
       <rect x="280" y="0" width="210" height="${height}"
-            fill="url(#tomato-side-grad)" rx="3"/>
+            fill="url(#beet-side-grad)" rx="3"/>
       <rect x="280" y="0" width="210" height="${height}"
-            fill="url(#tomato-seeds-side)" rx="3"/>
+            fill="url(#beet-seeds-side)" rx="3"/>
       <rect x="280" y="0" width="210" height="${height}"
-            fill="none" stroke="#8A0000" stroke-width="2" rx="3"/>
+            fill="none" stroke="#2A001F" stroke-width="2" rx="3"/>
     </svg>
   `;
   
   return svg;
 }
+
 
 
 // SALADE (verte avec formes ondulées des 2 côtés)
