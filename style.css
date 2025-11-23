@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   overflow-y: auto; /* on remet le scroll normal */
   scroll-behavior: smooth; /* active le smooth scroll */
-  font-family: "Inter", "Caveat", "Segoe UI", sans-serif;;
+  font-family: "Inter", "Caveat", "Segoe UI", sans-serif;
 
   --fixed-Width: 1251px;
   --fixed-Height: 573px;
@@ -75,7 +75,26 @@ button {
   display: flex;
   justify-content: center;
   align-items: start;
-  flex-direction: row
+  flex-direction: row;
+
+  h1{
+
+    color: #528B4C;
+    font-weight: bolder;
+  }
+
+  &::before{
+
+    content: '';
+    position: absolute;
+    margin: auto;
+    width: 80%;
+    height: 90%;
+    background-color: purple;
+    top: -45%;
+    border-radius: 50%;
+    z-index: -1;
+  }
 }
 
 .action-appeal{
@@ -288,6 +307,15 @@ img{
     width: 200px;
   }
 
+  &.vege-badge-or-not{
+
+    position: absolute;
+    width: 100px;
+    top: -30px;
+    left: -10px;
+
+  }
+
 }
 
 
@@ -302,13 +330,13 @@ img{
     width: 340px;
 
     padding: 25px 28px 30px;
-    background: #faf7f0;
+    background: #F3E5B8;
     border-radius: 16px;
 
     /* Texture papier */
-    background-image: url("https://i.imgur.com/2zZ5x7R.png");
+    /* background-image: url("https://i.imgur.com/2zZ5x7R.png");
     background-size: cover;
-    background-blend-mode: multiply;
+    background-blend-mode: multiply; */
 
     /* Ombres raffinées */
     box-shadow:
@@ -319,7 +347,30 @@ img{
 
     transform: rotate(6deg);
 
-    z-index: 5;
+    z-index: 0;
+
+    
+    &::after{
+      position: absolute;
+      content: 'végé !';
+      top: 5px;
+      color: white;
+      padding: 3px;
+      background-color: #0C5C03;
+      font-weight: bolder;
+      border-radius: 3px;
+      /* left: 50%;
+      transform: translateX(-50%); */
+      right: 17px;
+
+    }
+
+    
+    &.nonvege::after{
+      content: 'non végé';
+      background: black;
+
+    }
 }
 
 /* ===== TITRE ===== */
@@ -369,6 +420,12 @@ img{
 
 }
 
+#menu-date-area{
+
+    color: #000;
+
+}
+
 .menu-item-value {
     color: #4b3a2a;
     font-family: "Caveat";
@@ -378,7 +435,9 @@ img{
     margin-top: 18px;
     text-align: center;
     font-style: italic;
-    color: #8a7866;
+    /* color: #8a7866; */
+    color: #000;
+
     font-size: 0.9em;
     font-family: "Caveat";
 

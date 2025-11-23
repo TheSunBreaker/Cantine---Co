@@ -1,0 +1,175 @@
+/* Style pour les animations de la page d'acceuil */
+
+
+.word, .veggie {
+    position: absolute;
+    pointer-events: none;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.word {
+    color: #2ecc71;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    font-size: 3rem;
+    font-family: "Chaumon-Script";
+}
+
+.veggie {
+    font-size: 4rem;
+    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2));
+}
+
+/* Animation de traversée gauche -> droite */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-200px) rotate(-15deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(calc(100vw + 200px)) rotate(15deg);
+        opacity: 0;
+    }
+}
+
+/* Animation de traversée droite -> gauche */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(calc(100vw + 200px)) rotate(15deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-200px) rotate(-15deg);
+        opacity: 0;
+    }
+}
+
+/* Animation de traversée haut -> bas */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-200px) rotate(-10deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(100vh + 200px)) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+/* Animation de traversée bas -> haut */
+@keyframes slideUp {
+    0% {
+        transform: translateY(calc(100vh + 200px)) rotate(10deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) rotate(-10deg);
+        opacity: 0;
+    }
+}
+
+/* Animation de rebond (écrasé puis rebond) */
+@keyframes bounce {
+    0% {
+        transform: scale(0.3, 0.3);
+        opacity: 0;
+    }
+    15% {
+        transform: scale(1.2, 0.7);
+        opacity: 1;
+    }
+    30% {
+        transform: scale(0.9, 1.1);
+    }
+    45% {
+        transform: scale(1.05, 0.95);
+    }
+    60% {
+        transform: scale(1, 1);
+    }
+    85% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+}
+
+/* Animation d'apparition zoom */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1) rotate(0deg);
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* Animation lettre par lettre */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: letterPop 0.3s forwards;
+}
+
+@keyframes letterPop {
+    0% {
+        transform: translateY(20px) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}

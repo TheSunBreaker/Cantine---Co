@@ -879,8 +879,11 @@ function setup() {
       gouter2: Table[idealDateIndex]['Gouter_02']
   };
 
+  // Strcuture qui déterminera le nom du fichier à prendre pour l'image badge du menu selon si oui ou non végé, et qui marquera ou non une classe 'nonvege' en fonction
+  let vegeBadge = Table[idealDateIndex].is_vege_day ? ["laitue-choux", ""] : ["viande", "nonvege"];
 
-  updateWelcomePageMenu(menuData);
+
+  updateWelcomePageMenu(menuData, vegeBadge);
 
 
 
@@ -973,8 +976,9 @@ function normalize(date) {
 }
 
 // Fonction de mise à jour du carton de menu de la première page
-function updateWelcomePageMenu(data) {
+function updateWelcomePageMenu(data, badge) {
     const container = document.getElementById("menuContent");
+    const bigMotherMenuContainer = document.querySelector(".menu-container");
     let html = "";
 
     for (const key in data) {
@@ -991,6 +995,8 @@ function updateWelcomePageMenu(data) {
     }
 
     container.innerHTML = html;
+    bigMotherMenuContainer.innerHTML += `<img src="Assets/${badge[0]}.png" alt="végé ou pas végé" class="vege-badge-or-not">`
+    bigMotherMenuContainer.className += " " + badge[1];
 }
 
 // Fonction de dessin des olives selecteurs
