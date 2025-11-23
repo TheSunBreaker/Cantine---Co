@@ -392,7 +392,7 @@ img{
   
   position: absolute;
   left: calc(25% + 15px);
-  top: 37px;
+  top: 42px;
 
   & > svg:first-child{
     transform: translateY(8px);

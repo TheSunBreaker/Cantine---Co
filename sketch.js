@@ -70,19 +70,22 @@ const CHART_CONFIG = {
   // Couleurs thème "cantine"
   colors: {
     bio: { line: '#528B4C', glow: '#0C5C03', food: '#6DAA2C'},
-    durable: { line: '#5e92f3', glow: '#90caf9', food: '#C7A76C' },
-    local: { line: '#BA0085', glow: '#ce93d8', food : '#D89B2A'},
-    // pot: '#F15A29', potShine: '#FF9966', potDark: '#832C00', 
+    durable: { line: '#CC4AA7', glow: '#CC4AA7', food: '#C7A76C' },
+    local: { line: '#BA0085', glow: '#CC4AA7', food : '#D89B2A'},
+    // pot: '#F15A29', potShine: '#FF9966', potDark: '#832C00',
+    // Couleur crème genre
+    pot: '#E6D4A8', potShine: '#F3E5B8', potDark: '#BFA16E', 
+ 
     // pot:      '#D4AF37',   // or principal
     // potShine: '#FFE39F',   // reflets lumineux
     // potDark:  '#8C6C13',   // ombre or foncé
     // pot:      '#C89B3C',   // or chaud
     // potShine: '#FFD27F',   // highlight plus chaud
     // potDark:  '#7A5A12',   // ombres bronze foncé
-    
-    pot: '#757575',          // Gris métal marmite
-    potShine: '#bdbdbd',     // Reflets marmite
-    potDark: '#424242',      // Ombres marmite
+      
+      // pot: '#757575',          // Gris métal marmite
+      // potShine: '#bdbdbd',     // Reflets marmite
+      // potDark: '#424242',      // Ombres marmite
 
 
 
@@ -1342,7 +1345,7 @@ text("Au", rect2X + 8, rect2Y + 5);
 
   
   // Etiquette durable
-  drawSandwichLabel(width * 0.42, 25, "Dur :", "#3498DB");
+  drawSandwichLabel(width * 0.42, 25, "Dur :", "#CC4AA7");
 
   
   wIm = 50; // largeur désirée
@@ -2272,7 +2275,7 @@ function drawTitle() {
   textSize(20);
   textStyle(BOLD);
   textFont("Inter")
-  fill("#c0bcbcff");
+  fill("#ede6e6ff");
   
   const startDateForLocal = new Date(startDate);
   const endDateForLocal = new Date(endDate);
@@ -2289,7 +2292,7 @@ function createControls() {
 
   const mainContainer = document.querySelector('#canvas1');
 
-  const controlY = CHART_CONFIG.y - 45;
+  const controlY = CHART_CONFIG.y - 42;
   const controlX = CHART_CONFIG.x;
 
   const gap = 20; // espacement horizontal constant
@@ -2316,6 +2319,8 @@ function createControls() {
   btnBio.parent(mainContainer); // maintenant le bouton est dans le même container que le canvas
   //btnBio.position(20, 20);     // position absolue par rapport au container
   //btnBio.style('position','absolute');
+  btnBio.style('background','#0C5C03');
+
   
   // --- 2) Bouton suivant : Durable ---
   const btnDurable = createButton('♻️ Durable');
@@ -2323,6 +2328,8 @@ function createControls() {
   styleButton(btnDurable);
   btnDurable.parent(mainContainer);
   placeNextButton(btnBio, btnDurable, controlY);
+  btnDurable.style('background','#CC4AA7');
+
 
   // --- 3) Bouton suivant : Local ---
   const btnLocal = createButton('📍 Durable Local');
@@ -2330,6 +2337,8 @@ function createControls() {
   styleButton(btnLocal);
   btnLocal.parent(mainContainer);
   placeNextButton(btnDurable, btnLocal, controlY);
+  btnLocal.style('background','#BA0085');
+
 
 
   // --- 4) Bouton suivant : Replay et réinitialisation d'intervalle ---
@@ -2347,6 +2356,8 @@ function createControls() {
   styleButton(btnReplay, true);
   btnReplay.parent(mainContainer);
   placeNextButton(btnLocal, btnReplay, controlY);
+  btnReplay.style('background', '#FF5E07');
+
 
 
   
@@ -2368,13 +2379,14 @@ function styleButton(btn, isSpecial = false) {
   btn.style('margin-right', '10px');
   btn.style('font-size', '14px');
   btn.style('cursor', 'pointer');
-  btn.style('font-size', '0.7em');
-  //btn.style('border', '2px solid #8d6e63');
-  btn.style('border-radius', '8px 8px 0px 8px');
-  btn.style('background', isSpecial ? '#ff6b00' : '#fff8e1');
-  btn.style('color', isSpecial ? '#fff' : '#3e2723');
-  btn.style('font-weight', 'bold');
+  btn.style('font-size', '0.9em');
+  btn.style('border', 'none');
+  btn.style('border-radius', '0');
+  // btn.style('color', isSpecial ? '#fff' : '#3e2723');
+  btn.style('color','#fff');
+  // btn.style('font-weight', 'bold');
   btn.style('transition', 'all 0.3s');
+  btn.style('font-family', 'Chaumon-Script')
   
   btn.mouseOver(() => {
     btn.style('transform', 'scale(1.05)');
@@ -3032,8 +3044,8 @@ function createPercentageBars(parent) {
     
     <!-- Barre bleue (DURABLE) -->
     <div id="bar-durable-wrapper" style="height: 0px; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
-      <div id="bar-durable-label" style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter; color: #3498DB;">dur</div>
-      <div id="bar-durable" class="percentage-bar-rect" data-type="durable" style="width: 5px; flex-grow: 1; background-color: #3498DB; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
+      <div id="bar-durable-label" style="position: absolute; bottom: 100%; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 12px; margin-bottom: 5px; font-style: italic; font-family: Inter; color: #CC4AA7;">dur</div>
+      <div id="bar-durable" class="percentage-bar-rect" data-type="durable" style="width: 5px; flex-grow: 1; background-color: #CC4AA7; cursor: pointer; transition: width 0.2s ease; border-radius: 1px;"></div>
     </div>
     
     <!-- Barre violette (DURABLE + MTS) -->
@@ -3114,7 +3126,7 @@ function updateBarsDisplay() {
   
   // Calcul des couleurs (selon seuils)
   let greenColor = bioPercent >= 20 ? '#528B4C' : '#E74C3C';
-  let blueColor = durablePercent >= 50 ? '#3498DB' : '#E74C3C';
+  let blueColor = durablePercent >= 50 ? '#CC4AA7' : '#E74C3C';
   let purpleColor = totalWithMTSPercent >= 50 ? '#BA0085' : '#E74C3C';
   
   // Mise à jour des wrappers (hauteurs)
