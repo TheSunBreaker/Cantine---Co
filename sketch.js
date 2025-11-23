@@ -89,7 +89,7 @@ const CHART_CONFIG = {
 
 
 
-    background: '#fef5e7',
+    background: '#E0E0E0',
     fire: ['#ff6b00', '#ff8800', '#ffaa00', '#ffcc00', '#ffe066'],
     rock: '#5d4037', text: '#3e2723',
     liquidAbove: '#64b5f6',    // Bleu clair (zone conforme)
@@ -1099,7 +1099,7 @@ function draw() {
   // Mise en place de la zone curseur
   
   noStroke();
-  fill("#ffe0c5ff");
+  // fill(224,224,224);
 
 
   x = 0;
@@ -1108,28 +1108,28 @@ function draw() {
   h = height;
   r = h/2 * 1.3; // profondeur de l’arrondi
 
-  beginShape();
+  // beginShape();
 
-  // Coin haut gauche -> haut droit interne
-  vertex(x, y);
-  vertex(x + w, y);
+  // // Coin haut gauche -> haut droit interne
+  // vertex(x, y);
+  // vertex(x + w, y);
 
-  // Arc concave vers l’intérieur (côté droit)
-  let cx = x + w;       // centre de l’arc (côté droit du rectangle)
-  let cy = y + h / 2;
+  // // Arc concave vers l’intérieur (côté droit)
+  // let cx = x + w;       // centre de l’arc (côté droit du rectangle)
+  // let cy = y + h / 2;
   
-  // Échantillonne l’arc de -90° à +90°
-  for (let a = -HALF_PI; a <= HALF_PI; a += 0.05) {
-    let vx = cx - r * cos(a);  // soustraction = concave
-    let vy = cy + r * sin(a);
-    vertex(vx, vy);
-  }
+  // // Échantillonne l’arc de -90° à +90°
+  // for (let a = -HALF_PI; a <= HALF_PI; a += 0.05) {
+  //   let vx = cx - r * cos(a);  // soustraction = concave
+  //   let vy = cy + r * sin(a);
+  //   vertex(vx, vy);
+  // }
 
-  // Coin bas droit interne -> bas gauche
-  vertex(x + w, y + h);
-  vertex(x, y + h);
+  // // Coin bas droit interne -> bas gauche
+  // vertex(x + w, y + h);
+  // vertex(x, y + h);
 
-  endShape(CLOSE);
+  // endShape(CLOSE);
 
   
   // CURSEUR À DEUX POIGNÉES
@@ -1155,7 +1155,7 @@ function draw() {
   // Barre verticale
   stroke(0);
   strokeWeight(2);
-  line(sliderX, sliderY1, sliderX, sliderY2);
+  //line(sliderX, sliderY1, sliderX, sliderY2);
 
   push();
   // Burger slider

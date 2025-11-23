@@ -46,7 +46,7 @@ function createWord() {
     const word = getRandomItem(words);
     const animation = getRandomItem(animations);
     const duration = getRandomInt(2, 5);
-    const size = getRandomInt(2, 6);
+    const size = getRandomInt(3, 6);
     
     const element = document.createElement('div');
     element.className = 'word';
@@ -72,7 +72,13 @@ function createWord() {
     }
 
     // Couleurs variées
-    const colors = ['#2ecc71', '#e74c3c', '#f39c12', '#9b59b6', '#3498db', '#1abc9c'];
+    // const colors = ['#2ecc71', '#e74c3c', '#f39c12', '#9b59b6', '#3498db', '#1abc9c'];
+    // const colors = ['#000'];
+    // const colors = ['#1a1a1a', '#2d2d2d', '#404040', '#525252', '#666666'];
+    const colors = ['#2c2c2c', '#3a3a3a', '#4a4a3a', '#5a5a4a', '#6a6a5a'];
+    // const colors = ['#1c1c1c', '#2a2f2a', '#333833', '#3d4a3d', '#4a5a4a'];
+    // const colors = ['#212121', '#2f2f2f', '#3c3c3c', '#4f4f4f', '#636363'];
+    // const colors = ['#1e1e1e', '#2e2b26', '#3d3730', '#4d443a', '#5d5244'];
     element.style.color = getRandomItem(colors);
 
     // Décider si on écrit lettre par lettre (20% de chance)
@@ -170,16 +176,16 @@ function createVeggie() {
 function startAnimation() {
     // Créer des éléments à intervalles variables
     setInterval(() => {
-        if (Math.random() < 0.7) {
+        if (Math.random() < 0.4) {
             createWord();
         }
-    }, 400);
+    }, 900);
 
     setInterval(() => {
-        if (Math.random() < 0.6) {
+        if (Math.random() < 0.4) {
             createVeggie();
         }
-    }, 600);
+    }, 1100);
 }
 
 // Démarrer l'animation

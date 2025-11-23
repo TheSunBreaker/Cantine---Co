@@ -75,11 +75,16 @@ button {
   justify-content: center;
   align-items: start;
   flex-direction: row;
+  background-image: url(Assets/Radis.png), url(Assets/Orange.png), url(Assets/Carotte.png);
+  background-size: 200px, 200px, 200px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 40% 110%, 90% 50%, 60% 12%;
 
   h1{
 
     color: #528B4C;
     font-weight: bolder;
+    text-transform: uppercase;
   }
 
   &::before{
@@ -89,7 +94,7 @@ button {
     margin: auto;
     width: 80%;
     height: 90%;
-    background-color: purple;
+    background-color: rgb(224, 224, 224);
     top: -45%;
     border-radius: 50%;
     z-index: -1;
@@ -110,7 +115,7 @@ button {
   animation: come-baby-come 2s ease-in-out infinite;
   cursor: pointer;
 
-  
+
   &::after{
     content: '>';
     font-size: 3em;
@@ -181,7 +186,8 @@ section#trans-zone2{
   z-index: 1000;
   /* background-color: #333; */
   color: black;
-  border: 2px dashed #BA0085;  padding: 12px 24px;
+  border: 2px dashed #BA0085;
+  padding: 12px 24px;
   border-radius: 8px;
   font-size: 0.9em;
   cursor: pointer;
@@ -212,7 +218,7 @@ section#trans-zone2{
 }
 
 #btnVegeLud{
-   
+
   display: block; /* toujours visible */
   top : 170px
 }
@@ -237,9 +243,9 @@ section#trans-zone2{
 }
 
 .info h1 {
-  font-size: 6em;
+  font-size: 5em;
   margin-bottom: 0.2em;
-  margin-top: 0;
+  margin-top: 7%;
 }
 
 .info p {
@@ -293,7 +299,7 @@ section#trans-zone2{
   position: absolute;
   left: 30%;
   bottom: 20px;
-}  
+}
 
 img{
 
@@ -304,6 +310,15 @@ img{
     right: -7px;
     z-index: 10000;
     width: 200px;
+  }
+
+  &.fixed-poireau{
+
+    position: absolute;
+    height: 90%;
+    left: 205px;
+    bottom: -10px;
+    transform: rotate(-5deg);
   }
 
   &.vege-badge-or-not{
@@ -323,15 +338,18 @@ img{
 /* ====== CARTON MENU EN HAUT À GAUCHE ====== */
 .menu-container {
     position: absolute;
-    bottom: -5px;
+    bottom: -17px;
     left: -10px;
 
-    width: 340px;
+    width: 320px;
 
     padding: 25px 28px 30px;
-    background: #F3E5B8;
+    /* background: #F3E5B8; */
 
-    border-radius: 16px;
+    border-radius: 30px 30px 0 0;
+    background-image: url('BackGrounds/fond_menu_grand.png');
+    background-size: 100%;
+    background-position-x: 0 50px;
 
     /* Texture papier */
     /* background-image: url("https://i.imgur.com/2zZ5x7R.png");
@@ -339,17 +357,19 @@ img{
     background-blend-mode: multiply; */
 
     /* Ombres raffinées */
-    box-shadow:
+    /* box-shadow:
         0 6px 15px rgba(60, 40, 20, 0.25),
-        0 0 25px rgba(0, 0, 0, 0.12) inset;
+        0 0 25px rgba(0, 0, 0, 0.12) inset; */
 
-    border: 1px solid rgba(160, 140, 110, 0.4);
+    /* border: 1px solid rgba(160, 140, 110, 0.4); */
+    border: 1px solid black;
 
     transform: rotate(6deg);
+    font-size: 80%;
 
     z-index: 0;
 
-    
+
     &::after{
       position: absolute;
       content: 'végé !';
@@ -361,11 +381,11 @@ img{
       border-radius: 3px;
       /* left: 50%;
       transform: translateX(-50%); */
-      right: 17px;
+      right: 20px;
 
     }
 
-    
+
     &.nonvege::after{
       content: 'non végé';
       background: black;
@@ -376,10 +396,11 @@ img{
 /* ===== TITRE ===== */
 .menu-title {
     text-align: center;
-    font-family: "Caveat", "Playfair Display", serif;
+    /* font-family: "Caveat", "Playfair Display", serif; */
     font-size: 1.8em;
     margin-bottom: 8px;
-    color: #614737;
+    /* color: #614737; */
+    color: black;
     letter-spacing: 1.5px;
 
     /* text-transform: uppercase; */
@@ -393,11 +414,16 @@ img{
 
 /* Filet décoratif */
 .menu-separator {
-    width: 60%;
-    margin: 10px auto 18px;
-    height: 2px;
-    background: linear-gradient(to right, #b8a374, #d8c58a, #b8a374);
+    width: 320px;
+    /* margin: 10px auto 18px; */
+    height: 1px;
+    /* background: linear-gradient(to right, #b8a374, #d8c58a, #b8a374); */
+    background: black;
+
     border-radius: 2px;
+    transform: translateX(-28px);
+    margin-bottom: 35px;
+    margin-top: 20px;
 }
 
 /* ===== ITEMS ===== */
@@ -409,13 +435,19 @@ img{
     align-items: center;
     font-size: 1.1em;
     border-bottom: 1px dashed rgba(120, 100, 80, 0.3);
+
+    &:last-of-type{
+
+      border-bottom: none;
+    }
 }
 
 .menu-item-name {
     font-weight: bold;
-    color: #5d4b3a;
-    margin-right: 10px;
-    font-family: "Inter";
+    /* color: #5d4b3a; */
+    color: black;
+    margin-right: 20px;
+    /* font-family: "Inter"; */
     font-size: 80%;
 
 }
@@ -428,18 +460,19 @@ img{
 
 .menu-item-value {
     color: #4b3a2a;
-    font-family: "Caveat";
+    text-align: right;
+    /* font-family: "Caveat"; */
 }
 
 .menu-footer {
-    margin-top: 18px;
+    margin-top: 28px;
     text-align: center;
     font-style: italic;
     /* color: #8a7866; */
     color: #000;
-
+    margin-bottom: 50px;
     font-size: 0.9em;
-    font-family: "Caveat";
+    /* font-family: "Caveat"; */
 
 }
 
@@ -448,7 +481,7 @@ img{
 /* ====== STYLES SANDWICH ====== */
 
 .sandwich-table{
-  
+
   position: absolute;
   left: calc(25% + 15px);
   top: 42px;
@@ -459,7 +492,7 @@ img{
 }
 
 .garniture{
-  
+
   width: 100%;
   height: 100px;
   position: relative;
@@ -485,7 +518,7 @@ section.ground{
 }
 
 .vege-from-ground{
-  
+
   position: absolute;
   z-index: 100;
   transform-origin: bottom center;
@@ -578,17 +611,17 @@ section.ground{
     animation-delay: 1.9s;
 
   &.carrot img{
-    
+
     transform: translateY(120px);
   }
 
   &.radis img{
-    
+
     transform: translateY(130px);
   }
 
   &.pumpkin img{
-    
+
     transform: translateY(160px);
   }
 
