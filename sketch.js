@@ -518,7 +518,7 @@ function preload() {
   );
 
   // Chargement des assets images
-  burgerImg = loadImage("Assets/burger-vege.png")
+  burgerImg = loadImage("Assets/boulettes-detr.png")
   olive = loadImage("Assets/olive-detouree.png")
   bretrave = loadImage("Assets/beterave.png")
   lettuce = loadImage("Assets/laitue.png")
@@ -1158,9 +1158,11 @@ function draw() {
   //line(sliderX, sliderY1, sliderX, sliderY2);
 
   push();
-  // Burger slider
+  // Boulette de viande slider
   imageMode(CENTER);
-  image(burgerImg, sliderX, height - verticalStickMagins + 50, 200, 100)
+  let bgrWidth = 200;
+  let bgrHeith = burgerImg.height * (bgrWidth / burgerImg.width)
+  image(burgerImg, sliderX, height - verticalStickMagins + 21, bgrWidth, bgrHeith);
   pop();
 
   strokeWeight(1);
