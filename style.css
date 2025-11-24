@@ -522,8 +522,11 @@ section.ground{
   position: absolute;
   z-index: 100;
   transform-origin: bottom center;
-  width: fit-content;
-  min-height: fit-content;
+  max-width: fit-content;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   &.carrot img{
     width: 300px;
@@ -543,8 +546,29 @@ section.ground{
   &.courj img{
 
     width: 600px;
-    transform-origin: top right !important ;
     transform: translateX(500px);
+  }
+
+
+  /* Vege Zone */
+
+  &.onion img{
+
+    width: 370px;
+    transform: translateY(317px);
+  }
+
+  &.poireau img{
+
+    width: 660px;
+    transform: translateX(-100px) translateY(260px);
+  }
+
+  &.vege-from-ground.poivron img{
+
+    width: 320px;
+    transform-origin: top center !important ;
+    transform: translateY(-420px);
   }
 
 }
@@ -591,10 +615,57 @@ section.ground{
   transform: rotate(.5deg);
   right: -50px;
   top: -60px;
+  transform-origin: top right !important ;
+
 
   &.out-of-ground{
 
     animation: swinging-courj 4s ease-in-out infinite;
+
+  }
+}
+
+
+/* Vege Zone */
+
+.onion{
+
+  transform: rotate(3deg);
+  left: 130px;
+  bottom: 0;
+  width: 300px;
+
+  &.out-of-ground{
+
+    animation: swinging-onion 3.5s ease-in-out infinite;;
+  }
+}
+
+.poireau{
+
+  transform: rotate(-40deg);
+  right: 100px;
+  bottom: 0;
+  transform-origin: bottom left;
+
+  &.out-of-ground{
+
+    animation: swinging-poireau 4s ease-in-out infinite;;
+
+  }
+}
+
+.poivron{
+
+  transform: rotate(4deg);
+  left: 25%;
+  top: 0px;
+  transform-origin: top center !important ;
+
+
+  &.out-of-ground{
+
+    animation: swinging-poivron 2.1s ease-in-out infinite;;
 
   }
 }
@@ -629,7 +700,27 @@ section.ground{
 
     transform: translateX(0px);
   }
+
+
+  /* Vege Zone */
+
+  &.onion img{
+
+    transform: translateY(130px);
+  }
+
+  &.poivron img{
+
+    transform: translateY(-120px);
+  }
+
+  &.poireau img{
+
+    transform: translateX(80px) translateY(200px);
+  }
+
 }
+
 
 
 @keyframes swinging-carrot {
@@ -673,5 +764,40 @@ section.ground{
 
   50%{
     transform: rotate(-0.5deg);
+  }
+}
+
+@keyframes swinging-onion {
+
+   0%, 100%{
+    transform: rotate(3deg);
+  }
+
+  50%{
+    transform: rotate(-3deg);
+  }
+}
+
+
+@keyframes swinging-poivron {
+
+   0%, 100%{
+    transform: rotate(4deg);
+  }
+
+  50%{
+    transform: rotate(-4deg);
+  }
+}
+
+
+@keyframes swinging-poireau {
+
+   0%, 100%{
+    transform: rotate(-40deg);
+  }
+
+  50%{
+    transform: rotate(-43deg);
   }
 }

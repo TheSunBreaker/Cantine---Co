@@ -989,6 +989,7 @@ let sketchVege = function(p){
     }
     
     function drawFullMenuCard(x, y, w, h, dayData) {
+        h = h + 50;
         p.push();
         p.translate(x, y);
         
@@ -1026,7 +1027,7 @@ let sketchVege = function(p){
         let yPos = -h/2 + 90;
         let lineHeight = 30;
         p.textAlign(p.LEFT, p.TOP);
-        p.textSize(11);
+        p.textSize(9);
         p.noStroke();
         
         let menuItems = [
