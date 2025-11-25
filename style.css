@@ -78,7 +78,7 @@ button {
   background-image: url(Assets/Radis.png), url(Assets/Orange.png), url(Assets/Carotte.png);
   background-size: 200px, 200px, 200px;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 70% 110%, 90% 50%, 60% 12%;
+  background-position: 40% 110%, 90% 50%, 60% 12%;
 
   h1{
 
@@ -105,7 +105,7 @@ button {
 
   position: absolute;
   bottom: 60px;
-  right: 50%;
+  right: 25%;
   font-size: 24px;
   color: #555;
   margin-bottom: 30px;
@@ -124,7 +124,8 @@ button {
     writing-mode: vertical-lr;
     position: absolute;
     bottom: -35px;
-    right: calc(50% - 24px);
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 

@@ -3,9 +3,8 @@
 
 const words = [
     'MIAAAM', 'CCRUUNNCH', 'GRUNCHH', 'MMMM', 
-    'CROUSTILLANT', 'SLURP', 'YUM', 'NOMNOMNOM',
-    'CRUNCH', 'DÉLICIEUX', 'BIO', 'FRAIS',
-    'CROQUANT', 'SAVOUREUX', 'Végé!!!', 'MIAM'
+    'GLOUGLOUGLOU', 'SLURP', 'YUM', 'NOMNOMNOM',
+    'CRUNCH', 'MIAM', 'YUUMMYY', 'GNOUMGNOUM', 'CRUNCHCRUNCH'
 ];
 
 // '<img src="carotte.png" style="width: 80px">',
