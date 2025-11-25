@@ -4,7 +4,7 @@
 const words = [
     'MIAAAM', 'CCRUUNNCH', 'GRUNCHH', 'MMMM', 
     'GLOUGLOUGLOU', 'SLURP', 'YUM', 'NOMNOMNOM',
-    'CRUNCH', 'MIAM', 'YUUMMYY', 'GNOUMGNOUM', 'CRUNCHCRUNCH'
+    'CRUNCH', 'MIAM', 'YUUMMYY', 'GNUMGNUM', 'CRUNCHCRUNCH'
 ];
 
 // '<img src="carotte.png" style="width: 80px">',
