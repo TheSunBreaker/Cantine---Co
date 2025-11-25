@@ -8,7 +8,6 @@ const words = [
     'CROQUANT', 'SAVOUREUX', 'Végé!!!', 'MIAM'
 ];
 
-// Vous pouvez remplacer ces emojis par vos vraies images comme ceci :
 // '<img src="carotte.png" style="width: 80px">',
 // '<img src="tomate.png" style="width: 80px">', etc.
 // const veggies = [

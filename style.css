@@ -78,7 +78,7 @@ button {
   background-image: url(Assets/Radis.png), url(Assets/Orange.png), url(Assets/Carotte.png);
   background-size: 200px, 200px, 200px;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 40% 110%, 90% 50%, 60% 12%;
+  background-position: 70% 110%, 90% 50%, 60% 12%;
 
   h1{
 
@@ -105,13 +105,13 @@ button {
 
   position: absolute;
   bottom: 60px;
-  right: 160px;
+  right: 50%;
   font-size: 24px;
   color: #555;
   margin-bottom: 30px;
   text-align: center;
   font-weight: bolder;
-  transform: translateY(0);
+  transform: translateX(50%) translateY(0);
   animation: come-baby-come 2s ease-in-out infinite;
   cursor: pointer;
 
@@ -131,11 +131,11 @@ button {
 @keyframes come-baby-come {
 
   0%, 100%{
-    transform: translateY(0);
+    transform: translateX(50%) translateY(0);
   }
 
   50%{
-    transform: translateY(15px);
+    transform: translateX(50%) translateY(15px);
   }
 }
 

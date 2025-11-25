@@ -858,7 +858,7 @@ let sketchVege = function(p){
             }
         }
     }
-    
+
     function updateClusterMovement(cluster) {
         // Mouvement de bulle flottante avec rebond sur les bords
         cluster.x += cluster.vx;
@@ -966,7 +966,7 @@ let sketchVege = function(p){
 
         p.pop();
     }
-        
+
     function drawMiniMenuCard(x, y, size, isVege, dayNumber) {
         p.push();
         p.translate(x, y);
