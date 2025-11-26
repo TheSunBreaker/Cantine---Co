@@ -43,12 +43,14 @@ let sketchVege = function(p){
     // Assets utiles
     let menu_bg;
     let assiettes;
+    let vege_bg;
 
 
     p.preload = function(){
 
         menu_bg = p.loadImage("BackGrounds/fond_menu.png");
         assiettes = p.loadImage("Assets/assiette.png");
+        vege_bg = p.loadImage("BackGrounds/vege_bg.jfif");
     }
 
     p.setup = function(){
@@ -84,7 +86,9 @@ let sketchVege = function(p){
 
 
     p.draw = function() {
-        p.background(colors.bg);
+        // p.background(colors.bg);
+
+        p.image(vege_bg, 0, 0, width, height);
 
         // Gestion des transitions de zoom
         if (isTransitioning) {
