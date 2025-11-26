@@ -45,6 +45,11 @@ section{
 
 }
 
+#canvas{
+
+  background-image: url("BackGrounds/vege_bg.jfif");
+}
+
 button {
 
   background: transparent;
@@ -515,6 +520,16 @@ section.ground{
     width: 100%;
     top: -34px;
     position: absolute;
+  }
+
+  &.n2{
+
+    height: 210px;
+    img{
+
+      top: -50px;
+    }
+
   }
 }
 

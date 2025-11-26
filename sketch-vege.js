@@ -44,6 +44,7 @@ let sketchVege = function(p){
     let menu_bg;
     let assiettes;
     let vege_bg;
+    let meatPk;
 
 
     p.preload = function(){
@@ -51,6 +52,7 @@ let sketchVege = function(p){
         menu_bg = p.loadImage("BackGrounds/fond_menu.png");
         assiettes = p.loadImage("Assets/assiette.png");
         vege_bg = p.loadImage("BackGrounds/vege_bg.jfif");
+        meatPk = p.loadImage("Assets/viande.png");
     }
 
     p.setup = function(){
@@ -617,7 +619,7 @@ let sketchVege = function(p){
             });
 
             p.textFont("Chaumon-Script")
-            p.text(monthNames[cluster.month - 1]  + (cluster.hasVege ? '✅' : '❌'), 0, 0);
+            p.text(monthNames[cluster.month - 1].toUpperCase()  + (cluster.hasVege ? '✅' : '❌'), 0, 0);
 
             p.pop();
 
@@ -639,7 +641,7 @@ let sketchVege = function(p){
         p.textSize(150);
         p.textStyle(p.BOLD);
         p.textFont("Chaumon-Script")
-        p.text(monthNames[selectedMonth - 1] + " " + selectedYear, p.width / 2, p.height / 2);
+        p.text(monthNames[selectedMonth - 1].toUpperCase() + " " + selectedYear, p.width / 2, p.height / 2);
         p.pop();
 
         // Gérer les collisions entre clusters
@@ -685,7 +687,7 @@ let sketchVege = function(p){
 
             p.textFont("Chaumon-Script")
 
-            p.text(`Semaine ${cluster.week}` + (cluster.hasVege ? '✅' : '❌'), 0, 0);
+            p.text(`Semaine ${cluster.week}`.toUpperCase() + (cluster.hasVege ? '✅' : '❌'), 0, 0);
 
             p.pop();
 
@@ -1023,7 +1025,18 @@ let sketchVege = function(p){
         p.stroke(colors.text);
         p.strokeWeight(3);
         p.rect(-w/2, -h/2, w, h, 10);
-        p.image(menu_bg, -w/2, -h/2, w, h);
+        if (dayData.isVege){
+            // Background selon si oui ou non végé
+            p.image(menu_bg, -w/2, -h/2, w, h);
+
+        }else{
+
+            // let wIm = 100; // largeur désirée
+            // let hIm = meatPk.height * (wIm / meat.width);
+            // // On change le repère coordonnées pour le centre
+            // p.imageMode(p.CENTER);
+            // p.image(meatPk, -w, -h, wIm, hIm);
+        }
 
         // Titre "MENU"
         p.fill(255);
