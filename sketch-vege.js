@@ -51,7 +51,7 @@ let sketchVege = function(p){
 
         menu_bg = p.loadImage("BackGrounds/fond_menu.png");
         assiettes = p.loadImage("Assets/assiette.png");
-        vege_bg = p.loadImage("BackGrounds/vege_bg.jfif");
+        vege_bg = p.loadImage("BackGrounds/vege_bg_grayer.png");
         meatPk = p.loadImage("Assets/viande.png");
     }
 
@@ -564,15 +564,42 @@ let sketchVege = function(p){
     function displayMonthClusters() {
         // Background avec l'année
         p.push();
+        p.noStroke();
+
+        let whiteWithOpacity = p.color(255, 255, 255, 225); // 200/255 = léger transparent
+        p.fill(whiteWithOpacity);        
+        p.rectMode(p.CENTER);
+
+        // On mesure le texte d'abord
+        p.textSize(180);
+        p.textStyle(p.BOLD);
+        p.textFont("Chaumon-Script")
+        
+        let txt = selectedYear;
+        // Largeur du texte
+        let tw = p.textWidth(txt);
+
+        // Hauteur approximative du texte
+        let th = p.textAscent() + p.textDescent();
+
+        // Marge autour du texte
+        let paddingX = 60;
+        let paddingY = 20;
+
+
+        p.rect(
+            p.width / 2, 
+            p.height / 2,
+            tw + paddingX * 2,
+            th + paddingY * 2, 20);
+
+        
         let bgColor = selectedYear && yearsData[selectedYear].hasVegeWeek ?
                p.color(colors.vegGreen) : p.color(colors.nonVegRed);
         bgColor.setAlpha(30);
         p.fill(bgColor);
         p.noStroke();
         p.textAlign(p.CENTER, p.CENTER);
-        p.textSize(180);
-        p.textStyle(p.BOLD);
-        p.textFont("Chaumon-Script")
         p.text(selectedYear, p.width / 2, p.height / 2);
         p.pop();
 
@@ -632,16 +659,44 @@ let sketchVege = function(p){
     function displayWeekClusters() {
         // Background avec le mois
         p.push();
+
+        p.noStroke();
+
+        let whiteWithOpacity = p.color(255, 255, 255, 225); // 200/255 = léger transparent
+        p.fill(whiteWithOpacity);        
+        p.rectMode(p.CENTER);
+
+        // On mesure le texte d'abord
+        p.textSize(180);
+        p.textStyle(p.BOLD);
+        p.textFont("Chaumon-Script")
+        
+        let txt = monthNames[selectedMonth - 1].toUpperCase() + " " + selectedYear;
+        // Largeur du texte
+        let tw = p.textWidth(txt);
+
+        // Hauteur approximative du texte
+        let th = p.textAscent() + p.textDescent();
+
+        // Marge autour du texte
+        let paddingX = 60;
+        let paddingY = 20;
+
+
+        p.rect(
+            p.width / 2, 
+            p.height / 2,
+            tw + paddingX * 2,
+            th + paddingY * 2, 20);
+
         let bgColor = selectedMonth && yearsData[selectedYear].months[selectedMonth].hasVegeWeek ?
                p.color(colors.vegGreen) : p.color(colors.nonVegRed);
         bgColor.setAlpha(30);
         p.fill(bgColor);
         p.noStroke();
         p.textAlign(p.CENTER, p.CENTER);
-        p.textSize(150);
-        p.textStyle(p.BOLD);
-        p.textFont("Chaumon-Script")
-        p.text(monthNames[selectedMonth - 1].toUpperCase() + " " + selectedYear, p.width / 2, p.height / 2);
+
+        p.text(txt, p.width / 2, p.height / 2);
         p.pop();
 
         // Gérer les collisions entre clusters
@@ -914,26 +969,29 @@ let sketchVege = function(p){
     // ==================== FONCTIONS DE DESSIN ====================
 
     function drawOrganicCircle(x, y, radius, col) {
-        p.push();
-        p.translate(x, y);
-        p.stroke(col);
-        p.strokeWeight(3);
-        p.noFill();
+        // p.push();
+        // p.translate(x, y);
+        // p.stroke(col);
+        // p.strokeWeight(3);
+        // p.noFill();
 
-        // Cercle organique avec variations
-        p.beginShape();
-        let points = 20;
-        for (let i = 0; i <= points; i++) {
-            let angle = (i / points) * p.TWO_PI;
-            let variation = p.noise(i * 0.5, p.frameCount * 0.01) * 15;
-            let r = radius + variation;
-            let px = p.cos(angle) * r;
-            let py = p.sin(angle) * r;
-            p.curveVertex(px, py);
-        }
-        p.endShape(p.CLOSE);
+        // // Cercle organique avec variations
+        // p.beginShape();
+        // let points = 20;
+        // for (let i = 0; i <= points; i++) {
+        //     let angle = (i / points) * p.TWO_PI;
+        //     let variation = p.noise(i * 0.5, p.frameCount * 0.01) * 15;
+        //     let r = radius + variation;
+        //     let px = p.cos(angle) * r;
+        //     let py = p.sin(angle) * r;
+        //     p.curveVertex(px, py);
+        // }
+        // p.endShape(p.CLOSE);
 
-        p.pop();
+        // p.pop();
+
+        p.imageMode(p.CENTER);
+        p.image(assiettes, x, y, radius*2.2, radius*2.2)
     }
 
     function drawPlate(x, y, size, isVege, label) {
