@@ -181,7 +181,7 @@ section#trans-zone2{
 #btnStats, #btnContexte, #btnVegeLud {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: calc(50% - (var(--fixed-Width)/2) + 20px);
   margin-left: 10px;
   height: 65px;
   z-index: 1000;
@@ -308,7 +308,7 @@ img{
 
     position: fixed;
     bottom: 0;
-    right: -7px;
+    right: calc(50% - (var(--fixed-Width)/2));
     z-index: 10000;
     width: 200px;
   }

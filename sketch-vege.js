@@ -40,6 +40,16 @@ let sketchVege = function(p){
     const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 
                         'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
 
+    // Assets utiles
+    let menu_bg;
+    let assiettes;
+
+
+    p.preload = function(){
+
+        menu_bg = p.loadImage("BackGrounds/fond_menu.png");
+        assiettes = p.loadImage("Assets/assiette.png");
+    }
                            
     p.setup = function(){
 
@@ -533,6 +543,7 @@ let sketchVege = function(p){
                 drawPlate(plate.offsetX, plate.offsetY, 24, hasVege, monthNames[plate.month - 1].substring(0, 3));
             });
 
+            p.textFont("Chaumon-Script")
             p.text(cluster.year + (cluster.hasVege ? '✅' : '❌'), 0, 0);
             
             p.pop();
@@ -555,6 +566,7 @@ let sketchVege = function(p){
         p.textAlign(p.CENTER, p.CENTER);
         p.textSize(180);
         p.textStyle(p.BOLD);
+        p.textFont("Chaumon-Script")
         p.text(selectedYear, p.width / 2, p.height / 2);
         p.pop();
         
@@ -600,6 +612,7 @@ let sketchVege = function(p){
                 drawPlate(plate.offsetX, plate.offsetY, 22, weekData.hasVegeDay, `S${plate.week}`);
             });
 
+            p.textFont("Chaumon-Script")
             p.text(monthNames[cluster.month - 1]  + (cluster.hasVege ? '✅' : '❌'), 0, 0);
             
             p.pop();
@@ -621,6 +634,7 @@ let sketchVege = function(p){
         p.textAlign(p.CENTER, p.CENTER);
         p.textSize(150);
         p.textStyle(p.BOLD);
+        p.textFont("Chaumon-Script")
         p.text(monthNames[selectedMonth - 1] + " " + selectedYear, p.width / 2, p.height / 2);
         p.pop();
         
@@ -664,6 +678,8 @@ let sketchVege = function(p){
                 
                 drawMiniMenuCard(card.offsetX, card.offsetY, 20, card.day.isVege, card.day.date.getDate());
             });
+
+            p.textFont("Chaumon-Script")
 
             p.text(`Semaine ${cluster.week}` + (cluster.hasVege ? '✅' : '❌'), 0, 0);
             
@@ -934,7 +950,11 @@ let sketchVege = function(p){
         //     p.circle(0, 0, r * 2);
         // }
 
-        // --- Bord ondulé ---
+        //Assiettes
+        p.imageMode(p.CENTER);
+        p.image(assiettes, 0, 0, size*2.5, size*2.5);
+
+        //--- Bord ondulé ---
         p.fill(baseColor);
         p.stroke(255);
         p.strokeWeight(2);
@@ -945,10 +965,11 @@ let sketchVege = function(p){
         for (let i = 0; i <= waves; i++) {
             let angle = (i / waves) * p.TWO_PI;
             let wave = p.sin(angle * 6) * amp;
-            let r = size * 1.2 + wave;
+            let r = size * 0.8 + wave;
             p.vertex(p.cos(angle) * r, p.sin(angle) * r);
         }
         p.endShape(p.CLOSE);
+
 
         // --- Centre éclairci ---
         let centerColor = lightenColor(p, baseHex, 40);
@@ -998,6 +1019,7 @@ let sketchVege = function(p){
         p.stroke(colors.text);
         p.strokeWeight(3);
         p.rect(-w/2, -h/2, w, h, 10);
+        p.image(menu_bg, -w/2, -h/2, w, h);
         
         // Titre "MENU"
         p.fill(255);
