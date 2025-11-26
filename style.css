@@ -27,6 +27,7 @@ h1{
 body{
 
   width: var(--fixed-Width);
+  overflow-x: hidden;
 
 }
 
@@ -504,16 +505,17 @@ img{
 
 section.ground{
 
-  height: 110px;
+  height: 180px;
   overflow: visible !important;
   position: relative;
   z-index: 1000;
+  background-color: #E0E0E0;
 
 
   & > img{
 
     width: 100%;
-    top: -34px;
+    top: -55px;
     position: absolute;
   }
 
@@ -527,6 +529,24 @@ section.ground{
       transform: rotate(-1deg);
     }
 
+  }
+
+  &.n3{
+
+    height: 150px;
+
+  }
+
+  &.and-legend{
+
+    height: 220px;
+
+
+    img{
+
+      top: auto;
+      bottom: 0;
+    }
   }
 }
 
@@ -568,7 +588,7 @@ section.ground{
   &.onion img{
 
     width: 370px;
-    transform: translateY(317px);
+    transform: translateY(322px);
   }
 
   &.poireau img{
@@ -813,12 +833,6 @@ section.ground{
   50%{
     transform: rotate(-43deg);
   }
-}
-
-
-.ground.and-legend{
-
-  height: 300px;
 }
 
 .vege-legend{
