@@ -1031,11 +1031,6 @@ let sketchVege = function(p){
 
         }else{
 
-            // let wIm = 100; // largeur désirée
-            // let hIm = meatPk.height * (wIm / meat.width);
-            // // On change le repère coordonnées pour le centre
-            // p.imageMode(p.CENTER);
-            // p.image(meatPk, -w, -h, wIm, hIm);
         }
 
         // Titre "MENU"

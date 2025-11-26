@@ -515,7 +515,7 @@ section.ground{
   z-index: 1000;
 
 
-  img{
+  & > img{
 
     width: 100%;
     top: -34px;
@@ -815,5 +815,36 @@ section.ground{
 
   50%{
     transform: rotate(-43deg);
+  }
+}
+
+
+.ground.and-legend{
+
+  height: 300px;
+}
+
+.vege-legend{
+
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid black;
+  padding: 10px;
+  padding-right: 15%;
+  gap: 10px;
+}
+
+.leg1, .leg2{
+
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img{
+
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
   }
 }
