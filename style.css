@@ -540,7 +540,12 @@ section.ground{
 
   &.n3{
 
-    height: 120px;
+    height: 130px;
+
+    img{
+
+      top: -73px;
+    }
 
   }
 
@@ -571,6 +576,7 @@ section.ground{
   &.carrot img{
     width: 300px;
     transform: translateY(310px);
+    transition-duration: 3s;
   }
 
   &.radis img{
@@ -717,9 +723,15 @@ section.ground{
 
 }
 
+
 .vege-from-ground.out-of-ground{
 
     animation-delay: 1.9s;
+
+  &.carrot{
+
+    animation-delay: 1.4s !important;
+  }
 
   &.carrot img{
 
@@ -846,7 +858,7 @@ section.ground{
 
   display: flex;
   flex-direction: row;
-  border-top: 2px solid black;
+  border-top: 0px solid black;
   padding: 10px;
   padding-right: 15%;
   gap: 10px;
