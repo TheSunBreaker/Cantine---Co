@@ -89,7 +89,7 @@ const CHART_CONFIG = {
 
 
 
-    background: '#E0E0E0',
+    background: '#FAFAFA',
     fire: ['#ff6b00', '#ff8800', '#ffaa00', '#ffcc00', '#ffe066'],
     rock: '#5d4037', text: '#3e2723',
     liquidAbove: '#64b5f6',    // Bleu clair (zone conforme)

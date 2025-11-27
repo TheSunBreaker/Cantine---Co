@@ -84,7 +84,7 @@ button {
 
   h1{
 
-    color: #528B4C;
+    color: black;
     font-weight: bolder;
     text-transform: uppercase;
   }
@@ -96,8 +96,8 @@ button {
     margin: auto;
     width: 80%;
     height: 90%;
-    background-color: rgb(224, 224, 224);
-    top: -45%;
+    background-color: rgb(220, 241, 224);
+    top: -40%;
     border-radius: 50%;
     z-index: -1;
   }
@@ -240,14 +240,14 @@ section#trans-zone2{
 /* --- Contenu de texte principal --- */
 .info {
   max-width: 600px;
-  margin-left: 20%;
+  margin-left: 7%;
   margin-top: 0;
 
 }
 
 .info h1 {
   font-size: 5em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.55em;
   margin-top: 7%;
 }
 
@@ -510,7 +510,7 @@ section.ground{
   overflow: visible !important;
   position: relative;
   z-index: 1000;
-  background-color: #E0E0E0;
+  background-color: #FAFAFA;
 
 
   & > img{
@@ -540,7 +540,7 @@ section.ground{
 
   &.n3{
 
-    height: 150px;
+    height: 120px;
 
   }
 

@@ -20,7 +20,7 @@ const veggies = [
     '<img src="Assets/Carotte.png" alt="carotte" width ="80px">',
     '<img src="Assets/Radis.png" alt="radis" width ="80px">',
     '<img src="Assets/Poireau.png" alt="poireau" width ="80px">',
-    '<img src="Assets/carrot.png" alt="carotte" width ="80px">',
+    '<img src="Assets/Champignon.png" alt="chapignon" width ="80px">',
     '<img src="Assets/Orange.png" alt="orange" width ="80px">'
 
 ]
@@ -73,10 +73,12 @@ function createWord() {
     // const colors = ['#2ecc71', '#e74c3c', '#f39c12', '#9b59b6', '#3498db', '#1abc9c'];
     // const colors = ['#000'];
     // const colors = ['#1a1a1a', '#2d2d2d', '#404040', '#525252', '#666666'];
-    const colors = ['#2c2c2c', '#3a3a3a', '#4a4a3a', '#5a5a4a', '#6a6a5a'];
+    // const colors = ['#2c2c2c', '#3a3a3a', '#4a4a3a', '#5a5a4a', '#6a6a5a'];
     // const colors = ['#1c1c1c', '#2a2f2a', '#333833', '#3d4a3d', '#4a5a4a'];
     // const colors = ['#212121', '#2f2f2f', '#3c3c3c', '#4f4f4f', '#636363'];
     // const colors = ['#1e1e1e', '#2e2b26', '#3d3730', '#4d443a', '#5d5244'];
+    const colors = ['#0C5C03', '#BA0085'];
+
     element.style.color = getRandomItem(colors);
 
     // Décider si on écrit lettre par lettre (20% de chance)
