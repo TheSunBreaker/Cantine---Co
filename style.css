@@ -189,7 +189,7 @@ section#trans-zone2{
   z-index: 1000;
   /* background-color: #333; */
   color: black;
-  border: 2px dashed #BA0085;
+  border: 2px dashed black;
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 0.9em;
@@ -198,6 +198,11 @@ section#trans-zone2{
   width: 150px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
+  
+  &:hover{
+
+    color: white;
+  }
 
   &::before{
     content: '';
@@ -208,7 +213,7 @@ section#trans-zone2{
     transition: .5s;
     width: 50px;
     aspect-ratio: 1/1;
-    background-color: #BA0085;
+    background-color: black;
     z-index: -1;
   }
 
@@ -217,13 +222,27 @@ section#trans-zone2{
 
 #btnStats {
   display: block; /* toujours visible */
-  top : 95px
+  top : 95px;
+  border-color: #BA0085;
+
+  &::before{
+
+    background-color: #BA0085;
+
+  }
 }
 
 #btnVegeLud{
 
   display: block; /* toujours visible */
-  top : 170px
+  top : 170px;
+  border-color: #0C5C03;
+
+  &::before{
+
+    background-color: #0C5C03;
+
+  }
 }
 
 
@@ -768,7 +787,7 @@ section.ground{
 
   &.poireau img{
 
-    transform: translateX(80px) translateY(200px);
+    transform: translateX(70px) translateY(200px);
   }
 
 }
